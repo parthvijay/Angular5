@@ -1,0 +1,94 @@
+<div id="sidebar-container">
+  <!-- Sidebar -->
+  <div class="sidebar-header">
+    <ul class="filter-tabs">
+      <li>
+        <a href="javascript:">
+          Filters
+          <!--img src="images/arrow-right.svg"-->
+        </a>
+        <button aria-label="Close" class="icon-close-btn filter-close" type="button" (click)="hideFilters()"></button>
+      </li>
+    </ul>
+  </div>
+  <div class="sidebar-opt-content">
+
+    <ngb-accordion #acc="ngbAccordion" activeIds="static-0">
+      <ngb-panel id="static-{{i}}" *ngFor="let c of filters; let i = index;">
+        <ng-template ngbPanelTitle>
+          <div class="card-header-div">
+            {{c.title}}
+            <span class="ico-arrow_collapse"></span>
+            <span class="ico-arrow_expand"></span>
+          </div>
+        </ng-template>
+
+        <ng-template ngbPanelContent>
+          <div class="card-block" *ngIf="c.type === 'status'">
+            <div class="cover mRT" *ngFor="let n of c.categories">
+              <label class="coverage">{{n.title}}</label>
+              <ul class="nav nav-pills nav-fill">
+                <li class="nav-item" *ngFor="let o of c.options" (click)="selectStatus(n, o);">
+                  <a class="nav-link" [ngClass]="{'active': n.selected === o}" href="javascript:">{{o}}</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="card-block" *ngIf="c.type === 'dropdown'">
+            <ng-container *ngFor="let f of c.levels_name; let i = index">
+              <div class="form-group" *ngIf="isDropdownVisible(c, i)">
+                <label>{{f}}</label>
+                <ss-multiselect-dropdown (keyup)="myMethod($event.target.value,c)"   [options]="c.levels[i]" [(ngModel)]="c.selected[i]" (ngModelChange)="onChange($event, c, i)" [settings]="mySettings"
+                  [texts]="myTexts" (click) = "populateSelectedFilter(c,  i, c.levels_name[i])" *ngIf="!c.searchable[i]"></ss-multiselect-dropdown>
+                <ss-multiselect-dropdown  (keyup)="myMethod($event.target.value,c,i)" [options]="c.levels[i]" [(ngModel)]="c.selected[i]" (ngModelChange)="onChange($event, c, i)" [settings]="mySettings_search"
+                  [texts]="myTexts"  (click) = "populateSelectedFilter(c,  i, c.levels_name[i])" *ngIf="c.searchable[i]"></ss-multiselect-dropdown>
+              </div>
+            </ng-container>
+          </div>
+
+          <div class="card-block" *ngIf="c.type === 'slider'">
+            <div class="cover" *ngFor="let n of c.categories">
+              <label class="">{{n.title}}</label>
+              <div>
+                <ion-range-slider #sliderElement type="double" [values]="n.valueTag" grid="true" (onFinish)="sliderOnFinish($event, n)"></ion-range-slider>
+              </div>
+            </div>
+          </div>
+
+          <div class="card-block" *ngIf="c.type === 'dataset'">
+            <div class="cover posRelative" *ngFor="let n of c.categories; let i=index">
+              <a href="javascript:void(0)" class="resetDataSet" *ngIf="i===0" (click)="resetDataset(c.categories)">Reset</a>
+              <label class="">{{n.title}}</label>
+              <div class="fliterDataSetWRap">
+                <div class="td-inline">
+                  <input type="number" *ngIf="i==0" [ngClass]="{'errorBorder':n.error}" [(ngModel)]="n.selected_value[0]" (keypress)="disableInput()" (ngModelChange)="setDataset(n, 'from');onDateChange(n.selected_value, n)" min="1996">
+                  <input type="number" *ngIf="i==1" [ngClass]="{'errorBorder':n.error}" [(ngModel)]="n.selected_value[0]" (keypress)="disableInput()" (ngModelChange)="setDataset(n, 'from');onDateChange(n.selected_value, n)" min="1996">
+                </div>
+                  <span>to</span>
+                <div class="td-inline">
+                  <input type="number" [(ngModel)]="n.selected_value[1]" (keypress)="disableInput()" (ngModelChange)="setDataset(n, 'to');onDateChange(n.selected_value, n)" min="1996">
+                  <span class="dataErrorWrap" [ngClass]="{'fltrDateErrorMsg':n.error}"><span class="icon-error-icon"></span>Start date cannot be greater than end date</span>
+                  <span class="dataErrorWrap" [ngClass]="{'fltrDateErrorMsg':n.error}"><span class="icon-error-icon"></span>Start date cannot be greater than end date</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </ng-template>
+      </ngb-panel>
+    </ngb-accordion>
+    <!-- /#accordion -->
+  </div>
+  <!-- /#sidebar-opt-content -->
+  <div class="fixed-bottom shadow float-right">
+    <button [disabled]="!isDatasetValid" class="button filled-btn blue" (click)="applyFilters();" [ngClass]="{'disabled': !isDatasetValid}" >
+      Apply
+      <span *ngIf="selectedFilters">({{selectedFilters}})</span>
+    </button>
+    <a href="javascript:;" class="clear-filter" (click)="clearFilters();">
+      clear all
+    </a>
+  </div>
+
+</div>
+<!-- /#sidebar-container -->

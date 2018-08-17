@@ -1,0 +1,33 @@
+.form-group { margin-bottom: 0; }
+.input-drop input[type="text"] { width: 100%; padding-right: 20px; }
+.block-option .input-drop { height: 32px; }
+.block-option .input-drop input { font-size: 13px; }
+.block-option .input-drop.disable input[disabled]::placeholder { color: #333; }
+button.btn.btn-default.calender-btn { padding-top: 3px; }
+.calendar-col.dropdown-menu {display: block; float: none; margin: 0; width: 100.6%;}
+.block-left, .block-right { display: inline-flex; }
+.ico-dropdown::before { color: #58585b; }
+.block-column .input-drop.block-input .nya-bs-select .dropdown-menu.open { display: block; }
+.block-column .input-drop.block-input .nya-bs-select .dropdown-menu.open .dropdown-menu.inner { display: block; }
+.input-drop.block-input.input-dropdown .dropdown-menu.inner { margin: 0; }
+.input-drop.block-input.input-dropdown .dropdown-toggle:after { top: 29px; }
+.input-drop.block-input.input-dropdown .dropdown-menu.inner li { width: 100%; float: left; }
+.input-drop.block-input.input-dropdown .dropdown-menu.inner li a { width: 100%; background-color: transparent; float: left; cursor: pointer; }
+.input-drop.block-input.input-dropdown .dropdown-menu.inner li a span { color: #00bceb; font-weight: 700; }
+.input-drop.block-input.input-dropdown .dropdown-menu.inner li a small { color: #999; }
+.input-drop.block-input.input-dropdown .dropdown-menu.inner li a:hover span, .input-drop.block-input.input-dropdown .dropdown-menu.inner li.active a span ,
+.input-drop.block-input.input-dropdown .dropdown-menu.inner li a:hover small, .input-drop.block-input.input-dropdown .dropdown-menu.inner li.active a small { color:#fff !important; }
+
+/* Disclaimer text and Buttons */
+.calendar-col .input-group.calender-input input { width: 100%; border:0; font-weight:100; font-size: 13px; }
+.block-column select { max-width:327px; font-size:13px; min-width:327px; height:34px; padding-left:9px; padding-right:0px; border:1px solid #ccc; border-radius:2px; overflow:hidden; text-overflow:ellipsis; }
+.block-column .input-drop.select-input.input-dropdown.disable select[disabled] { color: #999; background-color: #cacaca; }
+.block-right .block-column { width:327px; }
+.input-group.calender-input .input-group-btn { position: absolute; right:0; }
+.block-left-det .input-drop .ico-dropdown { position: absolute; right: 30px; top: 10px; }
+.block-left-det .input-drop .ico-search { position: absolute; right: 5px; top: 7px; }
+.block-input .dropdown-toggle span { text-align:left; width: 100%; }
+.block-input .dropdown-toggle .filter-option > span { font-weight: 700; font-family:'CiscoSans'; text-align: left; line-height: normal; }
+.block-input .dropdown-toggle .pull-left.filter-option { padding-top: 0; line-height: 16px; }
+.small-data { color: #999; font-size: 11px; display: block; font-weight: 400; word-break: break-all; white-space: normal; }
+.button.nxt-btn{transition: unset;}

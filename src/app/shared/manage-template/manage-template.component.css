@@ -1,0 +1,33 @@
+.dropdown.manage-template{ position: absolute; top:4px; margin-right:0; right:443px; z-index:10; }
+.dropdown.manage-template .form-group{ margin-bottom: 20px;}
+.manage-template> label{ font-size: 11px; text-transform: uppercase; color: #999; margin: 0px;}
+.dropdown.manage-template .dropdown-menu{ padding: 17px 21px !important; width: 340px; right: auto; left: 0; margin-top: 42px; top: -2px; margin-left:0; }
+.manage-template .dropdown-menu .icon-arrow-up{ right: auto;left:131px;}
+.manage-template .dropdown-menu h3{ font-size: 20px; letter-spacing: 0.05em; color: #58585b; display: block; padding-bottom: 10px; border-bottom: 1px solid #ccc; margin-bottom: 15px;}
+.manage-template h5{ font-size: 16px; color:#00bceb; cursor: pointer; height: 20px; } 
+.manage-template h5 span.nameTemplate{ display:inline-block; max-width:150px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; font-weight: 300; }
+.manage-template h5 .icon-arrow{ position: absolute; top:16px; right:-20px; }
+.manage-template h5 .icon-arrow:before { content:"\E941"; font-size: 10px; font-family: 'icomoon'; }
+.manage-template .dropdown-menu h4{ font-size: 14px; margin-bottom: 9px; color: #58585b;}
+.manage-template .dropdown-menu li a{ color: #58585b;}
+.manage-template .dropdown-menu li:hover a{ color: #fff;}
+.manage-template .dropdown-menu .modal-footer{ padding: 0px; margin-top: 10px;}
+.note{font-size: 12px; margin: 23px 0;color: #999;}
+.dropdown-menu ul.choose-existing{ margin: 0px -21px; max-height: 152px;}
+.dropdown-menu ul.choose-existing li.edit-mode{ background: transparent; padding-right: 80px;}
+.dropdown-menu ul.choose-existing li.edit-mode:hover i:before{ color:#00bceb;}
+.dropdown-menu ul.choose-existing li.edit-mode input[type="text"] { border: 0px; padding: 0px;} 
+.dropdown-menu ul.choose-existing li::before { border-bottom: 1px solid #ccc; position: absolute; bottom: 0px; bottom: 0px; content: ""; width: 85%; }
+.dropdown-menu ul.choose-existing li.edit-mode::before { border-bottom: 2px solid #00bceb; position: absolute; bottom: 0px; bottom: 0px; content: ""; width: 85%; }
+.dropdown-menu ul.choose-existing li{ display: block;  padding-right: 80px; position: relative; padding-left: 25px; position: relative;}
+.dropdown-menu ul.choose-existing li:hover i{ display:block; cursor: pointer;}
+.dropdown-menu ul.choose-existing li:hover .icon-cross:before, .dropdown-menu ul.choose-existing li:hover .icon-delete:before,.dropdown-menu ul.choose-existing li:hover .icon-edit:before, .dropdown-menu ul.choose-existing li.active:hover a{ color: white;}
+.dropdown-menu ul.choose-existing li i{ position: absolute; top:11px; right:0px; display: none;}
+.dropdown-menu ul.choose-existing li a{ font-size: 14px; word-wrap: break-word;}
+.dropdown-menu ul.choose-existing li a, .dropdown-menu ul.choose-existing li.edit-mode i.icon-tick{ font-size: 14px; font-weight: 300; }
+.dropdown-menu ul.choose-existing li i.icon-edit { right:57px;}
+.dropdown-menu ul.choose-existing li i.icon-cross{font-size: 14px; right: 57px;}
+.dropdown-menu ul.choose-existing li i.icon-delete, .dropdown-menu ul.choose-existing li i.icon-tick, .dropdown-menu ul.choose-existing li.edit-mode i.icon-tick{ right: 25px;}
+.dropdown-menu ul.choose-existing li.active a{ color:#00bceb; font-weight: 600; }
+.dropdown-menu ul.choose-existing li.edit-mode .form-control{ height: 22px; font-size: 14px;  font-weight: 300; color: #58585b!important; letter-spacing: 0.5px;}
+.tipsy3_0 { width: 15px; height: 10px; position: absolute; top: -8px ; }

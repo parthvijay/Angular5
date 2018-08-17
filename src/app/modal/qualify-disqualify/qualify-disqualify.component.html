@@ -1,0 +1,148 @@
+<!--Start Common Modal Window-->
+<div class="modal-header">
+    <h5 class="modal-title" id="exampleModalLabel">{{modalTitle}}</h5>
+    <button type="button" class="icon-close-btn" aria-label="Close" (click)="activeModal.dismiss('Cross click')"></button>
+</div>
+<div class="modal-body">
+    <div class="row" *ngIf="isPendingModal">
+        <div class="col-lg-12 text-center qualify-btns">
+            <a class="qual-button-left" [ngClass]="{'active': (stage === 'qualify')}" (click)="stage = 'qualify'">Qualify</a>
+            <a class="qual-button-right" [ngClass]="{'active': (stage === 'disqualify')}" (click)="stage = 'disqualify'">Disqualify</a>
+        </div>
+    </div>
+    <form *ngIf="stage === 'qualify'">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="form-group">
+                    <ss-multiselect-dropdown [options]="selectedReasonCodeOptions" [(ngModel)]="selectedReasonCode" [settings]="mySettings" name="selectedReasonCode"
+                        [texts]="myTexts" (ngModelChange)="qualReasonCodeChange($event)"></ss-multiselect-dropdown>
+                    <div class="custom-dropdown">
+                        <select class="custom-select mb-2 mr-sm-2 mb-sm-0 col myCustomSelect" name="selectedReasonCode" [(ngModel)]="selectedReasonCode"
+                            required appElementFocus>
+                            <option value="{{qualifyReason.name}}" *ngFor="let qualifyReason of selectedReasonCodeOptions">{{qualifyReason.name}}</option>
+                        </select>
+                        <label class="form-control-placeholder" for="selectedReasonCode">Reason Code
+                            <span class="import">*</span>
+                        </label>
+                        <span class="drop-arrow"></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- DE160977 -->
+        <div class="row" *ngIf="showDealID()">
+            <div class="col-lg-12">
+                <div class="form-group txt">
+                    <input type="text" class="form-control" name="qualDealId" [(ngModel)]="qualDealId" required="" appElementFocus id="qualDealId" onkeypress='return event.charCode >= 48 && event.charCode <= 57'>
+                    <label class="form-control-placeholder" for="qualDealId">Deal ID
+                        <span class="import">*</span></label>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="form-group txt-area-group">
+                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" name="message" [(ngModel)]="message" required=""
+                    appElementFocus></textarea>
+                    <label for="exampleFormControlTextarea1" class="form-control-placeholder">Description</label>
+                </div>
+            </div>
+        </div>
+    </form>
+
+    <form *ngIf="stage === 'disqualify'">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="form-group ">
+                    <ss-multiselect-dropdown [options]="selectedReasonCodeDisOptions" [(ngModel)]="selectedReasonCodeDis" [settings]="mySettings"
+                        name="selectedReasonCodeDis" [texts]="myTexts" (ngModelChange)="disqualCodeChange($event)"></ss-multiselect-dropdown>
+                    <div class="custom-dropdown">
+                        <select class="custom-select mb-2 mr-sm-2 mb-sm-0 col myCustomSelect" name="selectedReasonCodeDis" [(ngModel)]="selectedReasonCodeDis"
+                            required appElementFocus>
+                            <option value="{{disqualifyReason.name}}" *ngFor="let disqualifyReason of selectedReasonCodeDisOptions">{{disqualifyReason.name}}</option>
+                        </select>
+                        <label class="form-control-placeholder" for="selectedReasonCodeDis">Reason Code
+                            <span class="import">*</span>
+                        </label>
+                        <span class="drop-arrow"></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row" [ngClass]="{'numberGroup': showEnterId()}" *ngIf="showDisqualifySubReason()">
+            <div class="col-lg-12">
+                <div class="form-group">
+                    <ss-multiselect-dropdown [options]="disqualifySubReasonCodeOptions" [(ngModel)]="selectedSubReasonCode" [settings]="mySettings"
+                        name="selectedSubReasonCode" [texts]="myTexts" (ngModelChange)="disqualSubCodeChange($event)"></ss-multiselect-dropdown>
+                    <div class="custom-dropdown">
+                        <select class="custom-select mb-2 mr-sm-2 mb-sm-0 col myCustomSelect" name="selectedSubReasonCode" [(ngModel)]="selectedSubReasonCode"
+                            required appElementFocus>
+                            <option value="{{disqualifySubReason.name}}" *ngFor="let disqualifySubReason of disqualifySubReasonCodeOptions">{{disqualifySubReason.name}}</option>
+                        </select>
+                        <label class="form-control-placeholder" for="selectedSubReasonCode">Sub Reason Code
+                            <span class="import">*</span>
+                        </label>
+                        <span class="drop-arrow"></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row" *ngIf="showEnterId()">
+            <div class="col-lg-12">
+                <div class="multiSelect">
+                    <p>Please Select</p>
+                    <ul class="radioList">
+                        <li>
+                            <a class="dropdown-item">
+                                <input type="radio" name="selectId" value="SO Number" [(ngModel)]="selectId">
+                                <span></span>SO Number</a>
+                        </li>
+                        <li *ngIf="!showSONumber()">
+                            <a class="dropdown-item">
+                                <input type="radio" name="selectId" value="Instance ID" [(ngModel)]="selectId">
+                                <span></span>Instance ID</a>
+                        </li>
+                        <li *ngIf="!showSONumber()">
+                            <a class="dropdown-item">
+                                <input type="radio" name="selectId" value="Contract Number" [(ngModel)]="selectId">
+                                <span></span>Contract Number</a>
+                        </li>
+                        <li *ngIf="showSONumber()">
+                            <a class="dropdown-item">
+                                <input type="radio" name="selectId" value="Deal ID" [(ngModel)]="selectId">
+                                <span></span>Deal ID</a>
+                        </li>
+                    </ul>
+                    <div class="form-group marginB0">
+                        <input type="text" class="form-control" required="" name="soNumber" [(ngModel)]="soNumber" appElementFocus id="soNumber" onkeypress='return event.charCode >= 48 && event.charCode <= 57'>
+                        <label class="form-control-placeholder" for="soNumber">Enter {{selectId}}
+                            <span class="import">*</span>
+                        </label>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="form-group txt-area-group">
+                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" name="messageDis" [(ngModel)]="messageDis" required=""
+                        appElementFocus></textarea>
+                    <label for="exampleFormControlTextarea1" class="form-control-placeholder">Description <span class="import" *ngIf="showNote()">*</span></label>
+                </div>
+            </div>
+        </div>
+        <div class="row" *ngIf="showNote()">
+            <div class="col-lg-12 popup_note" *ngIf="selectedSubReasonCode.indexOf('Device is lost to Competitor') > -1">Enter the Competitor's Name and Capture the Feature that caused us to lose this Customer to the Competitor in
+                the description section</div>
+            <div class="col-lg-12 popup_note" *ngIf="selectedSubReasonCode.indexOf('Product RMA\'ed') > -1">Enter the Serial Number in the description section</div>
+        </div>
+    </form>
+</div>
+<div class="modal-footer marginT15">
+    <button type="button" class="btn btn-secondary" (click)="activeModal.dismiss('Cancel click')">Cancel</button>
+    <button type="button" class="btn btn-primary" [class.disabled]="!isFormValid()" data-dismiss="modal" (click)="closeDisqualify();"
+        *ngIf="stage === 'disqualify'">Disqualify</button>
+    <button type="button" class="btn btn-primary" [class.disabled]="!isQualifyFormValid()" data-dismiss="modal" (click)="closeQualify();"
+        *ngIf="stage === 'qualify'">Qualify</button>
+</div>
+<!--End Common Modal Window-->

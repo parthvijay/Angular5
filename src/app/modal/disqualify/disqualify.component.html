@@ -1,0 +1,88 @@
+<!--Begin Modal Window-->
+<button class="btn btn-lg btn-outline-primary" (click)="open(content)">Launch demo modal</button>
+<ng-template #content let-c="close" let-d="dismiss">
+<div class="modal fade" id="disqualifyModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog myModelDialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Provide reason for disqualifying (6 Items)</h5>
+                <button type="button" class="icon-close-btn" data-dismiss="modal" aria-label="Close"> <span aria-hidden="true">&times;</span> </button>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="form-group">
+                                <label for="">Reason Code*</label>
+                                <!-- <select class="custom-select mb-2 mr-sm-2 mb-sm-0 col myCustomSelect">
+                                    <option selected>Select</option>
+                                    <option value="Product Removed from Customer’s Network">Product Removed from Customer’s Network</option>
+                                    <option value="Customer No Longer Active">Customer No Longer Active</option>
+                                    <option value="Customer not Refreshing Now">Customer not Refreshing Now</option>
+                                    <option value="Customer not Renewing Now">Customer not Renewing Now</option>
+                                    <option value="Customer not Attaching Now">Customer not Attaching Now</option>
+                                    <option value="Data Needs Updating">Data Needs Updating</option>
+                                </select> -->
+                                <select class="custom-select mb-2 mr-sm-2 mb-sm-0 col myCustomSelect form-control" name="game" [(ngModel)]="selectedGame"
+                                    required>
+                                    <option *ngFor="let game of games" [ngValue]="game">{{game.name}}</option>
+                                  </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="form-group">
+                                <label for="">Sub Reason Code*</label>
+                                <select class="custom-select mb-2 mr-sm-2 mb-sm-0 col myCustomSelect">
+                <option selected>Select</option>
+                <option value="Acquisitions">Acquisitions</option>
+                <option value="Invalid customer location">Invalid customer location</option>
+                <option value="Improper Account Mapping">Improper Account Mapping</option>
+                <option value="Subscription Service(EA)">Subscription Service(EA)</option>
+                <option value="Migrated to SWSS">Migrated to SWSS</option>
+                <option value="Already Renewed under a different Service">Already Renewed under a different Service</option>
+              </select>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-5">
+                            <div class="form-group">
+                                <label for="">SO Number*</label>
+                                <input type="text" placeholder="372847" class="form-control">
+                            </div>
+                        </div>
+                        <div class="col-lg-7">
+                            <div class="form-group">
+                                <label for="">Deal ID</label>
+                                <select class="custom-select mb-2 mr-sm-2 mb-sm-0 col myCustomSelect">
+                <option selected>Enter deal ID or browse...</option>
+                <option value="264318">264318</option>
+                <option value="431826">431826</option>
+                <option value="321455">321455</option>
+                <option value="623346">623346</option>
+              </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="form-group txt-area-group">
+                                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="Add your comment..." required=""></textarea>
+                                <label for="exampleFormControlTextarea1">Message</label>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+                <button type="button" class="btn btn-primary">Disqualify</button>
+            </div>
+        </div>
+    </div>
+</div>
+</ng-template>
+<!--End Modal Window-->

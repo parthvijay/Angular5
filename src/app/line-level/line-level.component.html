@@ -1,0 +1,279 @@
+<!-- Start Page Content Wrapper -->
+<app-sub-header (headerInfo)="updateReportOption($event)" [pageName]="pageName" [metadata]="metadata" [totalQualification]="totalQualification" #getHeader></app-sub-header>
+<div class="overlay"></div>
+<!-- filters section -->
+<div class="clearfix"></div>
+
+<div id="actions-container" class="container-fluid">
+
+  <div id="approve-disapprove" class="approve-disapprove" *ngIf="showApproval">
+    <i class="icon-info-line-level-fill"></i>
+    <span>
+      <strong>Action Required:</strong> Please click to
+      <span *ngIf="!viewSummary">
+        <a href="javascript:" [class.disabled]="!selectedRowsCount" (click)="selectedRowsCount && openApproveDisapproveModal('approve', {id: '-1'})" class="">Approve</a> or
+        <a href="javascript:" [class.disabled]="!selectedRowsCount" (click)="selectedRowsCount && openDisapproveConfirmationModal('disapprove', {id: '-1'})" class="">Disapprove</a> this Qualification</span>
+      <span *ngIf="viewSummary">
+        <a href="javascript:" routerLink="/intermediate-summary/{{customerID}}/{{utilitiesService.getGlobalCustomerView()}}" class="">View Summary</a>
+      </span>
+    </span>
+
+    <ul class="qualify-btn float-right" style="display: none;">
+      <li *ngIf="!viewSummary">
+        <a href="javascript:" (click)="openDisapproveConfirmationModal('disapprove', {id: '-1'})" class="">Disapprove</a>
+      </li>
+      <li>
+        <a href="javascript:" (click)="openApproveDisapproveModal('approve', {id: '-1'})" class="" *ngIf="!viewSummary">Approve</a>
+      </li>
+      <li>
+      </li>
+    </ul>
+  </div>
+
+  <div>
+    <div class="filter-switch qualify-filter">
+      <div class="flexible-div align-items-center" [ngClass]="{'filterSummaryView': isSummaryView}">
+        <app-filters-actions class="col-xs-8 col-sm-6 col-md-6 paddingL0"></app-filters-actions>
+        <app-filters *ngIf="filtersService.getFiltersState()" (onFiltersApply)="applyFilters($event)"></app-filters>
+          <!-- <div class="viewAssetsDropdown" *ngIf="!category && !assetID" [ngClass]="{'filteredBarOpened': filtersService.getFiltersState()}">
+            <label>View Assets by:</label>
+            <ss-multiselect-dropdown [options]="linelevelService.selectedAssetViewOptions" [(ngModel)]="linelevelService.selectedAssetView" [settings]="mySettings" [texts]="myTexts" (ngModelChange)="assetViewChange($event)"></ss-multiselect-dropdown>
+          </div> -->
+        <div class="col-xs-4 col-sm-6 col-md-6 paddingR0">
+          <ul class="qualify-btn float-right">
+            <li class="exitFullScreenBtn" [ngClass]="{'enableExitBtn': headerService.fullScreen}">
+              <a href="javascript:" (click)="headerService.exitFullScreenView()">
+                <span class="icon-exitfullView icon"></span>Exit Full Screen</a>
+            </li>
+            <li class="fullScreenBtn" [ngClass]="{'disableBtn': headerService.fullScreen}">
+              <a href="javascript:" (click)="headerService.fullScreenView()">
+                <span class="icon-full-screen"></span>Full Screen</a>
+            </li>
+            <li *ngIf="!isSummaryView || assetID"> 
+              <button (click)="selectedRowsCount && openUndoModal()" [class.disabled]="disableUndo" class="btn btn-secondary marginR10" type="button">Undo</button>
+            </li>
+            <li *ngIf="!isSummaryView || assetID">
+              <button (click)="selectedRowsCount && openQualifyDisqualifyModal('disqualify', {id: '-1'})" [class.disabled]="!selectedRowsCount"
+                class="btn btn-secondary marginR10" type="button">Disqualify</button>
+            </li>
+            <li *ngIf="!isSummaryView || assetID">
+              <button (click)="selectedRowsCount && openQualifyDisqualifyModal('qualify', {id: '-1'})" [class.disabled]="!selectedRowsCount"
+                class="btn btn-primary" type="button">Qualify</button>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <hr class="darkborder margin0">
+      <div class="row align-items-baseline">
+        <div class="col-md-6">
+          <!-- <div class="subTab-breadcrumbs" style="display: none;">
+            <div class="backIconWrap">
+              <a href="javascript:void(0)" (click)="navigateBackToAsset()"><span class="back-icon"></span></a>
+            </div>
+            <ul>
+              <li><a href="javascript:void(0)">Contract Number <span class="assetsSubTabCount">(140)</span></a> > </li>
+              <li>Selected Contract Number: </li>
+              <li class="active" (click)="changeSelectedValue()"><a href="javascript:void(0)">{{assetID}} <span class="assetsSubTabCount">(Change)</span></a></li>
+            </ul>
+            <div class="dropdown-menu" *ngIf="showList">
+              <span class="icon-arrow-up tipsy3_0"></span>
+              <div class="form-group txt">
+              <div class="searchbar">
+                  <input id="typeahead-focus" name="searchInput" type="text" class="form-control" [(ngModel)]="model" [ngbTypeahead]="search" (focus)="focus$.next($event.target.value)" (click)="click$.next($event.target.value)" #instance="ngbTypeahead" />
+              </div>
+              </div>
+              <div class="choose-exisiting">
+                <ul class="choose-existing">
+                  <li *ngFor="let c of contractList">
+                    <a href="javascript:void(0)">{{c.contractNumber}}</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div> -->
+
+          <!-- US197163 -->
+          <div class="lineLevel-subHeading" *ngIf="!category && !assetID" [ngClass]="{'filteredBarOpened': filtersService.getFiltersState()}">
+            <h2>View Assets by</h2>
+            <ul class="sortingTabs">
+              <li *ngFor="let asset of linelevelService.assetsList" [ngClass]="{'active': (linelevelService.activeAsset == asset.name), 'disabled': disableAssetLink}"><a (click)="changeAssetView(asset.name)">{{asset.name}}</a></li>
+            </ul>
+          </div>
+          <!-- /US197163 -->
+
+          <div class="contractNumberWrap">
+            <div class="subTab-breadcrumbs" *ngIf="assetID">
+              <div class="backIconWrap">
+                <a routerLink="/line-level/{{customerID}}/All/{{globalType}}"><span class="back-icon"></span></a>
+              </div>
+              <ul>
+                <li>{{linelevelService.selectedAssetView[0]}} <span class="assetsSubTabCount">{{assetID}} </span>
+                  <!-- <div class="dropdown-menu">
+                  <span class="icon-arrow-up tipsy3_0"></span>
+                  <div class="form-group txt">
+                    <div class="searchbar">
+                      <input type="text" id="searchInput" class="form-control" name="searchInput" [(ngModel)]="searchText" appElementFocus /><label for="searchInput" class="form-control-placeholder">SEARCH AND SELECT {{linelevelService.selectedAssetView[0]}}</label>
+                      <span class="icon-search" *ngIf="!searchText"></span>
+                      <button *ngIf="searchText" (click)="clearInput()" aria-label="Close" class="icon-close-btn" type="button"></button>
+                      <div class="searchList">
+                        <ul>
+                          <li *ngFor="let c of assetSearchItems | filter : searchText" (click)="selectAssetNumber(c)"><a href="javascript:void(0)">{{c}}</a></li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div> 
+                </div>-->
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6">
+            <app-manage-template (onNewEntryAdded)="saveTemplate($event)" (onTemplateSelect)="selectTemplate($event)" #updateTemp *ngIf="!isSummaryView || assetID"></app-manage-template>
+          <ul class="filter-opt full-view-opt float-right">
+            <li class="configurePanel" [ngClass]="{'active': showToolPanel}"*ngIf="!isSummaryView || assetID">
+              <a href="javascript:" (click)="toggleConfigureColumn()">
+                <span class="icon-configure"></span>Configure Columns</a>
+            </li>
+            <!-- <li class="exitFullScreenBtn" [ngClass]="{'enableExitBtn': headerService.fullScreen}">
+              <a href="javascript:" (click)="headerService.exitFullScreenView()">
+                <span class="icon-exitfullView icon"></span>Exit Full Screen</a>
+            </li>
+
+            <li class="fullScreenBtn" [ngClass]="{'disableBtn': headerService.fullScreen}">
+              <a href="javascript:" (click)="headerService.fullScreenView()">
+                <span class="icon-full-screen"></span>Full Screen</a>
+            </li> -->
+
+            <li class="dropdown action">
+              <a href="javascript:" class="active">Actions
+                <span class="caret"></span>
+              </a>
+              <div class="dropdown-menu">
+                <span class="icon-arrow-up tipsy3_0"></span>
+                <ul>
+                  <li *ngIf="!isSummaryView">
+                    <a href="javascript:;" (click)="openLookupModal()">Lookup by</a>
+                  </li>
+                  <li (click)="openRequestReport()" *ngIf="showReport && !isSummaryView">
+                    <a href="javascript:;" [class.disabled]="disableReport">Request Report</a>
+                  </li>
+                  <li class="dropdown-submenu" [ngClass]="{'disabled': disableDownload}">
+                    <a href="javascript:;" class="dropdown-toggle">Download</a>
+                    <ul class="dropdown-menu">
+                      <!-- <li>
+                        <a href="javascript:" (click)="exportToCsv()">CSV</a>
+                      </li> -->
+                      <li>
+                        <a href="javascript:" (click)="exportToExcel()">Excel</a>
+                      </li>
+                    </ul>
+                  </li>
+                  <li (click)="openRequestReport()" [ngClass]="{'disabled': reportAlert}" *ngIf="reportAlert">
+                    <a href="javascript:;">Line count exceeds 500K</a>
+                  </li>
+                </ul>
+              </div>
+            </li>
+            <li class="saveAs">
+              <a (click)="selectedRowsCount && openSaveQualificationModal()" [class.disabled]="!selectedRowsCount">
+                <span class="icon-save"></span>Save as Qualification
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      
+      <hr class="darkborder margin0" *ngIf="lookupComplete">
+      
+      <div class="row align-items-baseline" *ngIf="lookupComplete">
+        <!-- US197163 -->
+        <div class="col-md-6">
+          <ul class="filter-opt view-opt float-left">
+            <li [ngClass]="{'active': matchFilter === ''}">
+              <a class="all" href="javascript:" (click)="externalFilterChanged('')">All</a>
+            </li>
+            <li [ngClass]="{'active': matchFilter === 'matched'}" >
+              <a class="matched" href="javascript:" (click)="externalFilterChanged('matched')">Matched</a>
+            </li>
+            <li class="unmatched-btn" [ngClass]="{'active': matchFilter === 'unmatched'}">
+              <a class="unmatched" href="javascript:" (click)="externalFilterChanged('unmatched')">Unmatched</a>
+            </li>
+            <li class="">
+              <a class="pl-15" href="javascript:" (click)="openUnidentifiedModal()" *ngIf="unidentifiedPercent>0">Unidentified Data</a>
+            </li>
+            <li class="clear-btn">
+              <a class="clear" href="javascript:" (click)="clearLookup()">Clear Lookup</a>
+            </li>
+          </ul>
+        </div>
+        <div class="col-md-6"></div>
+      </div>
+      <!-- /US197163 -->
+
+    </div>
+  </div>
+</div>
+<!-- /filters-section -->
+
+<div class="main-table line-level-table">
+  <div *ngIf="showGrid">
+      <div class="container-fluid">
+        <ag-grid-angular #agGrid id="ag-grid" style="width: 100%;" appTableHeight fullScreen="{{headerService.fullScreen}}" class="ag-fresh table-height qualificationTable lineLevelTable"
+          [ngClass]="{'fullScreenTable': headerService.fullScreen}" [gridOptions]="gridOptions" [columnDefs]="columnDefs" [rowData]="rowData"
+          [showToolPanel]="showToolPanel" enableColResize enableSorting enableFilter groupHeaders suppressRowClickSelection toolPanelSuppressGroups
+          toolPanelSuppressValues debug="false" [headerHeight]="gridHeaderHeight" rowHeight="26" rowSelection="multiple" (modelUpdated)="onModelUpdated()" (cellClicked)="onCellClicked($event)"
+          (cellDoubleClicked)="onCellDoubleClicked($event)" (cellContextMenu)="onCellContextMenu($event)" (cellValueChanged)="onCellValueChanged($event)"
+          (cellFocused)="onCellFocused($event)" (rowSelected)="onRowSelected($event)" (selectionChanged)="onSelectionChanged()"
+          (beforeFilterChanged)="onBeforeFilterChanged()" (afterFilterChanged)="onAfterFilterChanged()" (filterModified)="onFilterModified()"
+          (beforeSortChanged)="onBeforeSortChanged()" (afterSortChanged)="onAfterSortChanged()" (sortChanged)="sortChanged()" (virtualRowRemoved)="onVirtualRowRemoved($event)"
+          (rowClicked)="onRowClicked($event)" (gridReady)="onReady($event)" (columnEverythingChanged)="onColumnEvent($event)" (columnRowGroupChanged)="onColumnEvent($event)"
+          (columnValueChanged)="onColumnEvent($event)" (columnMoved)="onColumnMoved($event)" (columnVisible)="onColumnVisible($event)"
+          (columnGroupOpened)="onColumnEvent($event)" (columnResized)="onColumnEvent($event)" (columnPinnedCountChanged)="onColumnEvent($event)" (cellMouseOver)="utilitiesService.onCellMouseOver($event)" (cellMouseOut)="utilitiesService.onCellMouseOut($event)" [overlayNoRowsTemplate]="agGridService.overlayNoRowsTemplate" [overlayLoadingTemplate]="agGridService.overlayLoadingTemplate" [defaultColDef]="agGridService.defaultColDef">
+        </ag-grid-angular>
+      </div>
+    <div class="paginationSize">
+      <label>View</label>
+      <select [(ngModel)]="dropdownsize" (change)="onPageSizeChanged(dropdownsize)">
+        <option [ngValue]="10">10</option>
+        <option [ngValue]="25">25</option>
+        <option [ngValue]="50" [selected]>50</option>
+        <option [ngValue]="100">100</option>
+        <option [ngValue]="500">500</option>
+        <option [ngValue]="1000">1000</option>
+      </select>
+    </div>
+    <div class="load-more">
+      <a href="javascript:" [attr.disabled]="disableLoadMore" (click)="!disableLoadMore && loadMore()" placement="top" ngbPopover="5000 records have been loaded, click to load more records" triggers="manual" #loadpopover="ngbPopover">
+        <i class="icon-load"></i>
+        <span>Load More</span>
+      </a>
+    </div>
+    <!-- <div class="load-more"><a href="javascript:" disabled1 (click)="showGridLoadingOverlay()" placement="top" ngbPopover="5000 records have been loaded, click to load more records" triggers="manual" #loadpopover="ngbPopover"><i class="icon-load"></i><span>Load More</span></a></div> -->
+    <span id="openLoadPopover" (click)="loadpopover.open()" style="display:none;">Open</span>
+    <span id="closeLoadPopover" (click)="loadpopover.close()" style="display:none;">Close</span>
+  </div>
+  <div class="gridFixedTabs">
+    <ul>
+      <li [ngClass]="{'active': (category === '')}">
+        <a href="javascript:" (click)="goToAll()">{{config.labels.all}}</a>
+      </li>
+      <li (clickOutside)="onClickedOutside($event)" [attachOutsideOnClick]="true" class="drop-down" *ngFor="let q of lineLevelTabs; let i = index"
+        [ngClass]="{'active': (category == q.qualificationHashId), 'has-edit': q.startedBy === userId}">
+        <a href="javascript:" (click)="getQualification(q)">{{q.qualificationName}}</a>
+        <i class="icon-arow-down" (click)="openEdit(i)" [ngClass]="{'active': (i == openEditList && editTab)}" *ngIf="q.startedBy === userId"></i>
+        <div class="bottom-dropdown dropdown-menu" [ngClass]="{'active': (i == openEditList && editTab)}" *ngIf="q.startedBy === userId">
+          <ul class="editTab">
+            <li (click)="openDeleteModal(i, q)">
+              <a>Delete</a>
+            </li>
+            <li (click)="openRenameModal(i, q)">
+              <a>Rename</a>
+            </li>
+          </ul>
+        </div>
+      </li>
+    </ul>
+  </div>
+</div>

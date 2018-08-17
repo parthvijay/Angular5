@@ -1,0 +1,930 @@
+[
+  {
+    "headerName": "",
+    "suppressSorting": true,
+    "suppressMenu": true,
+    "pinned": "left",
+    "checkboxSelection": true,
+    "suppressToolPanel": true,
+    "suppressMovable": true,
+    "suppressResize": true,
+    "headerCheckboxSelection": true,
+    "headerCheckboxSelectionFilteredOnly": true,
+    "width": 40,
+    "minWidth": 40
+  },
+  {
+    "headerName": "Serial Number / PAK Number",
+    "sort": "asc",
+    "suppressToolPanel": true,
+    "field": "serialNumber",
+    "width": 135,
+    "minWidth": 60
+  },
+  {
+    "headerName": "Covered / Uncovered",
+    "field": "coveredStatus",
+    "suppressSorting": true,
+    "filterParams": {
+      "cellHeight": 20
+    },
+    "width": 105,
+    "minWidth": 60
+  },
+  {
+    "headerName": "Covered Line Status",
+    "field": "coveredLineStatus",
+    "suppressSorting": true,
+    "filterParams": {
+      "cellHeight": 20
+    },
+    "width": 100,
+    "minWidth": 60
+  },
+  {
+    "headerName": "Architecture Group",
+    "field": "archGroup",
+    "suppressSorting": true,
+    "filterParams": {
+      "cellHeight": 20
+    },
+    "width": 130,
+    "minWidth": 60
+  },
+  {
+    "headerName": "Architecture Sub Group",
+    "field": "archSubGroup",
+    "suppressSorting": true,
+    "filterParams": {
+      "cellHeight": 20
+    },
+    "width": 120,
+    "minWidth": 60
+  },
+  {
+    "headerName": "Cisco One Suite",
+    "field": "ciscoOneSuite",
+    "suppressSorting": true,
+    "filterParams": {
+      "cellHeight": 20
+    },
+    "width": 120,
+    "minWidth": 60
+  },
+  {
+    "headerName": "Product Family",
+    "field": "productFamily",
+    "suppressSorting": true,
+    "filterParams": {
+      "cellHeight": 20
+    },
+    "width": 90,
+    "minWidth": 60
+  },
+  {
+    "headerName": "Product ID",
+    "field": "productID",
+    "suppressSorting": true,
+    "filterParams": {
+      "cellHeight": 20
+    },
+    "width": 105,
+    "minWidth": 60,
+    "cellClass": function (params) {
+          return localInstance.addUnmatchedClass(params, localInstance);
+    },
+    "headerClass": function (params) {
+          return localInstance.addColStateBorder(params, localInstance);
+    }
+  },
+  {
+    "headerName": "Product Description",
+    "field": "productDesc",
+    "suppressSorting": true,
+    "filterParams": {
+      "cellHeight": 20
+    },
+    "width": 215,
+    "minWidth": 60
+  },
+  {
+    "headerName": "Product Type",
+    "field": "productType",
+    "suppressSorting": true,
+    "filterParams": {
+      "cellHeight": 20
+    },
+    "width": 100,
+    "minWidth": 60
+  },
+  {
+    "headerName": "Item Quantity",
+    "field": "itemQuantity",
+    "suppressSorting": true,
+    "filterParams": {
+      "cellHeight": 20
+    },
+    "width": 90,
+    "minWidth": 60,
+    "cellRenderer": this.numberCellRendered
+  },
+  {
+    "headerName": "Coverage Start Date",
+    "field": "coverageStartDate",
+    "suppressSorting": true,
+    "filterParams": {
+      "cellHeight": 20
+    },
+    "width": 105,
+    "minWidth": 60,
+    "type": "numericColumn",
+    "cellRenderer": this.changeDateFormat
+  },
+  {
+    "headerName": "Coverage End Date",
+    "field": "coverageEndDate",
+    "suppressSorting": true,
+    "filterParams": {
+      "cellHeight": 20
+    },
+    "width": 105,
+    "minWidth": 60,
+    "type": "numericColumn",
+    "cellRenderer": this.changeDateFormat
+  },
+  {
+    "headerName": "Contract Type",
+    "field": "contractType",
+    "suppressSorting": true,
+    "filterParams": {
+      "cellHeight": 20
+    },
+    "width": 90,
+    "minWidth": 60
+  },
+  {
+    "headerName": "Contract Number",
+    "field": "contractNumber",
+    "suppressSorting": true,
+    "filterParams": {
+      "cellHeight": 20
+    },
+    "width": 90,
+    "minWidth": 60,
+    "cellClass": function (params) {
+          return localInstance.addUnmatchedClass(params, localInstance);
+    },
+    "headerClass": function (params) {
+          return localInstance.addColStateBorder(params, localInstance);
+    }
+  },
+  {
+    "headerName": "Covered Line End Date FY-FQ",
+    "field": "coveredLineEndDateFY",
+    "suppressSorting": true,
+    "filterParams": {
+      "cellHeight": 20
+    },
+    "width": 140,
+    "minWidth": 60
+  },
+  {
+    "headerName": "Ship Date",
+    "field": "shipDate",
+    "suppressSorting": true,
+    "filterParams": {
+      "cellHeight": 20
+    },
+    "width": 95,
+    "minWidth": 60,
+    "type": "numericColumn",
+    "cellRenderer": this.changeDateFormat
+  },
+  {
+    "headerName": "Shipped Date FY",
+    "field": "shippedDateFY",
+    "suppressSorting": true,
+    "filterParams": {
+      "cellHeight": 20
+    },
+    "width": 120,
+    "minWidth": 60
+  },
+  {
+    "headerName": "End of Product Sale Date",
+    "field": "eopsDate",
+    "suppressSorting": true,
+    "filterParams": {
+      "cellHeight": 20
+    },
+    "width": 150,
+    "minWidth": 60,
+    "type": "numericColumn",
+    "cellRenderer": this.changeDateFormat
+  },
+  {
+    "headerName": "Last Date of Support",
+    "field": "lastSupportDate",
+    "suppressSorting": true,
+    "filterParams": {
+      "cellHeight": 20
+    },
+    "width": 115,
+    "minWidth": 60,
+    "type": "numericColumn",
+    "cellRenderer": this.changeDateFormat
+  },
+  {
+    "headerName": "LDOS FY",
+    "field": "ldosFY",
+    "suppressSorting": true,
+    "filterParams": {
+      "cellHeight": 20
+    },
+    "width": 120,
+    "minWidth": 60
+  },
+  {
+    "headerName": "End of Life Product Bulletin",
+    "field": "endLifeProductBulletin",
+    "suppressSorting": true,
+    "filterParams": {
+      "cellHeight": 20
+    },
+    "width": 295,
+    "minWidth": 60
+  },
+  {
+    "headerName": "Warranty Type",
+    "field": "warrantyType",
+    "suppressSorting": true,
+    "filterParams": {
+      "cellHeight": 20
+    },
+    "width": 115,
+    "minWidth": 60
+  },
+  {
+    "headerName": "Warranty End Date",
+    "field": "warrantyEndDate",
+    "suppressSorting": true,
+    "filterParams": {
+      "cellHeight": 20
+    },
+    "width": 105,
+    "minWidth": 60,
+    "type": "numericColumn",
+    "cellRenderer": this.changeDateFormat
+  },
+  {
+    "headerName": "KTN Network Collected",
+    "field": "ktnNetworkCollected",
+    "suppressSorting": true,
+    "filterParams": {
+      "cellHeight": 20
+    },
+    "width": 120,
+    "minWidth": 60
+  },
+  {
+    "headerName": "Collection Date FY",
+    "field": "collectionDateFY",
+    "suppressSorting": true,
+    "filterParams": {
+      "cellHeight": 20
+    },
+    "width": 120,
+    "minWidth": 60
+  },
+  {
+    "headerName": "Install Site Customer Registry GU Name",
+    "field": "iscrGUName",
+    "suppressSorting": true,
+    "filterParams": {
+      "cellHeight": 20
+    },
+    "width": 190,
+    "minWidth": 60
+  },
+  {
+    "headerName": "Install Site Customer Registry Party Name",
+    "field": "iscrPartyName",
+    "suppressSorting": true,
+    "filterParams": {
+      "cellHeight": 20
+    },
+    "width": 190,
+    "minWidth": 60
+  },
+  {
+    "headerName": "Install Site Customer Registry Party ID",
+    "field": "iscrPartyId",
+    "suppressSorting": true,
+    "filterParams": {
+      "cellHeight": 20
+    },
+    "width": 190,
+    "minWidth": 60
+  },
+  {
+    "headerName": "Install Site Name",
+    "field": "installSiteName",
+    "suppressSorting": true,
+    "filterParams": {
+      "cellHeight": 20
+    },
+    "width": 115,
+    "minWidth": 60
+  },
+  {
+    "headerName": "Install Site ID",
+    "field": "installSiteId",
+    "suppressSorting": true,
+    "filterParams": {
+      "cellHeight": 20
+    },
+    "width": 110,
+    "minWidth": 60,
+    "cellClass": function (params) {
+          return localInstance.addUnmatchedClass(params, localInstance);
+    },
+    "headerClass": function (params) {
+          return localInstance.addColStateBorder(params, localInstance);
+    }
+  },
+  {
+    "headerName": "Install Site Address 1",
+    "field": "installSiteAddress",
+    "suppressSorting": true,
+    "filterParams": {
+      "cellHeight": 20
+    },
+    "width": 135,
+    "minWidth": 60
+  },
+  {
+    "headerName": "Install Site City",
+    "field": "installSiteCity",
+    "suppressSorting": true,
+    "filterParams": {
+      "cellHeight": 20
+    },
+    "width": 85,
+    "minWidth": 60
+  },
+  {
+    "headerName": "Install Site State",
+    "field": "installSiteState",
+    "suppressSorting": true,
+    "filterParams": {
+      "cellHeight": 20
+    },
+    "width": 92,
+    "minWidth": 60
+  },
+  {
+    "headerName": "Install Site Country",
+    "field": "installSiteCountry",
+    "suppressSorting": true,
+    "filterParams": {
+      "cellHeight": 20
+    },
+    "width": 110,
+    "minWidth": 60
+  },
+  {
+    "headerName": "Install Site Postal Code",
+    "field": "installSiteZip",
+    "suppressSorting": true,
+    "filterParams": {
+      "cellHeight": 20
+    },
+    "width": 115,
+    "minWidth": 60
+  },
+  {
+    "headerName": "Product Bill-to Partner Name",
+    "field": "productbilltoPN",
+    "suppressSorting": true,
+    "filterParams": {
+      "cellHeight": 20
+    },
+    "width": 140,
+    "minWidth": 60
+  },
+  {
+    "headerName": "Service Bill-to Partner Name",
+    "field": "servicebilltoPN",
+    "suppressSorting": true,
+    "filterParams": {
+      "cellHeight": 20
+    },
+    "width": 135,
+    "minWidth": 60
+  },
+  {
+    "headerName": "Product List Price $",
+    "field": "productListPrice",
+    "suppressSorting": true,
+    "filterParams": {
+      "cellHeight": 20
+    },
+    "width": 105,
+    "minWidth": 60,
+    "type": "numericColumn"
+  },
+  {
+    "headerName": "Default Service List Price $",
+    "field": "serviceListPrice",
+    "suppressSorting": true,
+    "filterParams": {
+      "cellHeight": 20
+    },
+    "width": 145,
+    "minWidth": 60,
+    "type": "numericColumn"
+  },
+  {
+    "headerName": "Existing Coverage Level List Price $",
+    "field": "existingCoveragePrice",
+    "suppressSorting": true,
+    "filterParams": {
+      "cellHeight": 20
+    },
+    "width": 165,
+    "minWidth": 60,
+    "type": "numericColumn"
+  },
+  {
+    "headerName": "Instance ID",
+    "field": "instanceId",
+    "suppressSorting": true,
+    "suppressToolPanel": true,
+    "filterParams": {
+      "cellHeight": 20
+    },
+    "width": 110,
+    "minWidth": 60
+  },
+  {
+    "headerName": "Parent Instance ID",
+    "field": "parentInstanceId",
+    "suppressSorting": true,
+    "filterParams": {
+      "cellHeight": 20
+    },
+    "width": 100,
+    "minWidth": 60
+  },
+  {
+    "headerName": "Product SO",
+    "field": "productSO",
+    "suppressSorting": true,
+    "filterParams": {
+      "cellHeight": 20
+    },
+    "width": 105,
+    "minWidth": 60
+  },
+  {
+    "headerName": "Service SO",
+    "field": "serviceSO",
+    "suppressSorting": true,
+    "filterParams": {
+      "cellHeight": 20
+    },
+    "width": 105,
+    "minWidth": 60
+  },
+  {
+    "headerName": "Mapped to SWSS (Y/N)",
+    "field": "mappedSwss",
+    "suppressSorting": true,
+    "filterParams": {
+      "cellHeight": 20
+    },
+    "width": 105,
+    "minWidth": 60
+  },
+  {
+    "headerName": "Mapped to C1 (Y/N)",
+    "field": "mappedtoC1",
+    "suppressSorting": true,
+    "filterParams": {
+      "cellHeight": 20
+    },
+    "width": 100,
+    "minWidth": 60
+  },
+  {
+    "headerName": "Data Audit Scoring",
+    "headerClass": "dataAudit",
+    "field": "dataAuditScoring",
+    "suppressSorting": true,
+    "filterParams": {
+      "cellHeight": 20
+    },
+    "width": 100,
+    "minWidth": 60
+  },
+  {
+    "headerName": "Additional Columns",
+    "headerClass": "additionalHeader",
+    "children": [
+      {
+        "headerName": "POS Distributor Name",
+        "headerClass": "additionalSubHeader",
+        "field": "posDistributorName",
+        "suppressSorting": true,
+        "cellClass": "additionalCell",
+        "toolPanelClass": "additionalCol",
+        "hide": true,
+        "filterParams": {
+          "cellHeight": 20
+        },
+        "width": 140,
+        "minWidth": 60
+      },
+      {
+        "headerName": "SWSS Attach Aging Buckets",
+        "headerClass": "additionalSubHeader",
+        "field": "sWSSAttachAgingBuckets",
+        "suppressSorting": true,
+        "cellClass": "additionalCell",
+        "toolPanelClass": "additionalCol",
+        "hide": true,
+        "filterParams": {
+          "cellHeight": 20
+        },
+        "width": 130,
+        "minWidth": 60
+      },
+      {
+        "headerName": "Cisco Booked Date",
+        "headerClass": "additionalSubHeader",
+        "field": "ciscoBookedDate",
+        "suppressSorting": true,
+        "cellClass": "additionalCell",
+        "toolPanelClass": "additionalCol",
+        "hide": true,
+        "filterParams": {
+          "cellHeight": 20
+        },
+        "width": 120,
+        "minWidth": 60,
+        "type": "numericColumn",
+        "cellRenderer": this.changeDateFormat
+      },
+      {
+        "headerName": "Suite",
+        "headerClass": "additionalSubHeader",
+        "field": "suite",
+        "suppressSorting": true,
+        "cellClass": "additionalCell",
+        "toolPanelClass": "additionalCol",
+        "hide": true,
+        "filterParams": {
+          "cellHeight": 20
+        },
+        "width": 90,
+        "minWidth": 60
+      },
+      {
+        "headerName": "Annuity Program",
+        "headerClass": "additionalSubHeader",
+        "field": "annuityProgram",
+        "suppressSorting": true,
+        "cellClass": "additionalCell",
+        "toolPanelClass": "additionalCol",
+        "hide": true,
+        "filterParams": {
+          "cellHeight": 20
+        },
+        "width": 120,
+        "minWidth": 60
+      },
+      {
+        "headerName": "Product Series",
+        "headerClass": "additionalSubHeader",
+        "field": "productSeries",
+        "suppressSorting": true,
+        "cellClass": "additionalCell",
+        "toolPanelClass": "additionalCol",
+        "hide": true,
+        "filterParams": {
+          "cellHeight": 20
+        },
+        "width": 120,
+        "minWidth": 60
+      },
+      {
+        "headerName": "UCSS Estimated End Date",
+        "headerClass": "additionalSubHeader",
+        "field": "uCSSEstimatedEndDate",
+        "suppressSorting": true,
+        "filterParams": {
+          "cellHeight": 20
+        },
+        "width": 140,
+        "minWidth": 60,
+        "type": "numericColumn",
+        "cellClass": "additionalCell",
+        "toolPanelClass": "additionalCol",
+        "hide": true,
+        "cellRenderer": this.changeDateFormat
+      },
+      {
+        "headerName": "ELA Flag",
+        "headerClass": "additionalSubHeader",
+        "field": "eLAFlag",
+        "suppressSorting": true,
+        "cellClass": "additionalCell",
+        "toolPanelClass": "additionalCol",
+        "hide": true,
+        "filterParams": {
+          "cellHeight": 20
+        },
+        "width": 120,
+        "minWidth": 60
+      },
+      {
+        "headerName": "Eligible Flag",
+        "headerClass": "additionalSubHeader",
+        "field": "eligibleFlag",
+        "suppressSorting": true,
+        "cellClass": "additionalCell",
+        "toolPanelClass": "additionalCol",
+        "hide": true,
+        "filterParams": {
+          "cellHeight": 20
+        },
+        "width": 120,
+        "minWidth": 60
+      },
+      {
+        "headerName": "Eligible Error Code",
+        "headerClass": "additionalSubHeader",
+        "field": "eligibleErrorCode",
+        "suppressSorting": true,
+        "cellClass": "additionalCell",
+        "toolPanelClass": "additionalCol",
+        "hide": true,
+        "filterParams": {
+          "cellHeight": 20
+        },
+        "width": 120,
+        "minWidth": 60
+      },
+      {
+        "headerName": "Parent Serial # / PAK #",
+        "headerClass": "additionalSubHeader",
+        "field": "parentSerial",
+        "suppressSorting": true,
+        "cellClass": "additionalCell",
+        "toolPanelClass": "additionalCol",
+        "hide": true,
+        "filterParams": {
+          "cellHeight": 20
+        },
+        "width": 120,
+        "minWidth": 60
+      },
+      {
+        "headerName": "Parent Contract #",
+        "headerClass": "additionalSubHeader",
+        "field": "parentContract",
+        "suppressSorting": true,
+        "cellClass": "additionalCell",
+        "toolPanelClass": "additionalCol",
+        "hide": true,
+        "filterParams": {
+          "cellHeight": 20
+        },
+        "width": 120,
+        "minWidth": 60
+      },
+      {
+        "headerName": "Parent Contract Type",
+        "headerClass": "additionalSubHeader",
+        "field": "parentContractType",
+        "suppressSorting": true,
+        "cellClass": "additionalCell",
+        "toolPanelClass": "additionalCol",
+        "hide": true,
+        "filterParams": {
+          "cellHeight": 20
+        },
+        "width": 130,
+        "minWidth": 60
+      },
+      {
+        "headerName": "Parent Covered Line Begin Date",
+        "headerClass": "additionalSubHeader",
+        "field": "parentCoveredLineBeginDate",
+        "suppressSorting": true,
+        "cellClass": "additionalCell",
+        "toolPanelClass": "additionalCol",
+        "hide": true,
+        "filterParams": {
+          "cellHeight": 20
+        },
+        "width": 140,
+        "minWidth": 60,
+        "type": "numericColumn",
+        "cellRenderer": this.changeDateFormat
+      },
+      {
+        "headerName": "Parent Covered Line End Date",
+        "headerClass": "additionalSubHeader",
+        "field": "parentCoveredLineEndDate",
+        "suppressSorting": true,
+        "cellClass": "additionalCell",
+        "toolPanelClass": "additionalCol",
+        "hide": true,
+        "filterParams": {
+          "cellHeight": 20
+        },
+        "width": 140,
+        "minWidth": 60,
+        "type": "numericColumn",
+        "cellRenderer": this.changeDateFormat
+      },
+      {
+        "headerName": "At POS / After POS",
+        "headerClass": "additionalSubHeader",
+        "field": "atPOSAfterPOS",
+        "suppressSorting": true,
+        "cellClass": "additionalCell",
+        "toolPanelClass": "additionalCol",
+        "hide": true,
+        "filterParams": {
+          "cellHeight": 20
+        },
+        "width": 120,
+        "minWidth": 60
+      },
+      {
+        "headerName": "Qualification Reason Attribute",
+        "headerClass": "additionalSubHeader",
+        "field": "qualReasonAttribute",
+        "suppressSorting": true,
+        "cellClass": "additionalCell",
+        "toolPanelClass": "additionalCol",
+        "hide": true,
+        "filterParams": {
+          "cellHeight": 20
+        },
+        "width": 150,
+        "minWidth": 60
+      },
+      {
+        "headerName": "Qualification Reason Attribute Value",
+        "headerClass": "additionalSubHeader",
+        "field": "qualReasonAttributeValue",
+        "suppressSorting": true,
+        "cellClass": "additionalCell",
+        "toolPanelClass": "additionalCol",
+        "hide": true,
+        "filterParams": {
+          "cellHeight": 20
+        },
+        "width": 180,
+        "minWidth": 60
+      },
+      {
+        "headerName": "SAV AM Name",
+        "headerClass": "additionalSubHeader",
+        "field": "savAMName",
+        "suppressSorting": true,
+        "cellClass": "additionalCell",
+        "toolPanelClass": "additionalCol",
+        "hide": true,
+        "filterParams": {
+          "cellHeight": 20
+        },
+        "width": 120,
+        "minWidth": 60
+      },
+      {
+        "headerName": "SAV Team Name",
+        "headerClass": "additionalSubHeader",
+        "field": "savTeamName",
+        "suppressSorting": true,
+        "cellClass": "additionalCell",
+        "toolPanelClass": "additionalCol",
+        "hide": true,
+        "filterParams": {
+          "cellHeight": 20
+        },
+        "width": 135,
+        "minWidth": 60
+      }
+    ]
+  },
+  {
+    "headerName": "Qualification",
+    "headerClass": "qualificationGroup",
+    "children": [
+      {
+        "headerName": "Stage",
+        "field": "qualificationStatus",
+        "suppressSorting": true,
+        "pinned": "right",
+        "filter": "text",
+        "minWidth": 70,
+        "maxWidth": 110,
+        "cellRenderer": "defaultQualificationStage",
+        "width": 125
+      },
+      {
+        "headerName": "Reason Code",
+        "field": "reasonCode",
+        "columnGroupShow": "open",
+        "suppressSorting": true,
+        "pinned": "right",
+        "filter": "text",
+        "minWidth": 70,
+        "maxWidth": 300,
+        "width": 115
+      },
+      {
+        "headerName": "Sub Reason Code",
+        "headerClass": "qualificationSubGroup",
+        "field": "subReasonCode",
+        "columnGroupShow": "open",
+        "suppressSorting": true,
+        "pinned": "right",
+        "filter": "text",
+        "minWidth": 70,
+        "maxWidth": 200,
+        "width": 145
+      }
+    ]
+  },
+  {
+    "headerName": "Comments",
+    "field": "comments",
+    "suppressSorting": true,
+    "pinned": "right",
+    "filterParams": {
+      "cellHeight": 20
+    },
+    "width": 100,
+    "minWidth": 60,
+    "maxWidth": 300
+  },
+  {
+    "headerName": "Qualification",
+    "children": [
+      {
+        "headerName": "Date Started",
+        "field": "qualificationStartedDate",
+        "suppressSorting": true,
+        "pinned": "right",
+        "filter": "text",
+        "width": 125,
+        "type": "numericColumn",
+        "minWidth": 70,
+        "maxWidth": 130
+      },
+      {
+        "headerName": "Started By",
+        "field": "qualificationStartedBy",
+        "columnGroupShow": "open",
+        "suppressSorting": true,
+        "pinned": "right",
+        "filter": "text",
+        "width": 115,
+        "minWidth": 70,
+        "maxWidth": 130
+      },
+    ]
+  },
+  {
+    "headerName": "Qualification",
+    "children": [
+      {
+        "headerName": "Date Modified",
+        "field": "modifiedDate",
+        "suppressSorting": true,
+        "pinned": "right",
+        "filter": "text",
+        "type": "numericColumn",
+        "width": 125,
+        "minWidth": 70,
+        "maxWidth": 130
+      },
+      {
+        "headerName": "Modified By",
+        "field": "modifiedName",
+        "columnGroupShow": "open",
+        "suppressSorting": true,
+        "pinned": "right",
+        "filter": "text",
+        "width": 110,
+        "minWidth": 70,
+        "maxWidth": 130
+      }
+    ]
+  }
+]

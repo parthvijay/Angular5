@@ -1,0 +1,98 @@
+<!-- Start Page Content Wrapper -->
+<section id="breadcrumbWrapper" class="breadcrumbWrapper">
+  <div class="container-fluid">
+    <div class="row align-items-center" [ngClass]="{'displayNone': (headerService.fullScreen)}">
+      <div class="col-lg-12" [ngClass]="{'full-screen': headerService.fullScreen}">
+        <ol class="breadcrumb m-0 pl-0">
+          <li class="breadcrumb-item"><a routerLink="/summary/{{isGlobal}}">Customers</a></li>
+          <li class="breadcrumb-item active" *ngIf="pageName === 'intermediate-summary'">Qualifications</li>
+          <li class="breadcrumb-item" *ngIf="pageName === 'line-level' && totalQualification > 0"><a routerLink="/intermediate-summary/{{customerID}}/{{isGlobal}}">Qualifications</a></li>
+          <li class="breadcrumb-item active" *ngIf="pageName === 'line-level' && qID === 'All'">All</li>
+          <li class="breadcrumb-item active" *ngIf="pageName === 'line-level' && qID !== 'All'" placement="top" ngbPopover="{{qualificationName}}" triggers="mouseenter:mouseleave">{{qualificationName}}</li>
+        </ol>
+      </div>
+    </div>
+    <div class="fullScreenBreadcrumb" [ngClass]="{'fullScreenMode': headerService.fullScreen}">
+      <div class="row">
+        <div class="col-lg-12 text-center">
+          <ol class="breadcrumb">
+            <li class="breadcrumb-item">
+              <a>{{customerName}}</a>
+            </li>
+            <!--li class="breadcrumb-item active">
+                                <div class="dropdown breadcrumbDropdown">
+                                <button aria-expanded="false" aria-haspopup="true" class="btn btn-secondary p-0 btn-sm dropdown-toggle" data-toggle="dropdown" id="breadcrumbDropdown" type="button">Wireless</button>
+                                <div aria-labelledby="breadcrumbDropdown" class="dropdown-menu">
+                                    <i class="tipsy"></i>
+                                    <a class="dropdown-item" href="#">Switching</a>
+                                    <a class="dropdown-item" href="#">Enterprise Networking</a>
+                                </div>
+                                </div>
+                            </li-->
+          </ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End of breadcrumbs -->
+
+<div class="clearfix"></div>
+<div id="page-content-wrapper" class="global-bookmark" [ngClass]="{'full-screen': headerService.fullScreen}">
+  <section id="subHeaderWrap" class="subHeaderWrap" [ngClass]="{'displayNone': (headerService.fullScreen)}">
+    <div class="container-fluid">
+
+      <!-- Main Drop Down -->
+      <div class="row">
+        <div class="col">
+          <div class="customerName" placement="top" ngbTooltip="{{customerName}}">{{customerName}}</div>
+          <!-- <div class="dropdown mainDropdown">
+            <button class="btn btn-secondary p-0 dropdown-toggle" type="button" id="mainDropdown" data-toggle="dropdown" aria-haspopup="true"
+              aria-expanded="false">{{customerName}}
+            </button>
+            <div class="dropdown-menu" aria-labelledby="mainDropdown">
+              <span class="icon-arrow-up">
+                <span class="path1"></span><span class="path2"></span>
+                </span>
+              <ul>
+                <li *ngFor="let c of customersList" [ngClass]="{'active': customerName == c.customerName}" (click)="getSelectedCustomer(c.customerName)">
+                  <a class="dropdown-item" routerLink="/{{pageName}}/{{c.customerId}}/{{c.qualificationId}}">
+                    <span class="ico-trending_chart"></span>{{c.customerName}}</a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="" (click)="viewMore()">
+                    <span class="ico-trending_chart"></span>View More</a>
+                </li>
+              </ul>
+            </div>
+          </div> -->
+          <div class="clearfix"></div>
+          <!--div class="dropdown subDropdown">
+                            <button class="btn btn-secondary p-0 btn-sm dropdown-toggle" type="button" id="subDropdown" data-toggle="dropdown" aria-haspopup="true"
+                                aria-expanded="false">
+                        Wireless
+                      </button>
+                            <div class="dropdown-menu" aria-labelledby="subDropdown">
+                                <i class="tipsy"></i>
+                                <a class="dropdown-item" href="#">Switching</a>
+                                <a class="dropdown-item" href="#">Enterprise Networking</a>
+                            </div>
+                        </div-->
+        </div>
+
+
+            <div class="text-right col-md-auto" *ngFor="let c of metadata;let i = index;">
+              <h4>{{c.title}}</h4>
+              <h2 class="digit">{{c.value}}</h2>
+            </div>
+            <div class="col-md-auto text-right globalButtonsWrap" *ngIf="pageName==='line-level' && manageLocation">
+              <button class="btn btn-secondary marginR0 manageLocation" type="button" (click)="manage()" [class.disabled]="!canManageLocation">Manage Location</button>
+              <span class="pendingRequestWrap"><a class="marginR0 requestAccess" (click)="requestAccess()" *ngIf="!isAccessRequested">Request Access</a>
+              <!-- <span class="requestStatus" *ngIf="isAccessRequested">Pending Approval</span> --></span>
+            </div>
+      </div>
+      <!-- Sub Drop Down -->
+    </div>
+  </section>
+  <!-- End of Sub - Header -->
+</div>

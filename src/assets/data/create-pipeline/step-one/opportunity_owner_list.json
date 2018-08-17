@@ -1,0 +1,17 @@
+[
+    {
+        "name": "Yopesh Gupta",
+        "territory": "APPLE DATA CENTER US yopgupta",
+        "isAccountOwner": ""
+    },
+    {
+        "name": "Marco Hogan",
+        "territory": "APPLE DATA CENTER US mhogan",
+        "isAccountOwner": 1
+    },
+    {
+        "name": "Bill Pay",
+        "territory": "APPLE DATA CENTER US - SVC (APPLE DATA CENTER US)",
+        "isAccountOwner": ""
+    }
+]

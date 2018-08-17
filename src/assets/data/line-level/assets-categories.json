@@ -1,0 +1,18 @@
+[
+  {
+    "id": "All",
+    "name": "All"
+  },
+  {
+    "id": "Contract",
+    "name": "Contract"
+  },
+  {
+    "id": "Product SO",
+    "name": "Product SO"
+  },
+  {
+    "id": "Service SO",
+    "name": "Service SO"
+  }
+]

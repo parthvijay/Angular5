@@ -1,0 +1,27 @@
+<div class="modal-header">
+  <h4 class="modal-title">Unidentified Data</h4>
+  <button type="button" class="icon-close-btn" aria-label="Close" (click)="activeModal.dismiss('Cross click')"></button>
+</div>
+<div class="modal-body unidentifed-body-text">
+  <p>
+    These are the columns that were not present in the Cisco Ready data for the Customer. Please check with your customer.
+  </p>
+  <ul class="pl-0">
+    <li class="grey-bg">
+      <span class="colname">Column Name</span>
+      <span class="unidentified float-right">Unidentified Data</span>
+    </li>
+    <li class="list-unstyled border-bottom-1">
+      <span class="pl-6">{{lookupService.colRadio === 'serialNumber' ? 'Serial Number' : 'Instance ID'}}</span>
+      <span class="percentage float-right">{{lookupService.unidentifiedPercent | number:'1.0-2'}}%</span>
+    </li>
+  </ul>
+</div>
+
+<div class="modal-footer unidentifed-footer">
+  <div class="btnns">
+    <button type="button" class="btn cancel-btn" (click)="activeModal.dismiss('Cancel click')">Cancel</button>
+    <button type="button" class="btn download-btn" (click)="download()">Download List</button>
+  </div>
+  <div class="clearfix"></div>
+</div>

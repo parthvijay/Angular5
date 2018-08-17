@@ -1,0 +1,7 @@
+.borderBottom0 { border-bottom: 0 ; }
+.modal-footer .floatNone { float: none ; margin: 0 auto; }
+.fixedCloseRight { position: absolute ; right: 20px ; top: 20px ; z-index: 99;}
+.padLR25 { padding: 25px 25px 0 25px;}
+.requestReport { text-align: center;}
+.requestReport .icon-mail-sent{ font-size: 76px;}
+.requestReport p { font-size: 16px; letter-spacing: 0.03em; line-height: 25px; }

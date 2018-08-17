@@ -1,0 +1,26 @@
+[
+    {
+        "id": "GU Site 1",
+        "name": "GU Site 1",
+        "details": {
+            "lineItems": 10,
+            "product_list": "343422",
+            "attach_list": "766543",
+            "renew_net": "125543",
+            "contracts_selected": 7,
+            "total_contracts": 7
+        }
+    },
+    {
+        "id": "GU Site 2",
+        "name": "GU Site 2",
+        "details": {
+            "lineItems": 30,
+            "product_list": "143512",
+            "attach_list": "265513",
+            "renew_net": "923183",
+            "contracts_selected": 4,
+            "total_contracts": 4
+        }
+    }
+]

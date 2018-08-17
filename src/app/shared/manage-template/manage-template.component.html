@@ -1,0 +1,45 @@
+<ul class="filter-opt view-opt float-left">
+  <li>
+    <div class="manage-template dropdown">
+      <label>Manage Template</label>
+      <h5>
+        <span class="nameTemplate">{{activeTemplate}}</span>
+        <span class="icon-arrow"></span>
+      </h5>
+      <div class="dropdown-menu">
+        <span class="icon-arrow-up tipsy3_0"></span>
+        <h3>Manage Template</h3>
+        <div class="form-group txt" *ngIf="templates.length<4">
+          <input appElementFocus class="form-control" id="createNew" name="createNew" type="text" [(ngModel)]="createNew" maxlength="50">
+          <label class="form-control-placeholder" for="createNew">Create New</label>
+        </div>
+        <div class="note" *ngIf="templates.length>=4">
+          <strong>Note:</strong> Only 5 templates allowed, please use and rename any of the 5 templates available.
+        </div>
+        <div class="choose-exisiting">
+          <h4>Choose an exisiting template</h4>
+          <ul class="choose-existing">
+            <li class="active" [ngClass]="{'active': activeTemplate==='Default Template'}">
+              <a href="javascript:" (click)="selectTemplate({'name': 'Default Template'});">Default Template</a>
+            </li>
+            <li *ngFor="let c of templates" [ngClass]="{'active': activeTemplate===c.viewName, 'edit-mode': c.editMode}">
+              <a href="javascript:" (click)="selectTemplate(c);" *ngIf="!c.editMode">{{c.viewName}}</a>
+              <input type="text" class="form-control" *ngIf="c.editMode" [(ngModel)]="c.newName" maxlength="50">
+              <span *ngIf="!c.editMode">
+                <!-- <i class="icon-edit" (click)="c.newName = c.name; c.editMode = true"></i> -->
+                <i class="icon-delete" (click)="deleteTemplate(c);"></i>
+              </span>
+              <span *ngIf="c.editMode">
+                <i class="icon-cross" (click)="c.newName = c.name; c.editMode = false"></i>
+                <i class="icon-tick" (click)="c.name = c.newName; c.editMode = false"></i>
+              </span>
+            </li>
+          </ul>
+        </div>
+        <div class="modal-footer">
+          <button class="btn btn-primary" type="button" (click)="saveTemplate();">{{createNew ? 'Create' : 'Update'}}</button>
+        </div>
+      </div>
+    </div>
+  </li>
+</ul>

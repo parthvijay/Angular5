@@ -1,0 +1,156 @@
+<div id="page-content-wrapper">
+    <div class="freezed-container">
+        <div class="grey-background">
+            <div class="clearfix" style="position:relative;">
+                <div class="container-fluid filter-switch">
+                    <!-- Opportunities/Performance switch -->
+                    <div class="row marginT10 marginB10">
+                        <div class="col-lg-12">
+                            <a routerLink="/intermediate-summary/{{customerName}}/{{global}}" class="refresh-back-btn marginT5">
+                                <span class="ico-left-arrow-sm hvr-icon-pop"><span class="path1"></span><span class="path2"></span><span class="path3"></span></span>
+                                <span class="back-btn-txt" (click)="createPipelineService.clearAllStepValues()">Back to Qualifications</span>
+                            </a>
+                        </div>
+                    </div>
+                    <!-- <div class="row">
+                      <div class="col-xs-12 paddingR0 view-account">
+                        <filter-detail get-data="getData()" sidebar-active-toggle="sidebarActiveToggle()" template="views/applied-filters.html"></filter-detail>
+                      </div>
+                  </div>
+              </div> -->
+                    <!-- Opportunities/Performance switch -->
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--freezed-container-->
+    <div class="container-fluid tabContent">
+        <form>
+            <div class="steps-container">
+                <div class="steps-heading">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="steps-head-left">
+                                <a class="paddingT5" href="javascript:void(0)">{{customerName}}</a>
+                            </div>
+                            <div class="steps-head-right">
+                                <!--<div class="search-sec"><input type="text" placeholder="Search"><span class="ico-search"></span></div>-->
+                                <div class="form-group heading-dropdown marginR0 m-0">
+                                    <label for="OpportunityStage">Best Site GU</label>
+                                    <div class="input-drop select-input input-dropdown">
+                                        <!-- <ol class="nya-bs-select btn-group" title="Select" data-selected-text-format="values">
+                                        <button class="btn btn-default dropdown-toggle pt-0 pb-0 text-left" type="button">
+                                            <span class="pull-left filter-option">
+                                                <span class="ng-scope">GU Site 1</span>
+                                            </span>
+                                            <span class="pull-left special-title">Select</span>&nbsp;</button>
+                                        <div class="dropdown-menu">
+                                            <div class="bs-actionsbox">
+                                                <div class="btn-group btn-group-sm btn-block">
+                                                    <button type="button" class="actions-btn bs-select-all btn btn-default">Select All</button>
+                                                    <button type="button" class="actions-btn bs-deselect-all btn btn-default">Deselect All</button>
+                                                </div>
+                                            </div>
+                                            <ul class="dropdown-menu inner">
+                                                <li class="">
+                                                    <a tabindex="0">GU Site 1</a>
+                                                </li>
+                                                <li class="">
+                                                    <a tabindex="0">GU Site 2</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </ol> -->
+                                        <ss-multiselect-dropdown [options]="selectedGUSiteOptions" [(ngModel)]="selectedGUSite" [settings]="mySettings" name="selectedGUSite"
+                                            [texts]="myTexts" (ngModelChange)="guSiteChange(selectedGUSite)"></ss-multiselect-dropdown>
+                                    </div>
+                                </div>
+                                <!--<ul class="filter-opt filter-opt-list view-filter paddingT5">
+                              <li><a href="">Available</a></li>                                    
+                              <li class="active"><a href="javascript:void(0)">Pipeline</a></li>
+                          </ul>-->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="steps-detail">
+                    <div class="row">
+                        <div class="col-lg-12 text-right paddingR0">
+                            <div class="usd-value paddingR15">Value shown in USD</div>
+                        </div>
+
+                        <div class="col-lg-12" *ngIf="showErrorMsg">
+                            <div class="alert-danger warning">
+                                <span class="ico-danger">
+                                    <span class="path1"></span><span class="path2"></span>
+                                </span>
+                                <span>{{errorMsg}}</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <!--div class="col-lg-6">
+                            <div class="view-detail-chart">
+                                <app-pie-chart *ngIf="chartData" [data]="chartData" [active]="active" (onActiveChange)="updateActive($event)"></app-pie-chart>
+                            </div>
+                        </div-->
+                        <div class="col-lg-12">
+                            <div class="row view-chart-detail">
+                                <div class="col-lg-4">
+                                    <div class="chart-detail-info">
+                                        <h6>${{guSiteDetailsObj.product_list | number}}</h6>
+                                        <span>Product List</span>
+                                    </div>
+
+                                    <div class="chart-detail-info">
+                                        <h6>{{guSiteDetailsObj.total_contracts}}</h6>
+                                        <span>Total Contracts
+                                            <a href="javascript:" (click)="openContractsModal()">Details</a>
+                                        </span>
+                                    </div>
+                                </div>
+
+                                <div class="col-lg-4">    
+                                    <div class="chart-detail-info">
+                                        <h6>${{guSiteDetailsObj.attach_list | number}}</h6>
+                                        <span>Attach List</span>
+                                    </div>
+
+                                    <div class="chart-detail-info">
+                                        <h6>{{guSiteDetailsObj.contracts_selected}}</h6>
+                                        <span>Contracts Selected</span>
+                                    </div>
+                                </div>
+
+                                <div class="col-lg-4">
+                                    <div class="chart-detail-info">
+                                        <h6>${{guSiteDetailsObj.renew_net | number}}</h6>
+                                        <span>Renew Net</span>
+                                    </div>                                
+                                    
+                                    <div class="chart-detail-info">
+                                        <h6>{{guSiteDetailsObj.lineItems}}</h6>
+                                        <span>Line Items Selected</span>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--steps-container-->
+        </form>
+        <div class="clearfix marginT10 marginB30 text-right view-detail-btn">
+            <span class="disclaimer">
+                <span class="mandatory">*</span>
+                <strong>Disclaimer:</strong> Values might not be updated immediately</span>
+            <a class="button stroke-btn blue marginB10 marginR10 cp-btn" routerLink="/intermediate-summary/{{customerName}}/{{global}}" (click)="createPipelineService.clearAllStepValues()">Cancel</a>
+            <!-- <a class="button filled-btn blue marginB10" routerLink="/create-pipeline/one">Create Pipeline</a> -->
+            <a class="button filled-btn blue marginB10 cp-btn" (click)="goToStepOne()" *ngIf="!hasProxy">Create Pipeline</a>
+            <!-- <a class="button filled-btn blue marginB10" (click)="goToStepOne()">Create Pipeline</a> -->
+            <a class="button filled-btn blue marginB10 disabled cp-btn" *ngIf="hasProxy">Create Pipeline</a>
+        </div>
+
+    </div>
+</div>

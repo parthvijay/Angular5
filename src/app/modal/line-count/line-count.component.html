@@ -1,0 +1,15 @@
+<!--Start Common Modal Window-->
+<div class="modal-header borderBottom0">
+  <button type="button" class="icon-close-btn fixedCloseRight" aria-label="Close" (click)="activeModal.dismiss('Cross click')"></button>
+</div>
+<div class="modal-body">
+  <div class="lineCount">
+    <span class="icon-warning-info"><span class="path1"></span><span class="path2"></span>
+      </span>
+    <p class="text-center padLR30">Line count exceeds 500K. <br/>You need to apply filters from 'All' tab.</p>
+  </div>
+</div>
+<div class="modal-footer">
+  <button type="button" class="btn btn-primary floatNone" data-dismiss="modal" (click)="allTab()">Go to 'All' tab</button>
+</div>
+<!--End Common Modal Window-->

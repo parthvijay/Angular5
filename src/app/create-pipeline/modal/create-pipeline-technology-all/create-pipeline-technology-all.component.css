@@ -1,0 +1,12 @@
+.modal-header h1 { font-size: 20px; position: relative; width: 100%; padding-right: 30px; }
+.modal-header h1 a.modal-close { position: absolute; right: -8px; top: -6px; }
+.modal-header .ico-close_bg { font-size: 32px; }
+.modal-body, .modal-footer { padding:15px 24px; }
+.fixed-head.asset-view .stroke-btn { margin-top:-2px; }
+.product-list span.ico-collapse, .product-list span.ico-expand { margin:-3px 6px 0 -20px; }
+.ico-close_bg .path1 { right: 4px; position: relative; }
+.hvr-icon-pop:hover, .hvr-icon-pop:focus, .hvr-icon-pop:active, .show-filter:hover .hvr-icon-pop, .show-filter:focus .hvr-icon-pop, .show-filter:active .hvr-icon-pop, .dropdown.help:hover .hvr-icon-pop, .dropdown.announcements:hover .hvr-icon-pop, .dropdown.feedback:hover .hvr-icon-pop, .help-link:focus .hvr-icon-pop, .help-link:active .hvr-icon-pop, .bookmark-hvr:hover .hvr-icon-pop, .bookmark-hvr:focus .hvr-icon-pop, .bookmark-hvr:active .hvr-icon-pop, .dropdown.apps:hover .hvr-icon-pop, .help-link:focus .hvr-icon-pop, .help-link:active .hvr-icon-pop, .activeDrill:hover .hvr-icon-pop, .refresh-back-btn:hover .hvr-icon-pop, .bookmark-opt:hover .hvr-icon-pop, .ico-download_bg:focus .hvr-icon-pop, .ico-download_bg:active .hvr-icon-pop, .ico-download_bg:hover .hvr-icon-pop {
+-webkit-animation-name: hvr-icon-pop; animation-name: hvr-icon-pop; -webkit-animation-duration: 0.3s; animation-duration: 0.3s; -webkit-animation-timing-function: linear; animation-timing-function: linear; -webkit-animation-iteration-count: 1; animation-iteration-count: 1; }
+.hvr-icon-pop { width: 28px; height: 28px; display: inline-block; -webkit-transform: translateZ(0); transform: translateZ(0); box-shadow: 0 0 1px rgba(0, 0, 0, 0); -moz-osx-font-smoothing: grayscale; position: relative; -webkit-transition-duration: 0.3s; transition-duration: 0.3s; }
+.all-tech input[type="checkbox"] {left: initial; position: initial; vertical-align: middle;}
+.all-tech input[type="checkbox"] + label { /*display:none;*/ position: relative; left: -17px; top: 1px; }

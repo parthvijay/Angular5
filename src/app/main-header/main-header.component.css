@@ -1,0 +1,103 @@
+header {height:65px; background-color:#fff; width:100%; padding:13px 0px 4px; position:relative; }
+/*  Logo  */
+.navbar-brand { line-height:normal; height:32px; font-size:100%; }
+.navbar-brand span { display:inline-block; }
+.navbar-brand span.site-logo { float:left; margin-right:16px; }
+.navbar-brand span.site-title { padding-top:0; }
+.navbar-brand span h2 { font-size:11px; font-family:'CiscoSans'; color:#58585b; letter-spacing:1.4px; font-weight:100; }
+.navbar-brand span h3 { font-size:20px; font-family:'CiscoSans'; color:#58585b; letter-spacing:0.03em; font-weight:700 ; }
+/*  End of Logo  */
+.posAbsolute { position:absolute; }
+/*  Center Navigation  */
+.posAbsolute.navTopCustom { left:60px; top:12px;}
+.sfdc-header .posAbsolute.navTopCustom { left:0;}
+.nav.navbar-nav.navTopCustom a { border-bottom:4px solid transparent; font-size:20px; }
+header nav.navbar .navbar-nav.navTopCustom > li {margin:3px 0px 0; padding:0 8px 0; font-size:14px; }
+.navbar-nav.ml-auto.rightNav.text-center{margin-top:0px;}
+.nav-item .ico-info { cursor: pointer; display: inline-block; font-size: 16px; opacity: 1; transition: all 0.5s ease 0s; vertical-align: top; margin: 0; height: 15px; width:15px; position:absolute; top: -2px; right: -3px; z-index:99999; }
+nav .navTopCustom .dropdown .dropdown-menu { border: 1px solid rgba(0,0,0,.15); background: #303c48; width: 240px; padding: 0 !important; }
+nav .navTopCustom .dropdown-menu > li:hover, 
+nav .navTopCustom .dropdown-menu > li:hover a { background: transparent; }
+nav .navTopCustom .dropdown .dropdown-menu { font-size: 14px; line-height: 14px; top: 28px; left: 8px; }
+nav .navTopCustom .dropdown .dropdown-menu .dropdown-main-head, 
+nav .navTopCustom .dropdown .dropdown-menu .dropdown-sub-head{ padding:0px; }
+nav .navTopCustom .dropdown .dropdown-menu .dropdown-main-head:hover { background-color: transparent; }
+nav .navTopCustom .dropdown .dropdown-menu .dropdown-main-head a{ color: #fff !important; padding: 11px 15px!important; border-bottom: 1px solid rgba(255,255,255,0.3); font-weight: 400 !important; width: 100%; float: left; font-style: 14px !important; letter-spacing: 1px; }
+nav .navTopCustom .dropdown .dropdown-menu .dropdown-main-head > a { background-color: #3e4654 !important; }
+nav .navTopCustom .dropdown .dropdown-menu .dropdown-main-head ul { float: left; width: 100%; }
+nav .navTopCustom .dropdown .dropdown-menu .dropdown-main-head ul li, 
+nav .navTopCustom .dropdown .dropdown-menu .dropdown-main-head ul li ul li { float: left; width: 100%; }
+nav .navTopCustom .dropdown .dropdown-menu .dropdown-main-head ul li ul li { padding-left: 15px; }
+nav .navTopCustom .dropdown .dropdown-menu .dropdown-main-head ul li ul li:hover, nav .navTopCustom .dropdown .dropdown-menu .dropdown-main-head ul li ul li:hover { background-color: #3e4654 !important; -webkit-transition:all 0.5s ease; -moz-transition:all 0.5s ease; -o-transition:all 0.5s ease; transition:all 0.5s ease 0s; }
+nav .navTopCustom .dropdown .dropdown-menu .dropdown-main-head ul li a, 
+nav .navTopCustom .dropdown .dropdown-menu .dropdown-main-head ul li ul li a { border-bottom: 0; }
+nav .navTopCustom .dropdown .dropdown-menu .dropdown-main-head ul li ul li a { padding-left: 30px; }
+nav .navTopCustom .dropdown .dropdown-menu .dropdown-main-head ul li { padding:0px; }
+nav .navTopCustom .dropdown .dropdown-menu a { padding: 11px 10px; }
+nav .navTopCustom .dropdown .dropdown-menu li.dropdown-main-head a { border-bottom: 1px solid rgba(255,255,255,0.3);}
+nav .navTopCustom .dropdown .dropdown-menu li:hover, nav .dropdown .dropdown-menu li:hover a { background-color: transparent !important; }
+header nav.navbar .navbar-nav.navTopCustom > li > a { padding:0px 8px 19px;line-height:14px; font-size:16px;text-transform:uppercase; letter-spacing:1px; font-weight:100; }
+header .navbar-nav.navTopCustom > li > a { color:#58585b; text-align:center; -webkit-transition:all 0.5s ease; -moz-transition:all 0.5s ease; -o-transition:all 0.5s ease; transition:all 0.5s ease 0s; vertical-align:middle; display:inline-block; border-bottom:4px solid transparent; font-family:"CiscoSans"; font-weight:300; }
+header .navbar-nav.navTopCustom > .active > a, header .navbar-nav.navTopCustom > .active > a:focus, header .navbar-nav.navTopCustom > .active > a:hover, header .navbar-nav.navTopCustom > li > a:hover { color:#049fd9; border-bottom:solid 4px #049fd9; background-color:transparent; }
+/*  End of Center Navigation  */
+
+/*  Right Side Navigation  */
+header nav.navbar .navbar-nav.rightNav > li:first-child{ margin:0px 0px; /*border-right:1px solid #f2f3f6;*/ padding-right:5px;}
+header nav.navbar .navbar-nav.rightNav .dropdown.profile { margin:4px 15px 0px 15px; }
+.user-desname { float: left; width: 100%; white-space: nowrap; }
+header nav.navbar .navbar-nav.rightNav > li > a .user-name { color:#58585b; display:inline-block; padding:0 15px 0 0; font-size:13px; font-weight:400; margin-top:5px; position: relative; overflow: hidden; white-space: nowrap; text-overflow: ellipsis; max-width: 120px; }
+header nav.navbar .navbar-nav.rightNav > li.dropdown.profile.proxy-active { text-align: left; margin-top: 2px; margin-right:10px; padding-right: 0;  }
+header nav.navbar .navbar-nav.rightNav > li.dropdown.profile.proxy-active > a .user-name { margin-top:0px; position: relative; top: -4px; }
+header nav.navbar .navbar-nav.rightNav > li.dropdown.profile.proxy-active > a { display: block; max-width: 130px; overflow: hidden; text-overflow: ellipsis; padding-right: 10px; }
+header nav.navbar .navbar-nav.rightNav .dropdown a .ico-dropdown { position: absolute; right: 0; }
+header nav.navbar .navbar-nav.rightNav > li > a .ico-dropdown:before { color:#58585b; }
+header nav.navbar .navbar-nav.rightNav > li > a:hover .user-name,header nav.navbar .navbar-nav.rightNav > li > a:hover .ico-dropdown:before{ color:#00BCEB; }
+header nav.navbar .navbar-nav.rightNav .dropdown a .ico-dropdown { font-size:10px; margin-left:10px; margin-top:4px; }
+.rightNav .dropdown-menu.profile-links .icon-arrow-up { font-size:9px; right:16px; top:-9px; }
+@supports (-webkit-appearance:none) { .rightNav .dropdown-menu.profile-links .icon-arrow-up { top:-8px; } }
+/*  End of Profile Tab  */
+header nav.navbar li:hover a span.hvr-icon-pop { background-color:#eee; border-color: transparent; }
+header nav.navbar li a span.icon-txt { color:#58585b; display:block; opacity:1; transition:all 0.5s ease 0s; line-height:14px; font-size:11px; letter-spacing:0.03em; font-family:'CiscoSans' !important; margin-top: 3px; }
+header nav.navbar li a:hover span.icon-txt { font-family:'CiscoSans'; }
+.ico-app .path2::before, .ico-app .path3::before { color:#00BCEB; }
+.ico-help .path2::before, .ico-help .path3::before{ color:#00BCEB; }
+.ico-app .path2::before, .ico-app .path3::before:hover{ color:#039CD6; }
+.ico-help .path2::before, .ico-help .path3::before:hover{ color:#039CD6; }
+
+/*  Icons Css  */
+header .navbar-nav.rightNav .dropdown .dropdown-menu > li, header .navbar-nav.rightNav .dropdown .dropdown-menu > li ul li { transition:all 0.9s ease 0s; }
+header .navbar-nav.rightNav .dropdown .dropdown-menu > li ul li:hover { background-color:#ececec; display:flex; width:100%; }
+header .navbar-nav.rightNav .dropdown.profile .dropdown-menu.profile-links li.dropdown-profile:hover { background-color:transparent; color:#58585b !important; }
+header .navbar-nav.rightNav .dropdown.lastLi { margin-right:0; }
+header .navbar-nav.rightNav .dropdown.lastLi .dropdown-menu > li:hover { background-color:#ececec; display:flex; width:100%; }
+header .navbar-nav.rightNav .dropdown.apps .dropdown-menu > li .app-img { display:inline-block; margin-right:15px; vertical-align:top; width:11%; }
+header .navbar-nav.rightNav .dropdown.apps .dropdown-menu > li .app-heading { display:inline-block; width:83%; }
+header .navbar-nav.rightNav .dropdown.apps .dropdown-menu > li h5 span { display:inline-block; font-family:"CiscoSans"; font-size:16px; padding:0; vertical-align:top; }
+header .navbar-nav.rightNav .dropdown.apps .dropdown-menu > li .app-heading .ico-trending_chart { display:none; font-size:20px; font-weight:bold; margin:-7px 0 0; vertical-align:middle; }
+header .navbar-nav.rightNav .dropdown.apps .dropdown-menu > li.active .app-heading .ico-trending_chart { display:inline-block; }
+header .navbar-nav.rightNav .dropdown.apps .dropdown-menu > li h5 { font-size:16px; }
+header .navbar-nav.rightNav .dropdown.apps .dropdown-menu > li p { font-family:"CiscoSans"; font-size:13px; }
+
+/*  End of Right Side Navigation  */ 
+.dropdown:not(.main-nav-dropdown):hover .dropdown-menu, .dropdown.main-nav-dropdown .campaign-nav:hover .dropdown-menu { display:block; opacity:0; }
+.navTopCustom .nav-item.dropdown.action a:hover ~ span.ico-info ~ .dropdown-menu { display:block; opacity:0; }
+.navTopCustom .nav-item.dropdown.action a ~ span.ico-info:hover ~ .dropdown-menu { display: none !important; opacity:0; }
+
+/*  Profile Dropdown width Proxy Addition  */
+.dropdown-profile { padding-top: 0 ; }
+ .dropdown-menu.profile-links li { float: left; width: 100%; position: relative; }
+ .dropdown-menu.profile-links li.amView.active:hover .icon-check:before { color:#fff;}
+.dropdown-profile span.smallTxt {margin-bottom:0px;}
+.proxyUserTitle { color: #58585B; font-size:14px; font-weight: 700; }
+.userInfoListItem { background-color: #f2f3f6; float:left; width: 100%; background-color: #f2f3f6 !important; }
+.userInfoListItem:hover { background-color: #f2f3f6 !important; }
+.userInfoListItem span { float:left; width: 100%; letter-spacing: 0.01em; }
+.smallTxt, .userPost { font-size:11px; color: #999; float:left; width: 100%; }
+.username { font-size:13px; font-weight: 700; color: #049fd9; margin-top: 5px; }
+/*  Profile Dropdown width Proxy Addition  */
+.dropdown-menu .icon-arrow-up.tipsy3_0 { width: 15px; height: 10px; right: 16px; top: -8px; }
+
+@media (min-width:1200px) and (max-width:1270px) {   
+header nav.navbar .navbar-nav.navTopCustom > li > a{ padding:0px 5px 15px;}
+.posAbsolute.navTopCustom{ top:16px}
+}

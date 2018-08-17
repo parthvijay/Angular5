@@ -1,0 +1,20 @@
+.notifyToAm-body-text p{font-size: 16px;color: #58585b;line-height: normal;letter-spacing: 0.033em;font-weight: 300;}
+.notifyToAm-body-text{padding: 21px 25px 28px 25px;}
+.notifyToAmTitle { float: left; width: 100%; }
+.notifyToAm-body-text .grey-bg{background-color: #f3f3f3;padding: 7px 15px 8px 15px; }
+.colname { padding-left:30px; }
+.colname, .notifyToAm{font-size: 13px !important;color: #58585b !important;letter-spacing: 0.03px; text-transform: uppercase; font-weight: 400; }
+.border-bottom-1 {border-bottom:1px solid #C6C6C6;}
+.notifyToAm-body-text ul { overflow-x: auto; overflow-y: auto; max-height: 250px; float: left; width: 100%; border-bottom:1px solid #C6C6C6; }
+.notifyToAm-body-text li { padding:10px 15px 6px 15px;color:#58585b;font-size: 16px; font-weight: 300; }
+.notifyToAm-body-text li label { margin-bottom: 0; }
+.notifyToAm-body-text li .percentage { padding-left: 10px; }
+
+.disclaimerText { float: left; width: 100%; padding: 15px 0; color: #999; }
+.disclaimerText .limitExceeded { color: #e12826; }
+
+.notifyToAm-footer{padding: 11px 24px 20px !important;}
+.notifyToAm-footer .btn{padding-right: 26px;padding-left: 26px;}
+.btn .cancel-btn {margin-right: 6px !important;border: 1px solid #00B9E9;color: #00B9E9;cursor: pointer;}
+.btn {width: 50%;}
+

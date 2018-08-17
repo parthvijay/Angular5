@@ -1,0 +1,939 @@
+{
+    "bookmarks": [
+        {
+            "id": "817",
+            "name": "Canada for Refresh FY17Q3",
+            "startDate": "2017-07-10",
+            "endDate": "2017-07-14",
+            "modifiedDate": "2017-07-07 12:45:31.170000000",
+            "createDate": "2017-07-07 12:45:31.170000000",
+            "description": "test 4",
+            "isFavourite": false,
+            "filter": [
+                [
+                    {
+                        "title": "Coverage",
+                        "coverage": "All",
+                        "categoryId": "coverage"
+                    },
+                    {
+                        "title": "Network Collection",
+                        "categoryId": "network",
+                        "network": "All"
+                    }
+                ],
+                [
+                    {
+                        "selected": [],
+                        "title": "Sales",
+                        "progressive": true,
+                        "levels": [
+                            []
+                        ],
+                        "active": true,
+                        "slug": "sales",
+                        "type": "dropdown",
+                        "searchable": [
+                            false,
+                            false,
+                            false,
+                            false,
+                            false,
+                            false,
+                            true,
+                            true
+                        ],
+                        "levels_name": [
+                            "Sales Level 1",
+                            "Sales Level 2",
+                            "Sales Level 3",
+                            "Sales Level 4",
+                            "Sales Level 5",
+                            "Sales Level 6",
+                            "Account Manager",
+                            "SAV Account"
+                        ]
+                    },
+                    {
+                        "selected": [],
+                        "title": "Account",
+                        "progressive": false,
+                        "levels": [
+                            [],
+                            [],
+                            [],
+                            [],
+                            [],
+                            []
+                        ],
+                        "active": false,
+                        "slug": "account",
+                        "type": "dropdown",
+                        "searchable": [
+                            true,
+                            true,
+                            false,
+                            false,
+                            true,
+                            false
+                        ],
+                        "levels_name": [
+                            "SAV Account",
+                            "Install Site",
+                            "Country",
+                            "Segment",
+                            "Partner",
+                            "Territory Coverage"
+                        ]
+                    },
+                    {
+                        "selected": [],
+                        "title": "Product",
+                        "progressive": true,
+                        "levels": [
+                            [],
+                            [],
+                            [],
+                            [],
+                            [],
+                            []
+                        ],
+                        "active": false,
+                        "slug": "product",
+                        "type": "dropdown",
+                        "searchable": [
+                            false,
+                            false,
+                            true,
+                            true,
+                            false,
+                            false
+                        ],
+                        "levels_name": [
+                            "Architecture",
+                            "Sub-Architecture",
+                            "Product Family",
+                            "Product ID",
+                            "Product Type",
+                            "Warranty"
+                        ]
+                    },
+                    {
+                        "title": "Dates",
+                        "active": false,
+                        "categories": [
+                            {
+                                "title": "EoS Date",
+                                "rangeTo": null,
+                                "direction": null,
+                                "month": null,
+                                "period": null,
+                                "rangeFrom": null
+                            },
+                            {
+                                "title": "LDoS Date",
+                                "rangeTo": null,
+                                "direction": null,
+                                "month": null,
+                                "period": null,
+                                "rangeFrom": null
+                            },
+                            {
+                                "title": "Shipment Date",
+                                "rangeTo": null,
+                                "direction": null,
+                                "month": null,
+                                "period": null,
+                                "rangeFrom": null
+                            }
+                        ],
+                        "type": "date"
+                    },
+                    {
+                        "title": "Status",
+                        "active": false,
+                        "categories": [
+                            {
+                                "selected": "All",
+                                "title": "Coverage"
+                            },
+                            {
+                                "selected": "All",
+                                "title": "Network Collection"
+                            }
+                        ],
+                        "type": "status",
+                        "options": [
+                            "All",
+                            "Yes",
+                            "No"
+                        ]
+                    }
+                ]
+            ],
+            "urlDetails": {
+                "salesHub": null,
+                "appUrl": "/sales/analysis/all",
+                "currentDashboardView": true,
+                "definition": null,
+                "view": "All Opportunities",
+                "additionalInfo": ""
+            },
+            "hashId": "31839B036F63806CBA3F47B93AF8CCB5",
+            "createdBy": "Sunil Chandra",
+            "userId": "sunchand",
+            "isGlobal": false,
+            "isPublic": false,
+            "isModified": false,
+            "isRegional": false
+        },
+        {
+            "id": "816",
+            "name": "Security for Refresh FY17Q3",
+            "startDate": "2017-07-07",
+            "endDate": "9999-12-31",
+            "modifiedDate": "2017-07-07 12:36:12.944000000",
+            "createDate": "2017-07-07 12:36:12.944000000",
+            "description": "test 3",
+            "isFavourite": false,
+            "filter": [
+                [
+                    {
+                        "title": "Coverage",
+                        "coverage": "All",
+                        "categoryId": "coverage"
+                    },
+                    {
+                        "title": "Network Collection",
+                        "categoryId": "network",
+                        "network": "All"
+                    }
+                ],
+                [
+                    {
+                        "selected": [],
+                        "title": "Sales",
+                        "progressive": true,
+                        "levels": [
+                            []
+                        ],
+                        "active": true,
+                        "slug": "sales",
+                        "type": "dropdown",
+                        "searchable": [
+                            false,
+                            false,
+                            false,
+                            false,
+                            false,
+                            false,
+                            true,
+                            true
+                        ],
+                        "levels_name": [
+                            "Sales Level 1",
+                            "Sales Level 2",
+                            "Sales Level 3",
+                            "Sales Level 4",
+                            "Sales Level 5",
+                            "Sales Level 6",
+                            "Account Manager",
+                            "SAV Account"
+                        ]
+                    },
+                    {
+                        "selected": [],
+                        "title": "Account",
+                        "progressive": false,
+                        "levels": [
+                            [],
+                            [],
+                            [],
+                            [],
+                            [],
+                            []
+                        ],
+                        "active": false,
+                        "slug": "account",
+                        "type": "dropdown",
+                        "searchable": [
+                            true,
+                            true,
+                            false,
+                            false,
+                            true,
+                            false
+                        ],
+                        "levels_name": [
+                            "SAV Account",
+                            "Install Site",
+                            "Country",
+                            "Segment",
+                            "Partner",
+                            "Territory Coverage"
+                        ]
+                    },
+                    {
+                        "selected": [],
+                        "title": "Product",
+                        "progressive": true,
+                        "levels": [
+                            [],
+                            [],
+                            [],
+                            [],
+                            [],
+                            []
+                        ],
+                        "active": false,
+                        "slug": "product",
+                        "type": "dropdown",
+                        "searchable": [
+                            false,
+                            false,
+                            true,
+                            true,
+                            false,
+                            false
+                        ],
+                        "levels_name": [
+                            "Architecture",
+                            "Sub-Architecture",
+                            "Product Family",
+                            "Product ID",
+                            "Product Type",
+                            "Warranty"
+                        ]
+                    },
+                    {
+                        "title": "Dates",
+                        "active": false,
+                        "categories": [
+                            {
+                                "title": "EoS Date",
+                                "rangeTo": null,
+                                "direction": null,
+                                "month": null,
+                                "period": null,
+                                "rangeFrom": null
+                            },
+                            {
+                                "title": "LDoS Date",
+                                "rangeTo": null,
+                                "direction": null,
+                                "month": null,
+                                "period": null,
+                                "rangeFrom": null
+                            },
+                            {
+                                "title": "Shipment Date",
+                                "rangeTo": null,
+                                "direction": null,
+                                "month": null,
+                                "period": null,
+                                "rangeFrom": null
+                            }
+                        ],
+                        "type": "date"
+                    },
+                    {
+                        "title": "Status",
+                        "active": false,
+                        "categories": [
+                            {
+                                "selected": "All",
+                                "title": "Coverage"
+                            },
+                            {
+                                "selected": "All",
+                                "title": "Network Collection"
+                            }
+                        ],
+                        "type": "status",
+                        "options": [
+                            "All",
+                            "Yes",
+                            "No"
+                        ]
+                    }
+                ]
+            ],
+            "urlDetails": {
+                "salesHub": null,
+                "appUrl": "/sales/analysis/all",
+                "currentDashboardView": true,
+                "definition": null,
+                "view": "All Opportunities",
+                "additionalInfo": ""
+            },
+            "hashId": "43FA7F58B7EAC7AC872209342E62E8F1",
+            "createdBy": "Sunil Chandra",
+            "userId": "sunchand",
+            "isGlobal": false,
+            "isPublic": false,
+            "isModified": false,
+            "isRegional": false
+        },
+        {
+            "id": "815",
+            "name": "Enterprise for Refresh FY17Q3",
+            "startDate": "2017-07-07",
+            "endDate": "2017-09-01",
+            "modifiedDate": "2017-07-07 12:33:09.496000000",
+            "createDate": "2017-07-07 12:33:09.496000000",
+            "description": "Test 2",
+            "isFavourite": false,
+            "filter": [
+                [
+                    {
+                        "title": "Coverage",
+                        "coverage": "All",
+                        "categoryId": "coverage"
+                    },
+                    {
+                        "title": "Network Collection",
+                        "categoryId": "network",
+                        "network": "All"
+                    }
+                ],
+                [
+                    {
+                        "selected": [],
+                        "title": "Sales",
+                        "progressive": true,
+                        "levels": [
+                            []
+                        ],
+                        "active": true,
+                        "slug": "sales",
+                        "type": "dropdown",
+                        "searchable": [
+                            false,
+                            false,
+                            false,
+                            false,
+                            false,
+                            false,
+                            true,
+                            true
+                        ],
+                        "levels_name": [
+                            "Sales Level 1",
+                            "Sales Level 2",
+                            "Sales Level 3",
+                            "Sales Level 4",
+                            "Sales Level 5",
+                            "Sales Level 6",
+                            "Account Manager",
+                            "SAV Account"
+                        ]
+                    },
+                    {
+                        "selected": [],
+                        "title": "Account",
+                        "progressive": false,
+                        "levels": [
+                            [],
+                            [],
+                            [],
+                            [],
+                            [],
+                            []
+                        ],
+                        "active": false,
+                        "slug": "account",
+                        "type": "dropdown",
+                        "searchable": [
+                            true,
+                            true,
+                            false,
+                            false,
+                            true,
+                            false
+                        ],
+                        "levels_name": [
+                            "SAV Account",
+                            "Install Site",
+                            "Country",
+                            "Segment",
+                            "Partner",
+                            "Territory Coverage"
+                        ]
+                    },
+                    {
+                        "selected": [],
+                        "title": "Product",
+                        "progressive": true,
+                        "levels": [
+                            [],
+                            [],
+                            [],
+                            [],
+                            [],
+                            []
+                        ],
+                        "active": false,
+                        "slug": "product",
+                        "type": "dropdown",
+                        "searchable": [
+                            false,
+                            false,
+                            true,
+                            true,
+                            false,
+                            false
+                        ],
+                        "levels_name": [
+                            "Architecture",
+                            "Sub-Architecture",
+                            "Product Family",
+                            "Product ID",
+                            "Product Type",
+                            "Warranty"
+                        ]
+                    },
+                    {
+                        "title": "Dates",
+                        "active": false,
+                        "categories": [
+                            {
+                                "title": "EoS Date",
+                                "rangeTo": null,
+                                "direction": null,
+                                "month": null,
+                                "period": null,
+                                "rangeFrom": null
+                            },
+                            {
+                                "title": "LDoS Date",
+                                "rangeTo": null,
+                                "direction": null,
+                                "month": null,
+                                "period": null,
+                                "rangeFrom": null
+                            },
+                            {
+                                "title": "Shipment Date",
+                                "rangeTo": null,
+                                "direction": null,
+                                "month": null,
+                                "period": null,
+                                "rangeFrom": null
+                            }
+                        ],
+                        "type": "date"
+                    },
+                    {
+                        "title": "Status",
+                        "active": false,
+                        "categories": [
+                            {
+                                "selected": "All",
+                                "title": "Coverage"
+                            },
+                            {
+                                "selected": "All",
+                                "title": "Network Collection"
+                            }
+                        ],
+                        "type": "status",
+                        "options": [
+                            "All",
+                            "Yes",
+                            "No"
+                        ]
+                    }
+                ]
+            ],
+            "urlDetails": {
+                "salesHub": null,
+                "appUrl": "/sales/analysis/all",
+                "currentDashboardView": true,
+                "definition": null,
+                "view": "All Opportunities",
+                "additionalInfo": ""
+            },
+            "hashId": "71AD16AD2C4D81F348082FF6C4B20768",
+            "createdBy": "Sunil Chandra",
+            "userId": "sunchand",
+            "isGlobal": false,
+            "isPublic": false,
+            "isModified": false,
+            "isRegional": false
+        },
+        {
+            "id": "805",
+            "name": "Americas for Refresh FY17Q3",
+            "startDate": "2017-07-06",
+            "endDate": "2017-07-28",
+            "modifiedDate": "2017-07-06 14:14:41.123000000",
+            "createDate": "2017-07-06 14:14:41.123000000",
+            "description": "another test",
+            "isFavourite": false,
+            "filter": [
+                [
+                    {
+                        "title": "Coverage",
+                        "coverage": "All",
+                        "categoryId": "coverage"
+                    },
+                    {
+                        "title": "Network Collection",
+                        "categoryId": "network",
+                        "network": "All"
+                    }
+                ],
+                [
+                    {
+                        "selected": [],
+                        "title": "Sales",
+                        "progressive": true,
+                        "levels": [
+                            []
+                        ],
+                        "active": true,
+                        "slug": "sales",
+                        "type": "dropdown",
+                        "searchable": [
+                            false,
+                            false,
+                            false,
+                            false,
+                            false,
+                            false,
+                            true,
+                            true
+                        ],
+                        "levels_name": [
+                            "Sales Level 1",
+                            "Sales Level 2",
+                            "Sales Level 3",
+                            "Sales Level 4",
+                            "Sales Level 5",
+                            "Sales Level 6",
+                            "Account Manager",
+                            "SAV Account"
+                        ]
+                    },
+                    {
+                        "selected": [],
+                        "title": "Account",
+                        "progressive": false,
+                        "levels": [
+                            [],
+                            [],
+                            [],
+                            [],
+                            [],
+                            []
+                        ],
+                        "active": false,
+                        "slug": "account",
+                        "type": "dropdown",
+                        "searchable": [
+                            true,
+                            true,
+                            false,
+                            false,
+                            true,
+                            false
+                        ],
+                        "levels_name": [
+                            "SAV Account",
+                            "Install Site",
+                            "Country",
+                            "Segment",
+                            "Partner",
+                            "Territory Coverage"
+                        ]
+                    },
+                    {
+                        "selected": [],
+                        "title": "Product",
+                        "progressive": true,
+                        "levels": [
+                            [],
+                            [],
+                            [],
+                            [],
+                            [],
+                            []
+                        ],
+                        "active": false,
+                        "slug": "product",
+                        "type": "dropdown",
+                        "searchable": [
+                            false,
+                            false,
+                            true,
+                            true,
+                            false,
+                            false
+                        ],
+                        "levels_name": [
+                            "Architecture",
+                            "Sub-Architecture",
+                            "Product Family",
+                            "Product ID",
+                            "Product Type",
+                            "Warranty"
+                        ]
+                    },
+                    {
+                        "title": "Dates",
+                        "active": false,
+                        "categories": [
+                            {
+                                "title": "EoS Date",
+                                "rangeTo": null,
+                                "direction": null,
+                                "month": null,
+                                "period": null,
+                                "rangeFrom": null
+                            },
+                            {
+                                "title": "LDoS Date",
+                                "rangeTo": null,
+                                "direction": null,
+                                "month": null,
+                                "period": null,
+                                "rangeFrom": null
+                            },
+                            {
+                                "title": "Shipment Date",
+                                "rangeTo": null,
+                                "direction": null,
+                                "month": null,
+                                "period": null,
+                                "rangeFrom": null
+                            }
+                        ],
+                        "type": "date"
+                    },
+                    {
+                        "title": "Status",
+                        "active": false,
+                        "categories": [
+                            {
+                                "selected": "All",
+                                "title": "Coverage"
+                            },
+                            {
+                                "selected": "All",
+                                "title": "Network Collection"
+                            }
+                        ],
+                        "type": "status",
+                        "options": [
+                            "All",
+                            "Yes",
+                            "No"
+                        ]
+                    }
+                ]
+            ],
+            "urlDetails": {
+                "salesHub": null,
+                "appUrl": "/sales/analysis/all",
+                "currentDashboardView": true,
+                "definition": null,
+                "view": "All Opportunities",
+                "additionalInfo": ""
+            },
+            "hashId": "846C260D715E5B854FFAD5F70A516C88",
+            "createdBy": "Sunil Chandra",
+            "userId": "sunchand",
+            "isGlobal": false,
+            "isPublic": false,
+            "isModified": false,
+            "isRegional": false
+        },
+        {
+            "id": "804",
+            "name": "Canada for Refresh FY17Q3 - Collab",
+            "startDate": "2017-07-06",
+            "endDate": "2017-07-28",
+            "modifiedDate": "2017-07-06 14:12:01.623000000",
+            "createDate": "2017-07-06 14:12:01.623000000",
+            "description": "test",
+            "isFavourite": false,
+            "filter": [
+                [
+                    {
+                        "title": "Coverage",
+                        "coverage": "All",
+                        "categoryId": "coverage"
+                    },
+                    {
+                        "title": "Network Collection",
+                        "categoryId": "network",
+                        "network": "All"
+                    }
+                ],
+                [
+                    {
+                        "selected": [],
+                        "title": "Sales",
+                        "progressive": true,
+                        "levels": [
+                            []
+                        ],
+                        "active": true,
+                        "slug": "sales",
+                        "type": "dropdown",
+                        "searchable": [
+                            false,
+                            false,
+                            false,
+                            false,
+                            false,
+                            false,
+                            true,
+                            true
+                        ],
+                        "levels_name": [
+                            "Sales Level 1",
+                            "Sales Level 2",
+                            "Sales Level 3",
+                            "Sales Level 4",
+                            "Sales Level 5",
+                            "Sales Level 6",
+                            "Account Manager",
+                            "SAV Account"
+                        ]
+                    },
+                    {
+                        "selected": [],
+                        "title": "Account",
+                        "progressive": false,
+                        "levels": [
+                            [],
+                            [],
+                            [],
+                            [],
+                            [],
+                            []
+                        ],
+                        "active": false,
+                        "slug": "account",
+                        "type": "dropdown",
+                        "searchable": [
+                            true,
+                            true,
+                            false,
+                            false,
+                            true,
+                            false
+                        ],
+                        "levels_name": [
+                            "SAV Account",
+                            "Install Site",
+                            "Country",
+                            "Segment",
+                            "Partner",
+                            "Territory Coverage"
+                        ]
+                    },
+                    {
+                        "selected": [],
+                        "title": "Product",
+                        "progressive": true,
+                        "levels": [
+                            [],
+                            [],
+                            [],
+                            [],
+                            [],
+                            []
+                        ],
+                        "active": false,
+                        "slug": "product",
+                        "type": "dropdown",
+                        "searchable": [
+                            false,
+                            false,
+                            true,
+                            true,
+                            false,
+                            false
+                        ],
+                        "levels_name": [
+                            "Architecture",
+                            "Sub-Architecture",
+                            "Product Family",
+                            "Product ID",
+                            "Product Type",
+                            "Warranty"
+                        ]
+                    },
+                    {
+                        "title": "Dates",
+                        "active": false,
+                        "categories": [
+                            {
+                                "title": "EoS Date",
+                                "rangeTo": null,
+                                "direction": null,
+                                "month": null,
+                                "period": null,
+                                "rangeFrom": null
+                            },
+                            {
+                                "title": "LDoS Date",
+                                "rangeTo": null,
+                                "direction": null,
+                                "month": null,
+                                "period": null,
+                                "rangeFrom": null
+                            },
+                            {
+                                "title": "Shipment Date",
+                                "rangeTo": null,
+                                "direction": null,
+                                "month": null,
+                                "period": null,
+                                "rangeFrom": null
+                            }
+                        ],
+                        "type": "date"
+                    },
+                    {
+                        "title": "Status",
+                        "active": false,
+                        "categories": [
+                            {
+                                "selected": "All",
+                                "title": "Coverage"
+                            },
+                            {
+                                "selected": "All",
+                                "title": "Network Collection"
+                            }
+                        ],
+                        "type": "status",
+                        "options": [
+                            "All",
+                            "Yes",
+                            "No"
+                        ]
+                    }
+                ]
+            ],
+            "urlDetails": {
+                "salesHub": null,
+                "appUrl": "/sales/analysis/all",
+                "currentDashboardView": true,
+                "definition": null,
+                "view": "All Opportunities",
+                "additionalInfo": ""
+            },
+            "hashId": "DC5689792E08EB2E219DCE49E64C885B",
+            "createdBy": "Sunil Chandra",
+            "userId": "sunchand",
+            "isGlobal": false,
+            "isPublic": false,
+            "isModified": false,
+            "isRegional": false
+        }
+    ]
+}

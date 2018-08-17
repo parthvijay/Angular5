@@ -1,0 +1,32 @@
+<!--Start Common Modal Window-->
+<div class="modal-header">
+  <h5 class="modal-title" id="exampleModalLabel">Save Qualification</h5>
+  <button type="button" class="icon-close-btn" aria-label="Close" (click)="activeModal.dismiss('Cross click')"></button>
+</div>
+<div class="modal-body">
+  <form>
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="form-group">
+          <input class="form-control" name="newQualificationName" [(ngModel)]="newQualificationName" type="text"  class="form-control" required="" (keyup)="qualSelected = ''; saveCreate = 'Create'" appElementFocus id="newQualificationName" />
+          <label for="newQualificationName" class="form-control-placeholder">Create New</label>
+        </div>
+      </div>
+    </div>
+
+    <div class="existing">
+      <h3>Or move selected lines to existing qualification</h3>
+      <ul>
+        <li *ngFor="let q of lineLevelTabsList" [ngClass]="{'active': qualSelected == q.qualificationName}" (click)="selectQualification(q)">
+          <a>{{q.qualificationName}}</a>
+          <i class="icon-check"></i>
+        </li>
+      </ul>
+    </div>
+  </form>
+</div>
+<div class="modal-footer">
+  <button type="button" class="btn btn-secondary" (click)="activeModal.dismiss('Cancel click')">Cancel</button>
+  <button type="button" class="btn btn-primary" data-dismiss="modal" (click)="closeSaveAs()">{{saveCreate}}</button>
+</div>
+<!--End Common Modal Window-->

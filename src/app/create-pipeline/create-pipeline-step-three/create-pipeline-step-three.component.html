@@ -1,0 +1,233 @@
+<div id="page-content-wrapper">
+    <div class="freezed-container">
+        <div class="grey-background">
+            <div class="clearfix" style="position:relative;">
+                <div class="container-fluid filter-switch">
+                    <!-- Opportunities/Performance switch -->
+                    <div class="row marginT10 marginB10">
+                        <div class="col-lg-12">
+                            <a (click)="returnUrl()" class="refresh-back-btn marginT5">
+                                <span class="ico-left-arrow-sm hvr-icon-pop"><span class="path1"></span><span class="path2"></span><span class="path3"></span></span>
+                                <span class="back-btn-txt" (click)="createPipelineService.clearAllStepValues()">{{backUrlText}}</span>
+                            </a>
+                        </div>
+                    </div>
+                    <!-- <div class="row">
+                        <div class="col-xs-12 paddingR0 view-account">
+                          <filter-detail get-data="getData()" sidebar-active-toggle="sidebarActiveToggle()" template="views/applied-filters.html"></filter-detail>
+                        </div>
+                    </div>
+                </div> -->
+                    <!-- Opportunities/Performance switch -->
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--freezed-container-->
+    <div class="container-fluid tabContent">
+        <div class="steps-container">
+            <div class="steps-heading">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <h3>Convert to Pipeline - Step 3 of 3</h3>
+                    </div>
+                </div>
+            </div>
+            <div class="steps-detail">
+                <div class="block-left single-row">
+                    <div class="usd-value marginR0 marginB10">Value shown in USD</div>
+                    <p>Review your selections</p>
+                    <div class="row marginB15">
+                        <div class="col-md-6 col-sm-12">
+                            <div class="review-opp-detail">
+                                <label>Opportunity Name:</label>
+                                <span>{{createPipelineService.opp_name}}</span>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-sm-12">
+                            <div class="review-opp-detail">
+                                <label>Opportunity Stage:</label>
+                                <span>{{createPipelineService.opportunity}}</span>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-sm-12">
+                            <div class="review-opp-detail">
+                                <label>Account Name:</label>
+                                <span>{{createPipelineService.accountName}}</span>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-sm-12">
+                            <div class="review-opp-detail">
+                                <label>Account Owner:</label>
+                                <span>{{createPipelineService.accountOwnerName}}</span>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-sm-12">
+                            <div class="review-opp-detail">
+                                <label>Opportunity Owner:</label>
+                                <span>{{createPipelineService.oppOwner.name}}</span>
+                            </div>
+                        </div>
+
+                        <div class="col-md-6 col-sm-12">
+                            <div class="review-opp-detail">
+                                <label>Forecasting Position:</label>
+                                <span>{{createPipelineService.oppOwner.territory}}</span>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-sm-12">
+                            <div class="review-opp-detail">
+                                <label>Expected Book Date:</label>
+                                <span>{{createPipelineService.selectedDate.month}}/{{createPipelineService.selectedDate.day}}/{{createPipelineService.selectedDate.year}}</span>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-sm-12">
+                            <div class="review-opp-detail">
+                                <label>Install Base Type:</label>
+                                <span>{{createPipelineService.installBase}}</span>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-sm-12">
+                            <div class="review-opp-detail">
+                                <label>Expected Product Amount:</label>
+                                <span>${{createPipelineService.ExpectedProductValue}}</span>
+                                <span *ngIf="!createPipelineService.ExpectedProductValue">$0</span>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-sm-12">
+                            <div class="review-opp-detail">
+                                <label>Expected Service Amount:</label>
+                                <span>${{createPipelineService.ExpectedServiceValue}}</span>
+                                <span *ngIf="!createPipelineService.ExpectedServiceValue">$0</span>
+                            </div>
+                        </div>
+                        
+                    </div>
+                    <h6 class="table-head no-border-head">Technologies</h6>
+                    <div class="table-responsive expanded">
+                        <table class="table border-table table-fixedheader opp-by sav-table table-fixed1 striped-table marginB0
+                                step-table">
+                            <thead>
+                                <tr>
+                                    <th style="">Business Entity/Sub Entity</th>
+                                    <th style="">Product Family</th>
+                                    <th class="text-right" style="width:140px">Allocation %</th>
+                                    <th style="width:210px" class="text-right">Expected Product Amount</th>
+                                </tr>
+                            </thead>
+                            <tbody class="borderB0 norecordTbody">
+                                <!-- <tr class="no-record">
+                                        <td colspan="5" class="text-center borderR0">No technologies are selected. You can add it by search.</td>
+                                    </tr> -->
+                                <tr *ngFor="let key of objectKeys(createPipelineService.newOpurtunity.selectedTechnologies);">
+                                    <td class="col-tbody-1">
+                                        {{key}}</td>
+                                    <td class="col-tbody-2">
+                                        <div *ngFor="let option of createPipelineService.newOpurtunity.selectedTechnologies[key].options">{{option.key}}
+                                            <br>
+                                        </div>
+                                    </td>
+                                    <td class="text-right col-tbody-3" data-ng-class="{'highlight-td' : !createPipelineService.newOpurtunity.selectedTechnologies[key].value >0}">
+                                        <span class="highlight-bar"></span>
+                                        {{createPipelineService.newOpurtunity.selectedTechnologies[key].value}}
+                                    </td>
+                                    <td class="text-right col-tbody-4">
+                                        {{createPipelineService.getAllocationValue(createPipelineService.ExpectedProductValue, createPipelineService.newOpurtunity.selectedTechnologies[key].value)}}
+                                    </td>
+                                </tr>
+
+                                <tr class="no-record" *ngIf="!objectKeys(createPipelineService.newOpurtunity.selectedTechnologies).length">
+                                        <td colspan="4" class="text-center borderR0">No Records</td>
+                                    </tr>
+
+                            </tbody>
+                        </table>
+                    </div>
+
+
+                    <h6 class="table-head marginT15 no-border-head">Services</h6>
+                    <div class="table-responsive expanded marginB30">
+                        <table class="table border-table opp-by sav-table table-fixedheader table-fixed1 striped-table marginB0">
+                            <thead>
+                                <tr>
+                                    <th style="">Service Program</th>
+                                    <th style="">Service Level</th>
+                                    <th style="">Service Category</th>
+                                    <th class="text-right" style="width:140px;">Allocation %</th>
+                                    <th class="text-right" style="width:210px;">Expected Service Amount</th>
+                                </tr>
+                            </thead>
+                            <tbody class="borderB0 norecordTbody">
+                                <tr *ngFor="let key of objectKeys(createPipelineService.newOpurtunity.selectedServices);">
+                                    <td class="col-tbody-1">
+                                        {{key}}</td>
+                                    <td class="text-left highlight-td col-tbody-2">
+                                        <!-- <span class="highlight-bar"></span> -->
+                                        <div class="form-group">
+                                            {{createPipelineService.newOpurtunity.selectedServices[key].serviceLevelSelected}}
+                                        </div>
+                                        <!--<div class="form-group">
+                                                <div class="select-input select-sm input-block input-dropdown marginB0 service-dropdown">
+                                                    <ol class="nya-bs-select serviceLevelList" ng-model="val.serviceLevelSelected" data-title="Select">
+                                                        <li class="nya-bs-option" nya-bs-option="level in val.serviceLevel" data-value="level.name">
+                                                            <a>{{level.name }}</a>
+                                                        </li>
+                                                    </ol>
+                                                </div>
+                                            </div> -->
+                                    </td>
+                                    <td class="text-left highlight-td col-tbody-3">
+                                        <span class="highlight-bar" *ngIf="!createPipelineService.newOpurtunity.selectedServices[key].serviceCategorySelected && false"></span>
+                                        <div class="form-group">
+                                            {{createPipelineService.newOpurtunity.selectedServices[key].serviceCategorySelected}}
+                                        </div>
+                                        <!-- <div class="form-group">
+                                                <div class="select-input select-sm input-block input-dropdown marginB0 service-dropdown">
+                                                    <ol class="nya-bs-select" ng-model="val.serviceCategorySelected" data-title="Select">
+                                                        <li class="nya-bs-option" nya-bs-option="category in val.serviceCategory" data-value="category.name">
+                                                            <a>{{category.name}}</a>
+                                                        </li>
+                                                    </ol>
+                                                </div>
+                                            </div> -->
+                                    </td>
+                                    <td class="text-right col-tbody-4" data-ng-class="{'highlight-td' : !createPipelineService.newOpurtunity.selectedServices[key].value >0}">
+                                        <!-- <span class="highlight-bar"></span> -->
+
+                                        {{createPipelineService.newOpurtunity.selectedServices[key].value}}
+                                    </td>
+                                    <td class="text-right highlight-td col-tbody-5">{{createPipelineService.getAllocationValue(createPipelineService.ExpectedServiceValue,
+                                        createPipelineService.newOpurtunity.selectedServices[key].value)}}
+                                    </td>
+                                </tr>
+
+                                <tr class="no-record" *ngIf="!objectKeys(createPipelineService.newOpurtunity.selectedServices).length">
+                                        <td colspan="5" class="text-center borderR0">No Records</td>
+                                    </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--steps-container-->
+        <div class="col-lg-12" *ngIf="showErrorMsg">
+            <div class="alert-danger warning">
+                <span class="ico-danger">
+                    <span class="path1"></span><span class="path2"></span>
+                </span>
+                <span>{{errorMsg}}</span>
+            </div>
+        </div>
+        <div class="clearfix marginT10 marginB30 text-right view-detail-btn">
+            <!-- <span class="disclaimer">
+                <span class="mandatory">*</span>
+                <strong>Disclaimer:</strong> Values might not be updated immediately</span> -->
+            <a class="button stroke-btn blue marginB10 marginR10 cp-btn" (click)="createPipelineService.clearAllStepValues(); returnUrl()">Cancel</a>
+            <a class="button filled-btn blue marginR10 marginB10 cp-btn" routerLink="{{stepTwoUrl}}">Previous</a>
+            <a class="button filled-btn blue marginB10 cp-btn" (click)="createPipeline()" *ngIf="isValid">Create New Pipeline</a>
+            <a class="button filled-btn blue marginB10 disabled cp-btn" *ngIf="!isValid">Create New Pipeline</a>
+        </div>
+
+    </div>
+</div>

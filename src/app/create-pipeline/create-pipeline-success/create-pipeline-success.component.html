@@ -1,0 +1,71 @@
+<div id="page-content-wrapper">
+    <div class="freezed-container">
+        <div class="grey-background">
+            <div class="clearfix" style="position:relative;">
+                <div class="container-fluid filter-switch">
+                    <!-- Opportunities/Performance switch -->
+                    <div class="row marginT10 marginB10">
+                        <div class="col-lg-12">
+                            <a href="javascript:void(0)" class="refresh-back-btn marginT5" (click)="returnUrl()">
+                                <span class="ico-left-arrow-sm hvr-icon-pop">
+                                    <span class="path1"></span>
+                                    <span class="path2"></span>
+                                    <span class="path3"></span>
+                                </span>
+                                <span class="back-btn-txt" (click)="createPipelineService.clearAllStepValues()">{{backUrlText}}</span>
+                            </a>
+                        </div>
+                    </div>			
+                    <!-- <div class="row">
+                        <div class="col-xs-12 paddingR0 view-account">
+                          <filter-detail get-data="getData()" sidebar-active-toggle="sidebarActiveToggle()" template="views/applied-filters.html"></filter-detail>
+                        </div>
+                    </div>
+                </div> --><!-- Opportunities/Performance switch -->
+                </div>
+            </div>
+        </div>
+    </div><!--freezed-container-->
+    <div class="container-fluid tabContent">
+
+        <div class="steps-container">
+            <div class="steps-heading">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <h3>Convert to Opportunity - Complete</h3>
+                    </div>
+                </div>
+            </div>
+            <div class="steps-detail success-area">
+                <div class="text-center">
+                    <span class="ico-confirmation"> </span>
+                    <p class="success-text">Opportunity Successfully Created</p>
+                    <div class="grey-text">Click to <a href="javascript:void(0)" (click)="navigateToSFDC('p')">Edit this Opportunity.</a> You will be redirected to the Opportunity tab.<br>To return to this prospect, click Done.</div>
+                </div>
+            </div>
+        </div><!--steps-container-->
+
+        <!-- <div class="steps-container" *ngIf="error">
+            <div class="steps-heading">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <h3>Convert to Opportunity - Incomplete</h3>
+                    </div>
+                </div>
+            </div>
+            <div class="steps-detail success-area">
+                <div class="text-center">
+                    <span class="ico-danger"><span class="path1"></span><span class="path2"></span></span>
+                    <p class="error-text">Error in creating opportunity</p>
+                    <div class="grey-text">Please try again</div>
+                </div>
+            </div>
+        </div> steps-container -->
+  
+        <div class="clearfix marginT10 marginB30 text-right view-detail-btn">
+            <span class="disclaimer"><span class="mandatory">*</span> <strong>Disclaimer:</strong> Values might not be updated immediately</span>
+            <a class="button filled-btn stroke-btn blue marginR10 marginB10" (click)="navigateToSFDC('p')">Edit Pipeline</a>
+            <a class="button filled-btn blue marginB10" (click)="returnUrl()">Done</a>
+        </div>
+    </div>					
+  </div>

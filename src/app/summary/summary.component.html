@@ -1,0 +1,83 @@
+<!-- Start Page Content Wrapper -->
+<div class="clearfix"></div>
+<div class="container-fluid" id="page-header">
+    <div class="row sub-heading">
+        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+            <h2 *ngIf="!flagged">Customers</h2>
+            <h2 *ngIf="flagged">My Tasks: Customers</h2>
+        </div>
+        <div class="col-lg-8 col-md-8 col-sm-8 col-xs-12 pos-relative">
+            <div class="tastk" (click)="toggleFlaggedRows(!flagged)" [ngClass]="{'active': flagged}">
+                <span class="taskFlagWrap">
+                    <i class="icon-flag-checked"></i>
+                </span>
+                <span>My Tasks
+                    <span [ngClass]="{'bounce animated': bounced}" class="count">{{flagCount}}</span>
+                </span>
+            </div>
+            <div class="globalSwitchWrap">
+                <span>SAV</span>
+                <ui-switch [(ngModel)]="globalView" checked size="small" color="#ABE3F2" switchColor="#00BCEA" (change)="globalSwitchChange($event)"></ui-switch>
+                <span>Global</span>
+            </div>
+            <div class="searchbar">
+                <input class="form-control" name="searchInput" [(ngModel)]="searchInput" type="text" (ngModelChange)="quickFilterChanged()"
+                    class="form-control" required="" appElementFocus id="searchInput" [ngbTypeahead]="searchCustomer" (selectItem)="customerSelection($event)"
+                />
+                <label for="searchInput" class="form-control-placeholder">Search by customer name...</label>
+                <!--input [(ngModel)]="searchInput" class="form-control" placeholder="Search by customer name..." type="text" /-->
+                <i *ngIf="!searchInput" class="icon-search"></i>
+                <button *ngIf="searchInput" (click)="clearInput()" aria-label="Close" class="icon-close-btn" type="button">
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- <button (click)="showGridOverlay()">Show Grid Overlay</button>
+<button (click)="hideGridOverlay()">Hide Grid Overlay</button> 
+[overlayLoadingTemplate]="agGridService.overlayLoadingTemplate"
+-->
+
+<input type="text" value="Hello World" id="copyLink" style="display:none;">
+
+<div class="main-table summary-table">
+    <div *ngIf="showGrid">
+        <div class="container-fluid">
+            <ag-grid-angular #agGrid id="ag-grid" style="width: 100%;" appTableHeight class="ag-fresh table-height qualificationTable" [ngClass]="{'fullScreenTable': fullScreen}"
+                [gridOptions]="gridOptions" [columnDefs]="columnDefs" groupHeaders suppressRowClickSelection toolPanelSuppressGroups toolPanelSuppressValues debug="false" rowHeight="26"
+                (modelUpdated)="onModelUpdated()" (cellClicked)="onCellClicked($event)" (cellDoubleClicked)="onCellDoubleClicked($event)"
+                (cellContextMenu)="onCellContextMenu($event)" (cellValueChanged)="onCellValueChanged($event)" (cellFocused)="onCellFocused($event)"
+                (rowSelected)="onRowSelected($event)" (selectionChanged)="onSelectionChanged()" (beforeFilterChanged)="onBeforeFilterChanged()"
+                (afterFilterChanged)="onAfterFilterChanged()" (filterModified)="onFilterModified()" (beforeSortChanged)="onBeforeSortChanged()"
+                (afterSortChanged)="onAfterSortChanged()" (virtualRowRemoved)="onVirtualRowRemoved($event)" (rowClicked)="onRowClicked($event)"
+                (gridReady)="onReady($event)" (columnEverythingChanged)="onColumnEvent($event)" (columnRowGroupChanged)="onColumnEvent($event)"
+                (columnValueChanged)="onColumnEvent($event)" (columnMoved)="onColumnEvent($event)" (columnVisible)="onColumnEvent($event)"
+                (columnGroupOpened)="onColumnEvent($event)" (columnResized)="onColumnEvent($event)" (columnPinnedCountChanged)="onColumnEvent($event)" 
+                (cellMouseOver)="utilitiesService.onCellMouseOver($event)" (cellMouseOut)="utilitiesService.onCellMouseOut($event)" [overlayNoRowsTemplate]="agGridService.overlayNoRowsTemplate" 
+                [defaultColDef]="agGridService.defaultColDef">
+            </ag-grid-angular>
+        </div>
+        <div class="paginationSize">
+            <label>View</label>
+            <select [(ngModel)]="dropdownsize" (change)="onPageSizeChanged(dropdownsize)">
+                <option [ngValue]="10">10</option>
+                <option [ngValue]="25" [selected]>25</option>
+                <option [ngValue]="50">50</option>
+                <option [ngValue]="100">100</option>
+                <option [ngValue]="500">500</option>
+                <option [ngValue]="1000">1000</option>
+            </select>
+        </div>
+        <div class="load-more">
+            <a href="javascript:" [attr.disabled]="disableLoadMore" (click)="loadMore()" placement="top"
+                ngbPopover="5000 records have been loaded, click to load more records" triggers="manual" #loadpopoverSummary="ngbPopover">
+                <i class="icon-load"></i>
+                <span>Load More</span>
+            </a>
+        </div>
+        <span id="openLoadPopoverSummary" (click)="loadpopoverSummary.open()" style="display:none;">Open</span>
+        <span id="closeLoadPopoverSummary" (click)="loadpopoverSummary.close()" style="display:none;">Close</span>
+    </div>
+
+</div>

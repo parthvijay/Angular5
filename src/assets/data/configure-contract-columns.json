@@ -1,0 +1,111 @@
+[
+  {
+    "headerName": "",
+    "suppressSorting": true,
+    "suppressMenu": true,
+    "cellClass": "rowCheckbox",
+    "pinned": "left",
+    "lockPosition": true,
+    "checkboxSelection": true,
+    "suppressToolPanel": true,
+    "suppressMovable": true,
+    "suppressResize": true,
+    "headerCheckboxSelection": true,
+    "headerCheckboxSelectionFilteredOnly": true,
+    "width": 40,
+    "minWidth": 40,
+    "headerClass": "assetViewClass"
+  },
+  {
+    "headerName": "Contract Number",
+    "field": "contractNumber",
+    "width": 135,
+    "minWidth": 60,
+    "sort": "desc",
+    "headerClass": "assetViewClass",
+    "cellRenderer": "contractProductServiceCellRenderer"
+  },
+  {
+    "headerName": "Contract Type",
+    "field": "contractType",
+    "suppressSorting": true,
+    "filterParams": {
+      "cellHeight": 20
+    },
+    "width": 130,
+    "minWidth": 60,
+    "headerClass": "assetViewClass"
+  },
+  {
+    "headerName": "Contract Earliest End Date",
+    "field": "contractEarliestEndDate",
+    "filterParams": {
+      "cellHeight": 20
+    },
+    "width": 165,
+    "minWidth": 60,
+    "type": "numericColumn",
+    "cellRenderer": "changeDateFormat",
+    "headerClass": "assetViewClass"
+  },
+  {
+    "headerName": "Services Bill-to Partner Name",
+    "field": "serviceBillToPartnerName",
+    "suppressSorting": true,
+    "filterParams": {
+      "cellHeight": 20
+    },
+    "width": 260,
+    "minWidth": 60,
+    "headerClass": "assetViewClass"
+  },
+  {
+    "headerName": "IB Opportunity Qualified / Disqualified / Pending (%)",
+    "field": "ibOpportunityPercentage",
+    "filterParams": {
+      "cellHeight": 20
+    },
+    "width": 230,
+    "minWidth": 60,
+    "headerClass": "assetViewClass",
+    "cellRenderer": "percentageBars"
+  },
+  {
+    "headerName": "Product List Price ($)",
+    "field": "productListPrice",
+    "filterParams": {
+      "cellHeight": 20
+    },
+    "width": 135,
+    "minWidth": 60,
+    "type": "numericColumn",
+    "cellRenderer": "currencyFormat",
+    "headerClass": "assetViewClass"
+  },
+  {
+    "headerName": "Default Service List Price ($)",
+    "field": "defaultServiceListPrice",
+    "suppressSorting": true,
+    "filterParams": {
+      "cellHeight": 20
+    },
+    "width": 160,
+    "minWidth": 60,
+    "type": "numericColumn",
+    "cellRenderer": "currencyFormat",
+    "headerClass": "assetViewClass"
+  },
+  {
+    "headerName": "Existing Coverage Level List Price $",
+    "field": "existingCoverageListPrice",
+    "suppressSorting": true,
+    "filterParams": {
+      "cellHeight": 20
+    },
+    "width": 160,
+    "minWidth": 60,
+    "type": "numericColumn",
+    "cellRenderer": "currencyFormat",
+    "headerClass": "assetViewClass"
+  }
+]

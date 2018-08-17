@@ -1,0 +1,40 @@
+{
+    "userDetails": [
+        {
+            "id": 1,
+            "name": "Yopesh Gupta",
+            "cec": "yopgupta",
+            "email": "yopgupta@cisco.com"
+        },
+        {
+            "id": 2,
+            "name": "Kalpna Thakur",
+            "cec": "kalthaku",
+            "email": "kalthaku@cisco.com"
+        },
+        {
+            "id": 3,
+            "name": "Devashish Sharma",
+            "cec": "devashar",
+            "email": "devashar@cisco.com"
+        },
+        {
+            "id": 4,
+            "name": "Kanwaljit Singh",
+            "cec": "knagi",
+            "email": "knagi@cisco.com"
+        },
+        {
+            "id": 5,
+            "name": "Rajiv Kaul",
+            "cec": "rkaul",
+            "email": "rkaul@cisco.com"
+        },
+        {
+            "id": 6,
+            "name": "Sunil Chandra",
+            "cec": "sunchand",
+            "email": "sunchand@cisco.com"
+        }
+    ]
+}

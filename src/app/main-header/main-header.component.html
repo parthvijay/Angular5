@@ -1,0 +1,668 @@
+<header id="header" [ngClass]="{'displayNone': (headerService.fullScreen), 'sfdc-header': isSFDC}">
+    <div class="container-fluid">
+        <div class="row align-items-center">
+            <div class="col-lg-3" *ngIf="!isSFDC">
+                <a href="javascript:" class="navbar-brand p-0" routerLink="/external/analysis">
+                    <span class="site-logo">
+                        <img src="assets/images/logo.svg" width="56" height="30">
+                    </span>
+                    <span class="site-title">
+                        <h2>CISCO READY</h2>
+                        <h3>CONNECTED EXPERIENCE</h3>
+                    </span>
+                </a>
+            </div>
+            <!-- End if Logo -->
+            <div class="pl-0" [ngClass]="{'col-lg-9': !isSFDC, 'col-lg-12': isSFDC}">
+                <nav class="navbar navbar-expand-lg p-0">
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <!-- Toggle Button -->
+                    <div id="navbarNavDropdown" class="navbar-collapse collapse">
+                        <ul class="navbar-nav mr-auto posAbsolute navTopCustom">
+                            <li class="nav-item analysisLink">
+                                <a class="nav-link" href="" routerLink="/external/analysis">Analysis</a>
+                                <span class="ico-info" placement="bottom" ngbPopover="Note: Switching between modules will clear your filter selections" popoverTitle="Provides Opportunities and Performance data" triggers="mouseenter:mouseleave"></span>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="" routerLink="/external/explore">Explore</a>
+                                <span class="ico-info" placement="bottom" ngbPopover="Note: Switching between modules will clear your filter selections." popoverTitle="Create custom online reports based on your choice of attribute grouping and filters." triggers="mouseenter:mouseleave"></span>
+                            </li>
+                            <li class="nav-item dropdown action">
+                                <a class="nav-link" href="" routerLink="/external/campaigns">Campaigns</a>
+                                <span class="ico-info" placement="bottom" ngbPopover="Note: Switching between modules will clear your filter selections" popoverTitle="Displays opportunity summaries on various Cisco sales campaigns" triggers="mouseenter:mouseleave"></span>
+                                <div class="dropdown-menu">
+                                    <ul>
+                                        <li class="dropdown-main-head"><a href="">All Campaigns</a>
+                                            <ul>
+                                                <li class="dropdown-sub-head"><a href="">Recent Campaigns</a>
+                                                    <ul class="dropdown-options">
+                                                        <li><a href="" routerLink="/external/security">Security Refresh</a></li>
+                                                        <li><a href="" routerLink="external/collaborationRefresh">Collaboration Refresh</a></li>
+                                                        <li><a href="" routerLink="/external/campaigns">Digital Ready Scorecard</a></li>
+                                                        <li><a href="" routerLink="/external/ciscoOne">Cisco ONE</a></li>
+                                                        <li><a href="" routerLink="/external/secondChance">Second Chance Attach/Renew</a></li>
+                                                    </ul>
+                                                </li>
+                                            </ul>
+                                        </li>                                    
+                                    </ul> 
+                                  </div>
+                            </li>
+                            <li class="nav-item active">
+                                <a class="nav-link" href="#">Qualifications</a>
+                                <span class="ico-info" placement="bottom" ngbPopover="Note: Switching between modules will clear your filter selections." popoverTitle="Displays Line level details for your Customer. Collaborate with your peers in Sales and Operations to do Write Backs on your Account via Qualification and Disqualification Reason codes." triggers="mouseenter:mouseleave"></span>
+                            </li>
+                        </ul>
+                        <!-- End of Center navigation -->
+                        <ul class="navbar-nav ml-auto rightNav text-center">
+                            <li class="dropdown profile" *ngIf="!isSFDC">
+                                <a href="javascript:" role="button">
+                                    <span class="proxyUserTitle" *ngIf="isProxy">Proxy User :</span>
+                                    <div class="user-name">{{userInfo.user.fullName}}
+                                        <span class="ico-dropdown"></span>
+                                    </div>
+                                </a>
+                                <div class="dropdown-menu profile-links 123">
+                                    <ul>
+                                    	<!--i class="tipsy"></i-->
+                                        <span class="icon-arrow-up tipsy3_0"></span>
+                                        <li class="dropdown-profile">
+                                            <span class="user-desname">{{userInfo.user.fullName}}</span>
+                                            <!-- <span class="smallTxt" *ngIf="isProxy">NonAM-Mgr</span> -->
+                                        </li>
+                                        <!-- <li class="amView" [ngClass]="{'active': lineLevelService.isAMView}">
+                                            <a class="dropdown-item" (click)="lineLevelService.getView()">AM View</a>
+                                            <i class="icon-check"></i>
+                                        </li> -->
+                                        <li class="" *ngIf="!isProxy && userInfo.proxyPermission">
+                                            <a href="javascript:" class="dropdown-item" routerLink="/external/proxy">Proxy Login</a>
+                                        </li>
+                                        <li class="" *ngIf="isProxy">
+                                            <a href="javascript:" class="dropdown-item" routerLink="/external/proxy">Change Proxy</a>
+                                        </li>
+
+                                        <li>
+                                            <a href="javascript:" class="dropdown-item" (click)="logout()">Sign Out</a>
+                                        </li>
+
+                                        <li class="userInfoListItem" *ngIf="isProxy">
+                                            <span class="smallTxt">Your Account</span>
+                                            <span class="username" (click)="removeProxy()">{{admin.fullName}}</span>
+                                            <span class="userPost">Administrator</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <!-- End of Profile List Item -->
+                            <li class="dropdown apps">
+                                <a href="javascript:" class="help-link">
+                                    <span class="icon-nine-dots hvr-icon-pop"></span>
+                                    <span class="icon-txt" link-title="Apps">Apps</span>
+                                </a>
+                                <!-- Sub Menu Started -->
+                                <div class="dropdown-menu nine-dots">
+                                    <ul>
+                                        <!--i class="tipsy"></i-->
+                                        <span class="icon-arrow-up tipsy3_0"></span>
+                                        <li [ngClass]="{'active': i == 0}" *ngFor="let app of appDetails; let i = index" (click)="viewLink(app.name, app.url)">
+                                            <span class="app-details borderB0">
+                                                <span class="app-img">
+                                                </span>
+                                                <span class="app-heading">
+                                                    <h5>
+                                                        <span>{{app.name}}</span>
+                                                        <span class="ico-trending_chart"></span>
+                                                    </h5>
+                                                    <p>{{app.description}}</p>
+                                                </span>
+                                            </span>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <!-- End of 1st Item -->
+                            <li class="dropdown help bookmarks disabled">
+                                <a href="javascript:">
+                                    <span class="iconBlock icon-with-badge">
+                                        <span class="icon-bookmarks hvr-icon-pop"></span>
+                                        <span class="icon-txt" link-title="Bookmarks">Bookmarks</span>
+                                    </span>
+                                </a>
+                                <!--div class="dropdown-menu bookmarks-link">
+                                    <ul>
+                                        <span class="icon-arrow-up tipsy3_0"></span>
+                                        <li *ngFor="let bookmark of favoriteBookmarks">
+                                            <a class="dropdown-item" href="">{{bookmark.name}}</a>
+                                        </li>
+                                    </ul>
+                                </div-->
+                            </li>
+                            <!-- End of 2nd Item -->
+                            <li class="dropdown feedback">
+                                <a href="javascript:" class="help-link" (click)="walkme()">
+                                    <span class="icon-guideMe hvr-icon-pop"></span>
+                                    <span class="icon-txt" link-title="Guide Me">Guide Me</span>
+                                </a>
+                            </li>
+                            <!-- End of 3rd Item -->
+                            <li class="dropdown help lastLi">
+                                <a href="javascript:" class="help-link">
+                                    <span class="icon-help hvr-icon-pop"></span>
+                                    <span class="icon-txt" link-title="help">Help</span>
+                                </a>
+                                <div class="dropdown-menu help-links">
+                                    <ul>
+                                        <!--i class="tipsy"></i-->
+                                        <span class="icon-arrow-up tipsy3_0"></span>
+                                        <!--li class="hidden">
+                                            <a class="dropdown-item" href="">Help</a>
+                                        </li-->
+                                        <li>
+                                            <a class="dropdown-item" target="_blank" href="https://salesconnect.cisco.com/open.html?h=PAGE-5569" class="jive borderB0 clearfix">
+                                                <span class="learn-more">Learn More On </span>
+                                                <img src="assets/images/SalesConnect.svg">
+                                            </a>
+                                        </li>
+                                        <li class="">
+                                            <a class="dropdown-item no-border" target="_blank" href="https://cisco.service-now.com/sp?id=search&bt=t&q=*&filter_string=serviceoffering:%27Cisco%20Ready%27">Have an issue?</a>
+                                        </li>
+                                        <li>
+                                            <a class="dropdown-item" target="_blank" href="https://pwc018.cloudapps.cisco.com/wsrp/pwc018/mobile/view/service/291050" class="jive borderB0 clearfix">
+                                                <span class="learn-more">Feedback </span>
+                                                <span class="icon-feedback"><span class="path1"></span><span class="path2"></span></span>
+                                            </a>
+                                        </li>
+                                        <!--li class="">
+                                            <a class="dropdown-item no-border" href="javascript:">Guided Walk-thrus</a>
+                                        </li-->
+                                        <li>
+                                            <a href="mailto:ciscoready_training@cisco.com" class="dropdown-item borderB0 clearfix">
+                                                <span>Need some training?</span>
+                                            </a>
+                                        </li>
+                                        <!--li>
+                                            <a href="mailto:ciscoready_support@cisco.com" class=" dropdown-item borderB0 clearfix">
+                                                <span>Cisco Ready team</span>
+                                            </a>
+                                        </li-->
+                                        <div class="clearfix"></div>
+                                        <li class="sub-item">
+                                            <div class="last-date">
+                                                <p>Last Data Refresh</p>
+                                                <span>
+                                                    <strong>{{userInfo.dataLastRefreshedOn}}</strong>
+                                                </span>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <!-- End of 4th Item -->
+                        </ul>
+                        <!-- End of Right Icons Navigation -->
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </div>
+</header>
+<!-- End of header -->
+
+
+
+
+
+
+<!-- 
+<nav style="display:none;" class="navbar navbar-default" [ngClass]="{'displayNone': (headerService.fullScreen)}">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" aria-expanded="false" aria-controls="navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <!--sunitayadav-changed header logo-->
+          <!--  <a href="javascript:" class="navbar-brand">
+                <span class="site-logo">
+                    <img src="/assets/images/logo.svg" width="56" height="30">
+                </span>
+                <span class="site-title">
+                    <h2>CISCO READY</h2>
+                    <h3>CONNECTED EXPERIENCE</h3>
+                </span>
+            </a>
+            <a href="" class="navbar-brand" style="display: none;">
+                <span class="site-logo">
+                    <img src="/assets/images/logo.svg" width="56" height="30">
+                </span>
+                <span class="site-title">
+                    <h2>SERVICES</h2>
+                    <h3>LEADERSHIP DASHBOARD</h3>
+                </span>
+            </a>
+
+        </div>
+        <ul class="nav navbar-nav navbar-right">
+            <li class="dropdown profile">
+                <a href="" role="button">
+                    <span class="user-name">{{userInfo.user.fullName}}
+                        <span class="ico-dropdown"></span>
+                    </span>
+                </a>
+                <!-- SunitaYadav  added class of animated fadeIn -->
+             <!--   <ul class="dropdown-menu profile-links">
+                    <span class="icon-arrow-up tipsy3_0"></span>
+                    <li class="dropdown-profile">
+                        <span class="user-desname">{{userInfo.user.fullName}}</span>
+                    </li>
+                    <li>
+                        <a routerLink="/external/signout">Sign Out</a>
+                    </li>
+                </ul>
+            </li>
+            <li class="dropdown apps">
+                <a href="" class="help-link">
+                    <span class="ico-app hvr-icon-pop">
+                        <span class="path1"></span>
+                        <span class="path2"></span>
+                        <span class="path3"></span>
+
+                    </span>
+                    <span class="icon-txt" link-title="Apps">Apps</span>
+                </a>
+                <!-- SunitaYadav  added class of animated fadeIn -->
+            <!--    <ul class="dropdown-menu app-links">
+                    <!--span class="icon-arrow-up"><span class="path1"></span><span class="path2"></span></span-->
+                  <!--  <i class="tipsy"></i>
+                    <li>
+                        <span class="app-details">
+                            <span class="app-img"></span>
+                            <span class="app-heading">
+                                <h5>
+                                    <span>Cisco Ready Connected Experience</span>
+                                    <span class="ico-trending_chart"></span>
+                                </h5>
+                                <p>Provides a comprehensive view and analytic to Sales Leaders and Sales Teams on their Installed
+                                    Base Opportunities and Performance related to Product Refresh, Services Renew and Attach</p>
+                            </span>
+                        </span>
+                    </li>
+
+                    <li>
+                        <span class="app-details">
+                            <span class="app-img"></span>
+                            <span class="app-heading">
+                                <h5>
+                                    <span>Cisco Ready Business Object</span>
+                                    <span class="ico-trending_chart"></span>
+                                </h5>
+                                <p>Provides adhoc analysis and data exploration capabilities on Installed Base data; track and report on Services Metrics</p>
+                            </span>
+                        </span>
+                    </li>
+
+                    <li>
+                        <span class="app-details">
+                            <span class="app-img"></span>
+                            <span class="app-heading">
+                                <h5>
+                                    <span>SFDC Competitive Dashboard</span>
+                                    <span class="ico-trending_chart"></span>
+                                </h5>
+                                <p>Provides Sales leadership the ability to quickly inspect the SFDC competitive landscape</p>
+                            </span>
+                        </span>
+                    </li>
+
+                    <li>
+                        <span class="app-details borderB0">
+                            <span class="app-img"></span>
+                            <span class="app-heading">
+                                <h5>
+                                    <span>Services Leadership Dashboard</span>
+                                    <span class="ico-trending_chart"></span>
+                                </h5>
+                                <p>Provides a comprehensive view of Services installed base Opportunities for TS Renew & TS Attach.
+                                </p>
+                            </span>
+                        </span>
+                    </li>
+
+                    <li>
+                        <span class="app-details borderB0">
+                            <span class="app-img"></span>
+                            <span class="app-heading">
+                                <h5>
+                                    <span>Reporting Center</span>
+                                    <span class="ico-trending_chart"></span>
+                                </h5>
+                                <p>Provides fast and easy way to request Smart IB for Customer, Partner or Distributor.</p>
+                            </span>
+                        </span>
+                    </li>
+
+                </ul>
+            </li>
+            <li class="dropdown help bookmarks">
+                <a href="" class="help-link notification">
+                    <span class="icon-with-badge">
+                        <!-- <span class="badge up bg-success">1</span> -->
+                  <!--      <span class="ico-bookmark_round hvr-icon-pop">
+                            <span class="path1"></span>
+                            <span class="path2"></span>
+                            <span class="path3"></span>
+                        </span>
+                    </span>
+                    <span class="icon-txt" link-title="Bookmarks">Bookmarks</span>
+                </a>
+                <ul class="dropdown-menu bookmark-links">
+                    <!--span class="icon-arrow-up"><span class="path1"></span><span class="path2"></span></span-->
+                  <!--  <i class="tipsy"></i>
+                    <li>
+                        <div class="bookmark-dropdown">
+                            <ul class="sub-menu">
+                                <li>
+                                    <a href="disabled">Canada for Refresh FY17Q3</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="bookmark-dropdown">
+                            <ul class="sub-menu">
+                                <li>
+                                    <a href="">Canada for Refresh FY17Q3 - Collab</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="bookmark-dropdown">
+                            <ul class="sub-menu">
+                                <li>
+                                    <a href="">Security for Refresh FY17Q3</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+
+                    <li>
+                        <div class="bookmark-dropdown">
+                            <ul class="sub-menu">
+                                <li>
+                                    <a href="">Enterprise for Refresh FY17Q3 - Regional Bookmark</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+
+                    <li>
+                        <div class="bookmark-dropdown">
+                            <ul class="sub-menu">
+                                <li>
+                                    <a href="">Enterprise for Refresh FY17Q3</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+            </li>
+
+            <li class="dropdown feedback">
+                <a href="https://pwc018.cloudapps.cisco.com/wsrp/pwc018/mobile/view/service/291050" class="help-link" target="_blank">
+                    <span class="ico-feedback hvr-icon-pop">
+                        <span class="path1"></span>
+                        <span class="path2"></span>
+                        <span class="path3"></span>
+                        <span class="path4"></span>
+                    </span>
+                    <span class="icon-txt" link-title="Feedback">Feedback</span>
+                </a>
+            </li>
+            <li class="dropdown help">
+                <a href="" class="help-link">
+                    <span class="ico-help hvr-icon-pop">
+                        <span class="path1"></span>
+                        <span class="path2"></span>
+                        <span class="path3"></span>
+                    </span>
+                    <span class="icon-txt" link-title="help">Help</span>
+                </a>
+                <ul class="dropdown-menu help-links">
+                    <i class="tipsy"></i>
+                    <!--span class="icon-arrow-up"><span class="path1"></span><span class="path2"></span></span-->
+                    <!--li class="hidden">
+                        <a href="">Help</a>
+                    </li-->
+               <!--     <li>
+                        <a target="_blank" href="https://salesconnect.cisco.com/open.html?h=PAGE-5569" class="jive borderB0 clearfix">
+                            <span class="learn-more">Learn More On </span>
+                            <img src="assets/images/SalesConnect.svg" />
+                        </a>
+                    </li>
+                    <li class="">
+                        <a class="no-border" target="_blank" href="http://srm.cisco.com/Cisco+Ready+Leadership+Dashboard">Have an issue?</a>
+                    </li>
+                    <!--li class="">
+                        <a class="no-border" href="javascript:">Guided Walk-thrus</a>
+                    </li-->
+                  <!--  <li>
+                        <a href="mailto:ciscoready_training@cisco.com" class=" borderB0 clearfix">
+                            <span>Need some training?</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="dropdown-item" target="_blank" href="javascript:" class="jive borderB0 clearfix">
+                            <span class="learn-more">Feedback </span>
+                            <span class="icon-feedback"><span class="path1"></span><span class="path2"></span></span>
+                        </a>
+                    </li>
+                    <!--li>
+                        <a href="mailto:ciscoready_support@cisco.com" class=" borderB0 clearfix">
+                            <span>Cisco Ready team</span>
+                        </a>
+                    </li-->
+                 <!--   <div class="clearfix"></div>
+                    <!-- SunitaYadav  added last date option -->
+                  <!--  <li class="sub-item">
+                        <div class="last-date">
+                            <p>Last Data Refresh</p>
+                            <span>
+                                <strong>24-Jan-2017</strong> at
+                                <strong>17:15:24</strong>-
+                                <strong>PST</strong>
+                            </span>
+                        </div>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+
+        <div id="navbar" class="navbar-collapse collapse mobile-view">
+            <ul class="nav navbar-nav collapse-nav">
+                <li>
+                    <a href="">{{userInfo.user.fullName}}
+                        <span class="ico-close_bg" aria-expanded="false" aria-controls="navbar">
+                            <span class="path1"></span>
+                            <span class="path2"></span>
+                        </span>
+                    </a>
+                </li>
+                <li>
+                    <a href="javascript:">
+                        <span>Analysis </span>
+                    </a>
+                    <span class="info-icon" uib-popover-template="'templates/analysis-tooltip.html'"></span>
+                </li>
+                <li class="dropdown main-nav-dropdown campaigns">
+                    <div class="campaign-nav">
+                        <a href="">
+                            <span>Campaigns </span>
+                        </a>
+                        <ul class="dropdown-menu campaigns-links">
+                            <li class="dropdown-main-head">
+                                <a href="">All Campaigns</a>
+                                <ul>
+                                    <li class="dropdown-sub-head">
+                                        <a href="">Recent Campaigns</a>
+                                        <ul class="dropdown-options">
+                                            <li>
+                                                <a href="javascript:">Digital Ready Scorecard</a>
+                                            </li>
+                                            <li>
+                                                <a href="javascript:">Cisco ONE</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                    <span class="info-icon" uib-popover-template="'templates/campaign-tooltip.html'"></span>
+                    <span class="ico-arrow_collapse"></span>
+                    <span class="ico-arrow_expand"></span>
+                    <!-- SunitaYadav  added class of animated fadeIn -->
+
+            <!--    </li>
+                <li class="active">
+                    <a href="">Qualifications</a>
+                </li>
+                <!--<li ><a href="">Quoting</a></li>-->
+            <!--</ul>
+            <ul class="nav navbar-nav collapse-nav bottom-fix">
+                <li class="dropdown main-nav-dropdown app-dropup hidden-lg apps-mobile">
+                    <a href="">Apps
+                        <span class="ico-arrow_collapse"></span>
+                        <span class="ico-arrow_expand"></span>
+                    </a>
+
+                    <ul class="dropdown-menu">
+                        <li class="dropdown-main-head">
+                            <a target="_blank" href="">
+                                <span class="app-img"></span>
+                                <span class="app-heading">
+                                    <h5>Cisco Ready Connected Experience</h5>
+                                    <p>Provides a comprehensive view and analytic to Sales Leaders and Sales Teams on their
+                                        Installed Base Opportunities and Performance related to Product Refresh, Services
+                                        Renew and Attach</p>
+                                </span>
+                            </a>
+                        </li>
+
+                        <li class="dropdown-main-head">
+                        <span class="app-details">
+                            <span class="app-img"></span>
+                            <span class="app-heading">
+                                <h5>
+                                    <span>Cisco Ready Business Object</span>
+                                    <span class="ico-trending_chart"></span>
+                                </h5>
+                                <p>Provides adhoc analysis and data exploration capabilities on Installed Base data; track and report on Services Metrics</p>
+                            </span>
+                        </span>
+                        </li>
+
+                        <li class="dropdown-main-head">
+                            <a target="_blank" href="">
+                                <span class="app-img"></span>
+                                <span class="app-heading">
+                                    <h5>SFDC Competitive Dashboard</h5>
+                                    <p>Provides Sales leadership the ability to quickly inspect the SFDC competitive landscape</p>
+                                </span>
+                            </a>
+                        </li>
+                        <li class="dropdown-main-head">
+                            <a target="_blank" href="">
+                                <span class="app-img"></span>
+                                <span class="app-heading">
+                                    <h5>Services Leadership Dashboard</h5>
+                                    <p>Provides a comprehensive view of Services installed base Opportunities for TS Renew &
+                                        TS Attach.</p>
+                                </span>
+                            </a>
+                        </li>
+                        <li class="dropdown-main-head">
+                            <a target="_blank" href="http://go2.cisco.com/CRReportingCenter">
+                                <span class="app-img"></span>
+                                <span class="app-heading">
+                                    <h5>Reporting Center</h5>
+                                    <p>Provides fast and easy way to request Smart IB for Customer, Partner or Distributor.</p>
+                                </span>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="dropdown main-nav-dropdown help-dropup hidden-lg">
+                    <a href="">Help
+                        <span class="ico-arrow_collapse"></span>
+                        <span class="ico-arrow_expand"></span>
+                    </a>
+
+                    <ul class="dropdown-menu">
+                        <li class="dropdown-main-head hidden">
+                            <a href="">Help</a>
+                        </li>
+                        <li class="dropdown-sub-head">
+                            <a target="_blank" href="https://salesconnect.cisco.com/open.html?h=PAGE-5569" class="jive clearfix">
+                                <span class="learn-more">Learn More On</span>
+                                <img src="assets/images/SalesConnect.svg" />
+                            </a>
+                        </li>
+                        <li class="dropdown-sub-head">
+                            <a target="_blank" href="http://srm.cisco.com/Cisco+Ready+Leadership+Dashboard">Have an issue?</a>
+                        </li>
+                        <!--li class="dropdown-sub-head">
+                            <a href="javascript:">Guided Walk-thrus</a>
+                        </li-->
+                       <!-- <li class="dropdown-sub-head">
+                            <a href="mailto:ciscoready_training@cisco.com" class="borderB0 clearfix">
+                                <span>Need some training?</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item" target="_blank" href="javascript:" class="jive borderB0 clearfix">
+                                <span class="learn-more">Feedback </span>
+                                <span class="icon-feedback"><span class="path1"></span><span class="path2"></span></span>
+                            </a>
+                        </li>
+                        <!--li class="dropdown-sub-head">
+                            <a href="mailto:ciscoready_support@cisco.com" class="borderB0 clearfix">
+                                <span>Cisco Ready team</span>
+                            </a>
+                        </li-->
+                        <!--<li class="dropdown-sub-head">
+                            <div class="last-date">
+                                <p>Last Data Refresh</p>
+                                <span>
+                                    <strong>24-Jan-2017</strong> at
+                                    <strong>17:15:24</strong>-
+                                    <strong>PST</strong>
+                                </span>
+                            </div>
+
+                        </li>
+                    </ul>
+                </li>
+                <li class="dropdown main-nav-dropdown announcements-dropup">
+                    <a target="_blank" href="https://pwc018.cloudapps.cisco.com/wsrp/pwc018/mobile/view/service/291050" class="help-link">
+                        Feedback
+                    </a>
+                </li>
+                <li>
+                    <a href="javascript:">Bookmarks</a>
+                </li>
+                <li>
+                    <a class="dropdown-item" routerLink="/external/signout">Sign Out</a>
+                </li>
+
+            </ul>
+        </div>
+        <!--nav-collapse -->
+    <!--</div>
+    <!--container-fluid -->
+<!--</nav> -->

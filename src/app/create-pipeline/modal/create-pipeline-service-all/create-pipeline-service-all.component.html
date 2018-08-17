@@ -1,0 +1,31 @@
+<div class="modal-header">
+  <h1>All Services and Product Family List
+    <a href="javascript:void(0)" class="modal-close" (click)="activeModal.dismiss('Cross click')">
+      <span class="ico-close_bg">
+        <span class="path1 hvr-icon-pop"></span><span class="path2"></span>
+      </span>
+    </a>
+  </h1>
+</div>
+
+<div class="modal-body no-scroll text-center">
+  <ul class="select-option">
+    <li>
+      <a href="javascript:void(0)" (click)="selectAll()">{{select?'Deselect All':'Select All'}}</a>
+    </li>
+  </ul>
+  <ul class="product-list">
+    <li *ngFor="let key of objectKeys(services); let i = index;">
+      <input type="checkbox" id="cb_{{i}}" name="product-check" [(ngModel)]="services[key].selected" (change)="pushOrPopElement(services[key], key)">
+      <label for="cb_{{i}}">
+        <span></span>
+      </label>
+      <span class="product-list-txt">{{key}}</span>
+    </li>
+  </ul>
+</div>
+
+<div class="clearfix text-right modal-footer">
+  <a href="javascript:void(0);" class="button stroke-btn blue marginR10 marginB10 pipeline-btn" (click)="activeModal.dismiss('Cross click')">Cancel</a>
+  <a href="javascript:void(0);" class="button filled-btn blue marginB10 pipeline-btn" (click)="saveServices()">Save</a>
+</div>

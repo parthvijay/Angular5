@@ -1,0 +1,56 @@
+<!--Start Common Modal Window-->
+<div class="modal-header" [ngClass]="{'borderBottom0': approvalDone}">
+    <h5 class="modal-title" id="exampleModalLabel" *ngIf="stage === 'disapprove'">Disapprove</h5>
+    <h5 class="modal-title" id="exampleModalLabel" *ngIf="stage === 'approve' && !approvalDone">Quick Summary</h5>
+    <button type="button" *ngIf="!approvalDone" class="icon-close-btn fixedCloseRight" aria-label="Close" (click)="activeModal.dismiss('Cross click')">
+    </button>
+  </div>
+  <div class="modal-body quickSummaryModalBody">
+    <form *ngIf="stage === 'approve'">
+      <div class="row">
+        <div class="col-lg-12">
+          
+          <div class="quickSummaryTable">
+            <div class="quickSummaryTR summaryTableHead">
+              <div class="td text-left">Status</div>
+              <div class="td text-center">Line items</div>
+              <div class="td text-right">Value($)</div>
+            </div>
+
+            <div class="quickSummaryTR">
+              <div class="td text-left">Qualified</div>
+              <div class="td text-center">{{summary.qualLines }}</div>
+              <div class="td text-right">{{summary.qualAmount | currency }}</div>
+            </div>
+            <div class="quickSummaryTR">
+              <div class="td text-left">Disqualified</div>
+              <div class="td text-center">{{summary.disqualLines}}</div>
+              <div class="td text-right">{{summary.disqualAmount | currency }}</div>
+            </div>
+          </div>
+          <p>Commiting changes will eliminate {{summary.disqualAmount | currency }} from CE.</p>
+        </div>
+      </div>
+    </form>
+  
+    <form *ngIf="stage === 'disapprove'">
+      <div class="row">
+          <div class="col-lg-12">
+              <div class="form-group txt-area-group">
+                  <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" name="messageDis" [(ngModel)]="messageDis" required="" appElementFocus></textarea>
+                  <label for="exampleFormControlTextarea1" class="form-control-placeholder">Reason for Disapproving <span class="import">*</span></label>
+              </div>
+          </div>
+      </div>
+    </form>
+
+    <p class="text-center padLR30" *ngIf="approvalDone">The line(s) have been approved and written to data foundation.</p>
+  
+  </div>
+  <div class="modal-footer marginT15">
+    <button type="button" class="btn btn-secondary" (click)="activeModal.dismiss('Cancel click')" *ngIf="!approvalDone">Cancel</button>
+    <button type="button" class="btn btn-primary" [class.disabled]="!isFormValid()" data-dismiss="modal" (click)="closeDisapprove();" *ngIf="stage === 'disapprove'">Done</button>
+    <button type="button" class="btn btn-primary" data-dismiss="modal" (click)="commitApprove();" *ngIf="stage === 'approve' && !approvalDone">Commit</button>
+    <button type="button" class="btn btn-primary floatNone" data-dismiss="modal" (click)="closeApprove();" *ngIf="approvalDone">Done</button>
+  </div>
+  <!--End Common Modal Window-->

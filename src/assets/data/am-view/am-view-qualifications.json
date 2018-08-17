@@ -1,0 +1,17 @@
+[
+    {
+        "qualificationId": 63610312,
+        "qualificationName": "Wireless",
+        "customerId": 67456787
+    },
+    {
+        "qualificationId": 33909060,
+        "qualificationName": "Switching",
+        "customerId": 67456787
+    },
+    {
+        "qualificationId": 93906023,
+        "qualificationName": "Enterprise Networking",
+        "customerId": 67456787
+    }
+]

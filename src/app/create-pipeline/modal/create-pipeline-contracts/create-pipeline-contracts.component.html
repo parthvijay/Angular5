@@ -1,0 +1,91 @@
+<div class="modal-header">
+    <h1>Health Quest
+        <a href="javascript:void(0)" class="modal-close" (click)="activeModal.dismiss('Cross click')"><span class="ico-close_bg"><span class="path1 hvr-icon-pop"></span><span class="path2"></span></span></a>
+    </h1>
+</div>
+
+<div class="modal-body text-center health-popup">
+    <div class="usd-value marginR0">Price shown in USD</div>
+    <div class="popup-table-wrap">
+        <div class="table-responsive expanded marginT10 popup-table absolute">
+            <table class="table opp-by table-fixed1 striped-table marginB0">
+                <thead>
+                    <tr class="text-left">
+                        <th style="width:26%;" class="fix-long-word sort">
+                            <input id="14" name="product-check" class="" checked="" type="checkbox" disabled="">
+                            <label for="14">
+                                <span></span>
+                            </label>
+                            <span class="product-list-txt paddingL10">Contract Number</span>
+                            <!-- <span class="icon-down-arrow"></span> -->
+                        </th>
+                        <th style="width:12%;">
+                            <span class="product-list-txt">Start Date</span>
+                        </th>
+                        <th style="width:12%;">
+                            <span class="product-list-txt">End Date</span>
+                        </th>
+                        <th style="width:12%;">
+                            <span class="product-list-txt">Earliest Line End Date</span>
+                        </th>
+                        <th style="width:8%;">
+                            <span class="product-list-txt">Type</span>
+                        </th>
+                        <th style="width:10%;" class="text-right">
+                            <span class="product-list-txt">Line Items</span>
+                        </th>
+                        <th style="width:10%;" class="text-right">
+                            <span class="product-list-txt">List Price</span>
+                        </th>
+                        <th style="width:17%;" class="text-right">
+                            <span class="product-list-txt">Net Price</span>
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- ngRepeat: contract in vm.contracts | orderBy:sort.column:sort.descending -->
+                    <tr *ngFor="let c of contracts">
+                        <td class="text-left">
+                            <input id="16+0" name="product-check" class="" type="checkbox" checked="" disabled="">
+                            <label for="16+0">
+                                <span></span>
+                            </label>
+                            <span class="product-list-txt paddingL10">
+                                <a href="javascript:void(0)" class="ng-binding">{{c.contractNumber}}</a>
+                            </span>
+                        </td>
+                        <td class="text-left">
+                            <span class="product-list-txt">{{utilitiesService.getFormattedDate(c.date.from)}}</span>
+                        </td>
+                        <td class="text-left">
+                            <span class="product-list-txt">{{utilitiesService.getFormattedDate(c.date.to)}}</span>
+                        </td>
+                        <td class="text-left">
+                            <span class="product-list-txt">{{utilitiesService.getFormattedDate(c.earliestEndDate)}}</span>
+                        </td>
+                        <td class="text-left">
+                            <span class="product-list-txt">{{c.type}}</span>
+                        </td>
+                        <td class="text-right">
+                            <span class="product-list-txt">{{c.lineItems}}</span>
+                        </td>
+                        <td class="text-right">
+                            <span class="product-list-txt">{{c.list}}</span>
+                        </td>
+                        <td class="text-right">
+                            <span class="product-list-txt">{{c.net}}</span>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+
+<div class="clearfix text-right modal-footer">
+    <!--
+  <a href="javascript:void(0);" class="button stroke-btn blue marginR10 marginB10" (click)="activeModal.dismiss('Cross click')">Cancel</a>
+  <a href="javascript:void(0);" class="button filled-btn blue marginB10" (click)="saveServices()">Apply</a>
+	-->
+</div>

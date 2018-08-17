@@ -1,0 +1,20 @@
+.qual-button-left,.qual-button-right{font-size:16px;color:#00BAEA;border:1px solid #00BAEA; padding:12px 20px;cursor:pointer; font-weight:300;}
+a.qual-button-right{ border-top-right-radius:20px; border-bottom-right-radius:20px;border:1px solid #00BAEA;}
+a.qual-button-left{border-top-left-radius:20px;border-bottom-left-radius:20px;border:1px solid #00BAEA; border-right:0px;margin-right:-4px;}
+a.qual-button-left:hover,a.qual-button-right:hover{ color:#005073; }
+.qual-button-right.active ,.qual-button-left.active {background:#00baea;color:#fff;}
+.col-lg-12.text-center.qualify-btns {margin-top:9px;margin-bottom:35px;}
+.multiSelect{background:#f2f2f2; padding:15px 20px 20px;  margin:15px 0 38px;}
+.multiSelect p { font-size:16px; color:#58585b; font-weight:normal; text-shadow:0 0;}
+.numberGroup .form-group {margin-bottom:0;}
+/*  Quick Summary Modal  */
+.quickSummaryTable { float:left; width:100%; display:table; margin-bottom:15px; }
+.quickSummaryTR { width:100%; display:table-row; }
+.quickSummaryTR.summaryTableHead { background-color:#F3F3F3; }
+.quickSummaryTR.summaryTableHead .td { font-size:13px; color:#999; font-weight:400 !important; border-bottom:0; }
+.quickSummaryTR .td { border-bottom:1px solid #ccc; height:40px; display:table-cell; width:auto; float:none; vertical-align:middle; font-size:16px; font-weight:300; color:#666; padding-left:15px; padding-right:15px; }
+.quickSummaryModalBody p { font-size:16px; font-weight:300; letter-spacing:0.03em; color:#666; margin-bottom:5px; }
+.borderBottom0 { border-bottom: 0 !important; }
+.modal-footer .floatNone { float: none !important; margin: 0 auto; }
+.fixedCloseRight { position: absolute !important; right: 20px !important; top: 20px !important; }
+.padLR30 {padding: 20px 30px 0 30px;}

@@ -1,0 +1,61 @@
+<app-loader></app-loader>
+<app-main-header></app-main-header>
+<app-copy-link></app-copy-link>
+<div class="tooltip-qualified">
+  <span class="tooltiptext">
+    <div class="outer-box">
+      <ul class="d-block pl-0 pb-0">
+        <li class="list-unstyled border-bottom-1 pb-10">
+          <span class="text">Qualified</span>
+          <span class="float-right percent">{{headerService.oppPercent['qualPercent']}}%</span>
+          <div class="amount-text mt-6">
+            <span class="amount d-block">Amount</span>
+            <span class="digits d-block">{{utilitiesService.formatValue(headerService.oppPercent['qualified'])}}</span>
+          </div>
+        </li>
+        <li class="list-unstyled border-bottom-1 pb-10 pt-10">
+          <span class="Disqualified">Disqualified</span>
+          <span class="float-right percent">{{headerService.oppPercent['disqualPercent']}}%</span>
+          <div class="amount-text mt-6">
+            <span class="amount d-block">Amount</span>
+            <span class="digits d-block">{{utilitiesService.formatValue(headerService.oppPercent['disqualified'])}}</span>
+          </div>
+        </li>
+        <li class="list-unstyled border-bottom-1 pb-10 pt-10">
+          <span class="pending">Pending</span>
+          <span class="float-right percent">{{headerService.oppPercent['pendingPercent']}}%</span>
+          <div class="amount-text mt-6">
+            <span class="amount d-block">Amount</span>
+            <span class="digits d-block">{{utilitiesService.formatValue(headerService.oppPercent['pending'])}}</span>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </span>
+</div>
+
+<div class="app-action-dropdown action-dropdown">
+<div class='app-shareDiv shareDiv'>
+  <div class='dropdown-menu' aria-labelledby='mainDropdown'>
+    <span class="icon-arrow-up tipsy3_0"></span>
+    <ul>
+      <li><a class="dropdown-item startQual" [ngClass]="{'enableStart': utilitiesService.enableStartQual}" href="javascript:" (click)="utilitiesService.share('startQual', 'qual')">Start Qualification</a></li>
+      <li class="share-options" [ngClass]="{'enableShare': utilitiesService.enableShare}"><a class="dropdown-item" href="javascript:">Share</a>
+        <ul class="subMenu">
+            <li><a class='dropdown-item emailShare' href='javascript:' (click)="utilitiesService.share('emailShare', 'email')"><span class='icon-email'></span> Email</a></li>
+            <li><a class='dropdown-item copyLink' href='javascript:' (click)="utilitiesService.share('copyLink', 'copy')"><span class='icon-link'></span> Copy Link</a></li>
+        </ul>
+      </li>
+      <!--li><a class="dropdown-item" href="javascript:">Start Asset Management</a></li>
+      <li><a class="dropdown-item" href="javascript:">Start IB Validation</a></li>
+      <li><a class="dropdown-item" href="javascript:">Start IB Details</a></li-->
+    </ul> 
+  </div>
+</div>
+</div>
+
+<div class="mainPageContent" [ngClass]="{'filters-active': filtersService.getFiltersState(), 'full-screen': headerService.fullScreen}">
+  <router-outlet></router-outlet>
+</div>
+<div class="marginB20"></div>
+<!-- </div> -->

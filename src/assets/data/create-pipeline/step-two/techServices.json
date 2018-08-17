@@ -1,0 +1,252 @@
+{
+    "isSuccess": true,
+    "status": 200,
+    "objectType": "OpportunityLineItem",
+    "errorCode": "",
+    "errorDescription": "",
+    "data": {
+        "technology": [
+            {
+                "id": "01t80000003Dy2kAAC",
+                "name": "COLLABORATION-Conferencing",
+                "productFamily": [
+                    "Cisco Toll Audio Plus",
+                    "Jabber",
+                    "Named Host",
+                    "WebEx Cloud ConnectedAudio",
+                    "WebEx Meeting Center",
+                    "WebEx on Cisco Price List",
+                    "WebEx on WebEx Price List"
+                ]
+            },
+            {
+                "id": "01t80000003Dy2kAAC",
+                "name": "COLLABORATION-Contact Center",
+                "productFamily": [
+                    "Temporary3",
+                    "Temporary4"
+                ]
+            },
+            {
+                "id": "01t80000003Dy2kAAC",
+                "name": "COLLABORATION-TP Endpoints",
+                "productFamily": [
+                    "Temporary5",
+                    "Temporary6"
+                ]
+            },
+            {
+                "id": "01t80000003Dy2kAAC",
+                "name": "COLLABORATION-TP Multiparty Conferencing",
+                "productFamily": [
+                    "Temporary7",
+                    "Temporary8"
+                ]
+            },
+            {
+                "id": "01t80000003Dy2kAAC",
+                "name": "COLLABORATION-UC Endpoints",
+                "productFamily": [
+                    "Temporary9",
+                    "Temporary10"
+                ]
+            },
+            {
+                "id": "01t80000003Dy2kAAC",
+                "name": "COLLABORATION-UC Infrastructure Applications",
+                "productFamily": [
+                    "Cisco Toll Audio Plus",
+                    "Jabber",
+                    "Named Host",
+                    "WebEx Cloud ConnectedAudio",
+                    "WebEx Meeting Center",
+                    "WebEx on Cisco Price List",
+                    "WebEx on WebEx Price List"
+                ]
+            },
+            {
+                "id": "01t80000003Dy2kAAC",
+                "name": "COLLABORATION-Other Collaboration",
+                "productFamily": [
+                    "Temporary3",
+                    "Temporary4"
+                ]
+            },
+            {
+                "id": "01t80000003Dy2kAAC",
+                "name": "COLLABORATION-TP Endpoints",
+                "productFamily": [
+                    "Temporary5",
+                    "Temporary6"
+                ]
+            },
+            {
+                "id": "01t80000003Dy2kAAC",
+                "name": "COLLABORATION-TP Multiparty Conferencing",
+                "productFamily": [
+                    "Temporary7",
+                    "Temporary8"
+                ]
+            },
+            {
+                "id": "01t80000003Dy2kAAC",
+                "name": "COLLABORATION-UC Endpoints",
+                "productFamily": [
+                    "Temporary9",
+                    "Temporary10"
+                ]
+            }
+        ],
+        "service": {
+            "serviceCategory": [
+                "AS-C-Advanced Services Configurable",
+                "AS-F-Advanced Services Fixed",
+                "ASS-Advanced Services Subscription",
+                "AST-Advanced Services Transactional",
+                "CollaborativeServices-AS Subscription"
+            ],
+            "list": [
+                {
+                    "id": "01t34000004I3kVAAS",
+                    "name": "AS-S-Cisco Assessment Svcs",
+                    "serviceLevel": [
+                        "Security",
+                        "Enterprise Networking",
+                        "Collaboration",
+                        "Data Center",
+                        "SP Mobility",
+                        "SP Video",
+                        "SP Networking",
+                        "Wireless"
+                    ]
+                },
+                {
+                    "id": "01t34000004I3kVAAS",
+                    "name": "AS-S-Cisco Deployment Svcs",
+                    "serviceLevel": [
+                        "Security",
+                        "Enterprise Networking",
+                        "Collaboration",
+                        "Data Center",
+                        "SP Mobility",
+                        "SP Video",
+                        "SP Networking",
+                        "Wireless"
+                    ]
+                },
+                {
+                    "id": "01t34000004I3kVAAS",
+                    "name": "AS-S-Cisco Design Svcs",
+                    "serviceLevel": [
+                        "Security",
+                        "Enterprise Networking",
+                        "Collaboration",
+                        "Data Center",
+                        "SP Mobility",
+                        "SP Video",
+                        "SP Networking",
+                        "Wireless"
+                    ]
+                },
+                {
+                    "id": "01t34000004I3kVAAS",
+                    "name": "AS-S-Cisco Assessment Svcs",
+                    "serviceLevel": [
+                        "Security",
+                        "Enterprise Networking",
+                        "Collaboration",
+                        "Data Center",
+                        "SP Mobility",
+                        "SP Video",
+                        "SP Networking",
+                        "Wireless"
+                    ]
+                },
+                {
+                    "id": "01t34000004I3kVAAS",
+                    "name": "AS-S-Cisco Deployment Svcs",
+                    "serviceLevel": [
+                        "Security",
+                        "Enterprise Networking",
+                        "Collaboration",
+                        "Data Center",
+                        "SP Mobility",
+                        "SP Video",
+                        "SP Networking",
+                        "Wireless"
+                    ]
+                },
+                {
+                    "id": "01t34000004I3kVAAS",
+                    "name": "AS-S-Cisco Design Svcs",
+                    "serviceLevel": [
+                        "Security",
+                        "Enterprise Networking",
+                        "Collaboration",
+                        "Data Center",
+                        "SP Mobility",
+                        "SP Video",
+                        "SP Networking",
+                        "Wireless"
+                    ]
+                },
+                {
+                    "id": "01t34000004I3kVAAS",
+                    "name": "AS-S-Cisco Assessment Svcs",
+                    "serviceLevel": [
+                        "Security",
+                        "Enterprise Networking",
+                        "Collaboration",
+                        "Data Center",
+                        "SP Mobility",
+                        "SP Video",
+                        "SP Networking",
+                        "Wireless"
+                    ]
+                },
+                {
+                    "id": "01t34000004I3kVAAS",
+                    "name": "AS-S-Cisco CON-SNT-WS-C650 Svcs",
+                    "serviceLevel": [
+                        "Security",
+                        "Enterprise Networking",
+                        "Collaboration",
+                        "Data Center",
+                        "SP Mobility",
+                        "SP Video",
+                        "SP Networking",
+                        "Wireless"
+                    ]
+                },
+                {
+                    "id": "01t34000004I3kVAAS",
+                    "name": "AS-S-Cisco WS-C6503-E-FAN Svcs",
+                    "serviceLevel": [
+                        "Security",
+                        "Enterprise Networking",
+                        "Collaboration",
+                        "Data Center",
+                        "SP Mobility",
+                        "SP Video",
+                        "SP Networking",
+                        "Wireless"
+                    ]
+                },
+                {
+                    "id": "01t34000004I3kVAAS",
+                    "name": "AS-S-Cisco PWR-1400-AC Svcs",
+                    "serviceLevel": [
+                        "Security",
+                        "Enterprise Networking",
+                        "Collaboration",
+                        "Data Center",
+                        "SP Mobility",
+                        "SP Video",
+                        "SP Networking",
+                        "Wireless"
+                    ]
+                }
+            ]
+        }
+    }
+}

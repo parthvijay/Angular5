@@ -1,0 +1,316 @@
+{
+  "assetsView": [
+    {
+      "productSO": 91456787,
+      "productBillToPartnerName": "TELUS COMMUNICATIONS COMPANY",
+      "ciscoBookedDate": "4/23/2015",
+      "ibOpportunityPercentage": {
+        "disqualified": 335306.75,
+        "qualified": 213295.84,
+        "pending": 622903.90
+      },
+      "productListPrice": 1725.00,
+      "defaultServiceListPrice": 90989898,
+      "existingCoverageListPrice": 12789743
+    },
+    {
+      "productSO": 62456787,
+      "productBillToPartnerName": "TELUS COMMUNICATIONS COMPANY",
+      "ciscoBookedDate": "8/23/2016",
+      "ibOpportunityPercentage": {
+        "disqualified": 3774301.312,
+        "qualified": 15097205.248,
+        "pending": 0
+      },
+      "productListPrice": 200.00,
+      "defaultServiceListPrice": 98123452,
+      "existingCoverageListPrice": 28904532
+    },
+    {
+      "productSO": 65456787,
+      "productBillToPartnerName": "TELUS COMMUNICATIONS COMPANY",
+      "ciscoBookedDate": "2/15/2014",
+      "ibOpportunityPercentage": {
+        "disqualified": 335306.75,
+        "qualified": 213295.84,
+        "pending": 622903.90
+      },
+      "productListPrice": 3395.00,
+      "defaultServiceListPrice": 98987656,
+      "existingCoverageListPrice": 31456786
+    },
+    {
+      "productSO": 34456787,
+      "productBillToPartnerName": "TELUS COMMUNICATIONS COMPANY",
+      "ciscoBookedDate": "4/23/2015",
+      "ibOpportunityPercentage": {
+        "disqualified": 335306.75,
+        "qualified": 213295.84,
+        "pending": 622903.90
+      },
+      "productListPrice": 1725.00,
+      "defaultServiceListPrice": 90989898,
+      "existingCoverageListPrice": 12789743
+    },
+    {
+      "productSO": 44446787,
+      "productBillToPartnerName": "TELUS COMMUNICATIONS COMPANY",
+      "ciscoBookedDate": "8/23/2016",
+      "ibOpportunityPercentage": {
+        "disqualified": 3774301.312,
+        "qualified": 15097205.248,
+        "pending": 0
+      },
+      "productListPrice": 200.00,
+      "defaultServiceListPrice": 98123452,
+      "existingCoverageListPrice": 28904532
+    },
+    {
+      "productSO": 12676787,
+      "productBillToPartnerName": "TELUS COMMUNICATIONS COMPANY",
+      "ciscoBookedDate": "2/15/2014",
+      "ibOpportunityPercentage": {
+        "disqualified": 335306.75,
+        "qualified": 213295.84,
+        "pending": 622903.90
+      },
+      "productListPrice": 3395.00,
+      "defaultServiceListPrice": 98987656,
+      "existingCoverageListPrice": 31456786
+    },
+    {
+      "productSO": 90056787,
+      "productBillToPartnerName": "TELUS COMMUNICATIONS COMPANY",
+      "ciscoBookedDate": "4/23/2015",
+      "ibOpportunityPercentage": {
+        "disqualified": 335306.75,
+        "qualified": 213295.84,
+        "pending": 622903.90
+      },
+      "productListPrice": 1725.00,
+      "defaultServiceListPrice": 90989898,
+      "existingCoverageListPrice": 12789743
+    },
+    {
+      "productSO": 100006787,
+      "productBillToPartnerName": "TELUS COMMUNICATIONS COMPANY",
+      "ciscoBookedDate": "8/23/2016",
+      "ibOpportunityPercentage": {
+        "disqualified": 3774301.312,
+        "qualified": 15097205.248,
+        "pending": 0
+      },
+      "productListPrice": 200.00,
+      "defaultServiceListPrice": 98123452,
+      "existingCoverageListPrice": 28904532
+    },
+    {
+      "productSO": 23256787,
+      "productBillToPartnerName": "TELUS COMMUNICATIONS COMPANY",
+      "ciscoBookedDate": "2/15/2014",
+      "ibOpportunityPercentage": {
+        "disqualified": 335306.75,
+        "qualified": 213295.84,
+        "pending": 622903.90
+      },
+      "productListPrice": 3395.00,
+      "defaultServiceListPrice": 98987656,
+      "existingCoverageListPrice": 31456786
+    },
+    {
+      "productSO": 89856787,
+      "productBillToPartnerName": "TELUS COMMUNICATIONS COMPANY",
+      "ciscoBookedDate": "4/23/2015",
+      "ibOpportunityPercentage": {
+        "disqualified": 335306.75,
+        "qualified": 213295.84,
+        "pending": 622903.90
+      },
+      "productListPrice": 1725.00,
+      "defaultServiceListPrice": 90989898,
+      "existingCoverageListPrice": 12789743
+    },
+    {
+      "productSO": 43456787,
+      "productBillToPartnerName": "TELUS COMMUNICATIONS COMPANY",
+      "ciscoBookedDate": "8/23/2016",
+      "ibOpportunityPercentage": {
+        "disqualified": 3774301.312,
+        "qualified": 15097205.248,
+        "pending": 0
+      },
+      "productListPrice": 200.00,
+      "defaultServiceListPrice": 98123452,
+      "existingCoverageListPrice": 28904532
+    },
+    {
+      "productSO": 77876787,
+      "productBillToPartnerName": "TELUS COMMUNICATIONS COMPANY",
+      "ciscoBookedDate": "2/15/2014",
+      "ibOpportunityPercentage": {
+        "disqualified": 335306.75,
+        "qualified": 213295.84,
+        "pending": 622903.90
+      },
+      "productListPrice": 3395.00,
+      "defaultServiceListPrice": 98987656,
+      "existingCoverageListPrice": 31456786
+    },
+    {
+      "productSO": 82456787,
+      "productBillToPartnerName": "TELUS COMMUNICATIONS COMPANY",
+      "ciscoBookedDate": "4/23/2015",
+      "ibOpportunityPercentage": {
+        "disqualified": 335306.75,
+        "qualified": 213295.84,
+        "pending": 622903.90
+      },
+      "productListPrice": 1725.00,
+      "defaultServiceListPrice": 90989898,
+      "existingCoverageListPrice": 12789743
+    },
+    {
+      "productSO": 62456787,
+      "productBillToPartnerName": "TELUS COMMUNICATIONS COMPANY",
+      "ciscoBookedDate": "8/23/2016",
+      "ibOpportunityPercentage": {
+        "disqualified": 3774301.312,
+        "qualified": 15097205.248,
+        "pending": 0
+      },
+      "productListPrice": 200.00,
+      "defaultServiceListPrice": 98123452,
+      "existingCoverageListPrice": 28904532
+    },
+    {
+      "productSO": 11456787,
+      "productBillToPartnerName": "TELUS COMMUNICATIONS COMPANY",
+      "ciscoBookedDate": "2/15/2014",
+      "ibOpportunityPercentage": {
+        "disqualified": 335306.75,
+        "qualified": 213295.84,
+        "pending": 622903.90
+      },
+      "productListPrice": 3395.00,
+      "defaultServiceListPrice": 98987656,
+      "existingCoverageListPrice": 31456786
+    },
+    {
+      "productSO": 45456787,
+      "productBillToPartnerName": "TELUS COMMUNICATIONS COMPANY",
+      "ciscoBookedDate": "4/23/2015",
+      "ibOpportunityPercentage": {
+        "disqualified": 335306.75,
+        "qualified": 213295.84,
+        "pending": 622903.90
+      },
+      "productListPrice": 1725.00,
+      "defaultServiceListPrice": 90989898,
+      "existingCoverageListPrice": 12789743
+    },
+    {
+      "productSO": 97156787,
+      "productBillToPartnerName": "TELUS COMMUNICATIONS COMPANY",
+      "ciscoBookedDate": "8/23/2016",
+      "ibOpportunityPercentage": {
+        "disqualified": 3774301.312,
+        "qualified": 15097205.248,
+        "pending": 0
+      },
+      "productListPrice": 200.00,
+      "defaultServiceListPrice": 98123452,
+      "existingCoverageListPrice": 28904532
+    },
+    {
+      "productSO": 32356787,
+      "productBillToPartnerName": "TELUS COMMUNICATIONS COMPANY",
+      "ciscoBookedDate": "2/15/2014",
+      "ibOpportunityPercentage": {
+        "disqualified": 335306.75,
+        "qualified": 213295.84,
+        "pending": 622903.90
+      },
+      "productListPrice": 3395.00,
+      "defaultServiceListPrice": 98987656,
+      "existingCoverageListPrice": 31456786
+    },
+    {
+      "productSO": 12126787,
+      "productBillToPartnerName": "TELUS COMMUNICATIONS COMPANY",
+      "ciscoBookedDate": "4/23/2015",
+      "ibOpportunityPercentage": {
+        "disqualified": 335306.75,
+        "qualified": 213295.84,
+        "pending": 622903.90
+      },
+      "productListPrice": 1725.00,
+      "defaultServiceListPrice": 90989898,
+      "existingCoverageListPrice": 12789743
+    },
+    {
+      "productSO": 42456787,
+      "productBillToPartnerName": "TELUS COMMUNICATIONS COMPANY",
+      "ciscoBookedDate": "8/23/2016",
+      "ibOpportunityPercentage": {
+        "disqualified": 3774301.312,
+        "qualified": 15097205.248,
+        "pending": 0
+      },
+      "productListPrice": 200.00,
+      "defaultServiceListPrice": 98123452,
+      "existingCoverageListPrice": 28904532
+    },
+    {
+      "productSO": 79056787,
+      "productBillToPartnerName": "TELUS COMMUNICATIONS COMPANY",
+      "ciscoBookedDate": "2/15/2014",
+      "ibOpportunityPercentage": {
+        "disqualified": 335306.75,
+        "qualified": 213295.84,
+        "pending": 622903.90
+      },
+      "productListPrice": 3395.00,
+      "defaultServiceListPrice": 98987656,
+      "existingCoverageListPrice": 31456786
+    },
+    {
+      "productSO": 33336787,
+      "productBillToPartnerName": "TELUS COMMUNICATIONS COMPANY",
+      "ciscoBookedDate": "4/23/2015",
+      "ibOpportunityPercentage": {
+        "disqualified": 335306.75,
+        "qualified": 213295.84,
+        "pending": 622903.90
+      },
+      "productListPrice": 1725.00,
+      "defaultServiceListPrice": 90989898,
+      "existingCoverageListPrice": 12789743
+    },
+    {
+      "productSO": 12456232,
+      "productBillToPartnerName": "TELUS COMMUNICATIONS COMPANY",
+      "ciscoBookedDate": "8/23/2016",
+      "ibOpportunityPercentage": {
+        "disqualified": 3774301.312,
+        "qualified": 15097205.248,
+        "pending": 0
+      },
+      "productListPrice": 200.00,
+      "defaultServiceListPrice": 98123452,
+      "existingCoverageListPrice": 28904532
+    },
+    {
+      "productSO": 77456712,
+      "productBillToPartnerName": "TELUS COMMUNICATIONS COMPANY",
+      "ciscoBookedDate": "2/15/2014",
+      "ibOpportunityPercentage": {
+        "disqualified": 335306.75,
+        "qualified": 213295.84,
+        "pending": 622903.90
+      },
+      "productListPrice": 3395.00,
+      "defaultServiceListPrice": 98987656,
+      "existingCoverageListPrice": 31456786
+    }
+  ]
+}

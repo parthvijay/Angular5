@@ -1,0 +1,766 @@
+[
+    {
+        "title": "Status",
+        "type": "status",
+        "active": false,
+        "categories": [
+            {
+                "title": "Covered",
+                "selected": "All"
+            },
+            {
+                "title": "Network Collection",
+                "selected": "All"
+            }
+        ],
+        "options": [
+            "All",
+            "Yes",
+            "No"
+        ]
+    },
+    {
+        "title": "Contract",
+        "slug": "contract",
+        "active": false,
+        "progressive": false,
+        "type": "dropdown",
+        "levels_name": [
+            "Contract Type",
+            "Contract Number",
+            "Service SO"
+        ],
+        "searchable": [
+            false,
+            true,
+            true
+        ],
+        "disabled": [],
+        "selected": [],
+        "levels": [
+            [
+                {
+                    "id": "Contract Type 1",
+                    "name": "Contract Type 1"
+                },
+                {
+                    "id": "Contract Type 2",
+                    "name": "Contract Type 2"
+                },
+                {
+                    "id": "Contract Type 3",
+                    "name": "Contract Type 3"
+                }
+            ],
+            [
+                {
+                    "id": "Contract Number 1",
+                    "name": "Contract Number 1"
+                },
+                {
+                    "id": "Contract Number 2",
+                    "name": "Contract Number 2"
+                },
+                {
+                    "id": "Contract Number 3",
+                    "name": "Contract Number 3"
+                }
+            ],
+            [
+                {
+                    "id": "Service SO 1",
+                    "name": "Service SO 1"
+                },
+                {
+                    "id": "Service SO 2",
+                    "name": "Service SO 2"
+                },
+                {
+                    "id": "Service SO 3",
+                    "name": "Service SO 3"
+                }
+            ]
+        ],
+        "excluded": []
+    },
+    {
+        "title": "Product",
+        "slug": "product",
+        "active": false,
+        "progressive": false,
+        "type": "dropdown",
+        "levels_name": [
+            "Architecture",
+            "Sub-Architecture",
+            "Product Family",
+            "Product ID",
+            "Product Type",
+            "Product SO"
+        ],
+        "searchable": [
+            false,
+            false,
+            true,
+            true,
+            false,
+            true
+        ],
+        "disabled": [],
+        "selected": [
+            [
+                "Collaboration",
+                "Data Center Switching"
+            ],
+            [
+                "Conferencing"
+            ]
+        ],
+        "levels": [
+            [
+                {
+                    "id": "Collaboration",
+                    "name": "Collaboration"
+                },
+                {
+                    "id": "Computing Systems",
+                    "name": "Computing Systems"
+                },
+                {
+                    "id": "Data Center Switching",
+                    "name": "Data Center Switching"
+                },
+                {
+                    "id": "Enterprise Routing",
+                    "name": "Enterprise Routing"
+                },
+                {
+                    "id": "Enterprise Switching",
+                    "name": "Enterprise Switching"
+                },
+                {
+                    "id": "IOT",
+                    "name": "IOT"
+                },
+                {
+                    "id": "Mobility",
+                    "name": "Mobility"
+                },
+                {
+                    "id": "Other",
+                    "name": "Other"
+                },
+                {
+                    "id": "Security",
+                    "name": "Security"
+                },
+                {
+                    "id": "Service Provider Routing",
+                    "name": "Service Provider Routing"
+                },
+                {
+                    "id": "SP Video Software and Solutions",
+                    "name": "SP Video Software and Solutions"
+                },
+                {
+                    "id": "Wireless",
+                    "name": "Wireless"
+                }
+            ],
+            [
+                {
+                    "id": 1,
+                    "name": "Collaboration",
+                    "isLabel": true
+                },
+                {
+                    "id": "Conferencing",
+                    "parentId": 1,
+                    "name": "Conferencing"
+                },
+                {
+                    "id": "Contact Center",
+                    "parentId": 1,
+                    "name": "Contact Center"
+                },
+                {
+                    "id": "TP Endpoints",
+                    "parentId": 1,
+                    "name": "TP Endpoints"
+                },
+                {
+                    "id": 2,
+                    "name": "Enterprise Routing",
+                    "isLabel": true
+                },
+                {
+                    "id": "Ent. Access Routing",
+                    "parentId": 2,
+                    "name": "Ent. Access Routing"
+                },
+                {
+                    "id": "Ent. Edge Routing",
+                    "parentId": 2,
+                    "name": "Ent. Edge Routing"
+                },
+                {
+                    "id": "IOT Routing",
+                    "parentId": 2,
+                    "name": "IOT Routing"
+                }
+            ],
+            [
+                {
+                    "id": 1,
+                    "name": "Conferencing",
+                    "isLabel": true
+                },
+                {
+                    "id": "CONFSVR",
+                    "parentId": 1,
+                    "name": "CONFSVR"
+                },
+                {
+                    "id": "CUVC",
+                    "parentId": 1,
+                    "name": "CUVC"
+                },
+                {
+                    "id": "EACONF",
+                    "parentId": 1,
+                    "name": "EACONF"
+                },
+                {
+                    "id": 2,
+                    "name": "TP Endpoints",
+                    "isLabel": true
+                },
+                {
+                    "id": "CTSAPP",
+                    "parentId": 2,
+                    "name": "CTSAPP"
+                },
+                {
+                    "id": "CTSIMS",
+                    "parentId": 2,
+                    "name": "CTSIMS"
+                },
+                {
+                    "id": 3,
+                    "name": "IOT Routing",
+                    "isLabel": true
+                },
+                {
+                    "id": "CGR1000",
+                    "parentId": 3,
+                    "name": "CGR1000"
+                },
+                {
+                    "id": "CGR2000",
+                    "parentId": 3,
+                    "name": "CGR2000"
+                },
+                {
+                    "id": "M2M800",
+                    "parentId": 3,
+                    "name": "M2M800"
+                }
+            ],
+            [
+                {
+                    "id": 1,
+                    "name": "CUVC",
+                    "isLabel": true
+                },
+                {
+                    "id": "VS-F6K-PFC4XL-RF",
+                    "parentId": 1,
+                    "name": "VS-F6K-PFC4XL-RF"
+                },
+                {
+                    "id": "N20-C6508",
+                    "parentId": 1,
+                    "name": "N20-C6508"
+                },
+                {
+                    "id": "UCSB-B200-M3-U",
+                    "parentId": 1,
+                    "name": "UCSB-B200-M3-U"
+                },
+                {
+                    "id": "SEC-SVP-3P,L-S-AC-APX-1YR-G",
+                    "parentId": 1,
+                    "name": "SEC-SVP-3P,L-S-AC-APX-1YR-G"
+                }
+            ],
+            [
+                {
+                    "id": "Hardware",
+                    "name": "Hardware"
+                },
+                {
+                    "id": "Software",
+                    "name": "Software"
+                },
+                {
+                    "id": "Services",
+                    "name": "Services"
+                }
+            ],
+            [
+                {
+                    "id": "Product SO 1",
+                    "name": "Product SO 1"
+                },
+                {
+                    "id": "Product SO 2",
+                    "name": "Product SO 2"
+                },
+                {
+                    "id": "Product SO 3",
+                    "name": "Product SO 3"
+                },
+                {
+                    "id": "Product SO 4",
+                    "name": "Product SO 4"
+                }
+            ]
+        ],
+        "excluded": []
+    },
+    {
+        "title": "Install Site",
+        "slug": "install",
+        "active": false,
+        "progressive": false,
+        "type": "dropdown",
+        "levels_name": [
+            "Customer Registry GU Name",
+            "Customer Registry Party Name",
+            "Customer Registry Party ID",
+            "Install Site Name",
+            "Install Site ID",
+            "Install Site Address 1",
+            "Install Site City",
+            "Install Site State",
+            "Install Site Country"
+        ],
+        "searchable": [
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true
+        ],
+        "search_api": [],
+        "disabled": [],
+        "selected": [],
+        "levels": [
+            [
+                {
+                    "id": "GU Name 1",
+                    "name": "GU Name 1"
+                },
+                {
+                    "id": "GU Name 2",
+                    "name": "GU Name 2"
+                },
+                {
+                    "id": "GU Name 3",
+                    "name": "GU Name 3"
+                },
+                {
+                    "id": "GU Name 4",
+                    "name": "GU Name 4"
+                }
+            ],
+            [
+                {
+                    "id": "Party Name 1",
+                    "name": "Party Name 1"
+                },
+                {
+                    "id": "Party Name 2",
+                    "name": "Party Name 2"
+                },
+                {
+                    "id": "Party Name 3",
+                    "name": "Party Name 3"
+                },
+                {
+                    "id": "Party Name 4",
+                    "name": "Party Name 4"
+                }
+            ],
+            [
+                {
+                    "id": "Party ID 1",
+                    "name": "Party ID 1"
+                },
+                {
+                    "id": "Party ID 2",
+                    "name": "Party ID 2"
+                },
+                {
+                    "id": "Party ID 3",
+                    "name": "Party ID 3"
+                },
+                {
+                    "id": "Party ID 4",
+                    "name": "Party ID 4"
+                }
+            ],
+            [
+                {
+                    "id": "Name 1",
+                    "name": "Name 1"
+                },
+                {
+                    "id": "Name 2",
+                    "name": "Name 2"
+                },
+                {
+                    "id": "Name 3",
+                    "name": "Name 3"
+                },
+                {
+                    "id": "Name 4",
+                    "name": "Name 4"
+                }
+            ],
+            [
+                {
+                    "id": "ID 1",
+                    "name": "ID 1"
+                },
+                {
+                    "id": "ID 2",
+                    "name": "ID 2"
+                },
+                {
+                    "id": "ID 3",
+                    "name": "ID 3"
+                },
+                {
+                    "id": "ID 4",
+                    "name": "ID 4"
+                }
+            ],
+            [
+                {
+                    "id": "Address 1",
+                    "name": "Address 1"
+                },
+                {
+                    "id": "Address 2",
+                    "name": "Address 2"
+                },
+                {
+                    "id": "Address 3",
+                    "name": "Address 3"
+                },
+                {
+                    "id": "Address 4",
+                    "name": "Address 4"
+                }
+            ],
+            [
+                {
+                    "id": "City 1",
+                    "name": "City 1"
+                },
+                {
+                    "id": "City 2",
+                    "name": "City 2"
+                },
+                {
+                    "id": "City 3",
+                    "name": "City 3"
+                },
+                {
+                    "id": "City 4",
+                    "name": "City 4"
+                }
+            ],
+            [
+                {
+                    "id": "State 1",
+                    "name": "State 1"
+                },
+                {
+                    "id": "State 2",
+                    "name": "State 2"
+                },
+                {
+                    "id": "State 3",
+                    "name": "State 3"
+                },
+                {
+                    "id": "State 4",
+                    "name": "State 4"
+                }
+            ],
+            [
+                {
+                    "id": "Australia",
+                    "name": "Australia"
+                },
+                {
+                    "id": "India",
+                    "name": "India"
+                },
+                {
+                    "id": "United States of America",
+                    "name": "United States of America"
+                }
+            ]
+        ],
+        "excluded": []
+    },
+    {
+        "title": "Partner",
+        "slug": "partner",
+        "active": false,
+        "progressive": false,
+        "type": "dropdown",
+        "levels_name": [
+            "Product Bill-to Partner Name",
+            "Service Bill-to Partner Name"
+        ],
+        "searchable": [
+            true,
+            true
+        ],
+        "disabled": [],
+        "selected": [
+            [
+                "Core BTS",
+                "Cisco Internal"
+            ],
+            [
+                "Liberty INC"
+            ]
+        ],
+        "levels": [
+            [
+                {
+                    "id": "Core BTS",
+                    "name": "Core BTS"
+                },
+                {
+                    "id": "Cisco Internal",
+                    "name": "Cisco Internal"
+                },
+                {
+                    "id": "Liberty INC",
+                    "name": "Liberty INC"
+                }
+            ],
+            [
+                {
+                    "id": "Core BTS",
+                    "name": "Core BTS"
+                },
+                {
+                    "id": "Cisco Internal",
+                    "name": "Cisco Internal"
+                },
+                {
+                    "id": "Liberty INC",
+                    "name": "Liberty INC"
+                }
+            ]
+        ],
+        "excluded": []
+    },
+    {
+        "title": "Qualification/Disqualification",
+        "slug": "qualification",
+        "active": false,
+        "progressive": false,
+        "type": "dropdown",
+        "levels_name": [
+            "Qualification Status",
+            "Reason Codes",
+            "Sub Reason Codes"
+        ],
+        "searchable": [
+            false,
+            false,
+            false
+        ],
+        "disabled": [],
+        "selected": [],
+        "levels": [
+            [
+                {
+                    "id": "Pending",
+                    "name": "Pending"
+                },
+                {
+                    "id": "Qualified",
+                    "name": "Qualified"
+                },
+                {
+                    "id": "Disqualified",
+                    "name": "Disqualified"
+                }
+            ],
+            [
+                {
+                    "id": "Product Removed from Customer's Network",
+                    "name": "Product Removed from Customer's Network"
+                },
+                {
+                    "id": "Data Needs Updating",
+                    "name": "Data Needs Updating"
+                }
+            ],
+            [
+                {
+                    "id": "Refreshed",
+                    "name": "Refreshed"
+                },
+                {
+                    "id": "Device is lost to Competitor",
+                    "name": "Device is lost to Competitor"
+                },
+                {
+                    "id": "Product RMA'ed",
+                    "name": "Product RMA'ed"
+                },
+                {
+                    "id": "Downsizing",
+                    "name": "Downsizing"
+                }
+            ]
+        ],
+        "excluded": []
+    },
+    {
+        "title": "Year",
+        "slug": "year",
+        "active": false,
+        "progressive": false,
+        "type": "dropdown",
+        "levels_name": [
+            "Covered Line End Date FY-FQ",
+            "LDOS FY",
+            "Shipped FY"
+        ],
+        "searchable": [
+            true,
+            true,
+            true
+        ],
+        "disabled": [],
+        "selected": [],
+        "levels": [
+            [
+                {
+                    "id": "2018 Q4",
+                    "name": "2018 Q4"
+                },
+                {
+                    "id": "2018 Q3",
+                    "name": "2018 Q3"
+                },
+                {
+                    "id": "2018 Q2",
+                    "name": "2018 Q2"
+                },
+                {
+                    "id": "2018 Q1",
+                    "name": "2018 Q1"
+                },
+                {
+                    "id": "2017 Q4",
+                    "name": "2017 Q4"
+                },
+                {
+                    "id": "2017 Q3",
+                    "name": "2017 Q3"
+                }
+            ],
+            [
+                {
+                    "id": "2019",
+                    "name": "2019"
+                },
+                {
+                    "id": "2018",
+                    "name": "2018"
+                },
+                {
+                    "id": "2017",
+                    "name": "2017"
+                },
+                {
+                    "id": "2016",
+                    "name": "2016"
+                }
+            ],
+            [
+                {
+                    "id": "2011",
+                    "name": "2011"
+                },
+                {
+                    "id": "2012",
+                    "name": "2012"
+                },
+                {
+                    "id": "2013",
+                    "name": "2013"
+                },
+                {
+                    "id": "2014",
+                    "name": "2014"
+                }
+            ]
+        ],
+        "excluded": []
+    },
+    {
+        "title": "Dataset",
+        "slug": "dataset",
+        "active": false,
+        "progressive": false,
+        "type": "dataset",
+        "categories": [
+            {
+                "title": "Covered IB Shipment FY Range",
+                "default_value": [
+                    1997,
+                    2018
+                ],
+                "selected_value": [
+                    1997,
+                    2018
+                ]
+            },
+            {
+                "title": "Uncovered IB Shipment FY Range",
+                "default_value": [
+                    2012,
+                    2018
+                ],
+                "selected_value": [
+                    2012,
+                    2018
+                ]
+            }
+        ],
+        "searchable": [
+            false,
+            false
+        ],
+        "disabled": [],
+        "selected": [],
+        "levels": [],
+        "excluded": []
+    }
+]

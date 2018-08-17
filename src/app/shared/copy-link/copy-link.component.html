@@ -1,0 +1,6 @@
+<div class="popover-message" *ngIf="copyLinkService.messageVisible" [ngClass]="{'popover-success': !copyLinkService.isError, 'popover-error': copyLinkService.isError}">
+  <i [ngClass]="{'icon-success': !copyLinkService.isError, 'icon-error-icon': copyLinkService.isError}"></i>
+  <span>{{copyLinkService.message}}</span>
+  <button (click)="copyLinkService.hideMessage()" class="icon-close-btn" type="button">
+  </button>
+</div>

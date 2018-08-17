@@ -1,0 +1,34 @@
+{
+    "app": [
+        {
+            "name": "Cisco Ready Connected Experience",
+            "description": "Provides a comprehensive view and analytic to Sales Leaders and Sales Teams on their Installed Base Opportunities and Performance related to Product Refresh, Services Renew and Attach",
+            "url": "https://rewarddash.cloudapps.cisco.com/#/sales/analysis/asset"
+        },
+        {
+            "name": "Cisco Ready Business Object",
+            "description": "Provides adhoc analysis and data exploration capabilities on Installed Base data; track and report on Services Metrics",
+            "url": "http://disebi/BOE/BI"
+        },
+        {
+            "name": "SFDC Competitive Dashboard",
+            "description": "Provides Sales leadership the ability to quickly inspect the SFDC competitive landscape",
+            "url": "http://qli-web-003-p/QvAJAXZfc/opendoc.htm?document=SFDC_Competitive_Dashboard_V1.qvw&host=QVS%40qli-app-006-P"
+        },
+        {
+            "name": "Services Leadership Dashboard",
+            "description": "Provides a comprehensive view of Services installed base Opportunities for TS Renew & TS Attach.",
+            "url": "https://rewardstg.cloudapps.cisco.com/#/services/analysis/tsRenew/overview"
+        },
+        {
+            "name": "Reporting Center",
+            "description": "Provides fast and easy way to request Smart IB for Customer, Partner or Distributor.",
+            "url": "http://go2.cisco.com/CRReportingCenter"
+        },
+        {
+            "name": "AS Demand Gen",
+            "description": "Sales Prospecting Tool for Advanced Services Offers with Services Recommendation.",
+            "url": "https://cr-analytics.cisco.com/#/site/CDOanalytics/views/ASDG/Landing?:iid=1"
+        }
+    ]
+}

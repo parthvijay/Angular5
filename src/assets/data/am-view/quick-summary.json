@@ -1,0 +1,12 @@
+[
+    {
+        "status": "Qualified",
+        "line_items": 12012,
+        "value": 85000.89
+    },
+    {
+        "status": "Disqualified",
+        "line_items": 45021,
+        "value": 12000.5
+    }
+]

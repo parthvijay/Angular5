@@ -1,0 +1,942 @@
+[
+    {
+        "quarter": "Q1FY14",
+        "areas": [
+            {
+                "state": "US_Enterprise (AMER)",
+                "freq": {
+                    "In Pipeline": 230000000,
+                    "Not in Pipeline": 730000000
+                }
+            },
+            {
+                "state": "Canada (AMER)",
+                "freq": {
+                    "In Pipeline": 550000000,
+                    "Not in Pipeline": 450000000
+                }
+            },
+            {
+                "state": "India_Area (APJ)",
+                "freq": {
+                    "In Pipeline": 610000000,
+                    "Not in Pipeline": 220000000
+                }
+            },
+            {
+                "state": "Emear_Central (EMEAR)",
+                "freq": {
+                    "In Pipeline": 670000000,
+                    "Not in Pipeline": 350000000
+                }
+            },
+            {
+                "state": "Emear_North (EMEAR)",
+                "freq": {
+                    "In Pipeline": 500000000,
+                    "Not in Pipeline": 310000000
+                }
+            },
+            {
+                "state": "Emear_South (EMEAR)",
+                "freq": {
+                    "In Pipeline": 510000000,
+                    "Not in Pipeline": 200000000
+                }
+            }
+        ]
+    },
+    {
+        "quarter": "Q2FY14",
+        "areas": [
+            {
+                "state": "US_Enterprise (AMER)",
+                "freq": {
+                    "In Pipeline": 830000000,
+                    "Not in Pipeline": 740000000
+                }
+            },
+            {
+                "state": "Canada (AMER)",
+                "freq": {
+                    "In Pipeline": 790000000,
+                    "Not in Pipeline": 380000000
+                }
+            },
+            {
+                "state": "India_Area (APJ)",
+                "freq": {
+                    "In Pipeline": 270000000,
+                    "Not in Pipeline": 280000000
+                }
+            },
+            {
+                "state": "Emear_Central (EMEAR)",
+                "freq": {
+                    "In Pipeline": 230000000,
+                    "Not in Pipeline": 560000000
+                }
+            },
+            {
+                "state": "Emear_North (EMEAR)",
+                "freq": {
+                    "In Pipeline": 670000000,
+                    "Not in Pipeline": 720000000
+                }
+            },
+            {
+                "state": "Emear_South (EMEAR)",
+                "freq": {
+                    "In Pipeline": 260000000,
+                    "Not in Pipeline": 700000000
+                }
+            }
+        ]
+    },
+    {
+        "quarter": "Q3FY14",
+        "areas": [
+            {
+                "state": "US_Enterprise (AMER)",
+                "freq": {
+                    "In Pipeline": 440000000,
+                    "Not in Pipeline": 210000000
+                }
+            },
+            {
+                "state": "Canada (AMER)",
+                "freq": {
+                    "In Pipeline": 690000000,
+                    "Not in Pipeline": 420000000
+                }
+            },
+            {
+                "state": "India_Area (APJ)",
+                "freq": {
+                    "In Pipeline": 820000000,
+                    "Not in Pipeline": 290000000
+                }
+            },
+            {
+                "state": "Emear_Central (EMEAR)",
+                "freq": {
+                    "In Pipeline": 630000000,
+                    "Not in Pipeline": 760000000
+                }
+            },
+            {
+                "state": "Emear_North (EMEAR)",
+                "freq": {
+                    "In Pipeline": 740000000,
+                    "Not in Pipeline": 770000000
+                }
+            },
+            {
+                "state": "Emear_South (EMEAR)",
+                "freq": {
+                    "In Pipeline": 210000000,
+                    "Not in Pipeline": 550000000
+                }
+            }
+        ]
+    },
+    {
+        "quarter": "Q4FY14",
+        "areas": [
+            {
+                "state": "US_Enterprise (AMER)",
+                "freq": {
+                    "In Pipeline": 820000000,
+                    "Not in Pipeline": 690000000
+                }
+            },
+            {
+                "state": "Canada (AMER)",
+                "freq": {
+                    "In Pipeline": 780000000,
+                    "Not in Pipeline": 400000000
+                }
+            },
+            {
+                "state": "India_Area (APJ)",
+                "freq": {
+                    "In Pipeline": 530000000,
+                    "Not in Pipeline": 770000000
+                }
+            },
+            {
+                "state": "Emear_Central (EMEAR)",
+                "freq": {
+                    "In Pipeline": 520000000,
+                    "Not in Pipeline": 610000000
+                }
+            },
+            {
+                "state": "Emear_North (EMEAR)",
+                "freq": {
+                    "In Pipeline": 610000000,
+                    "Not in Pipeline": 540000000
+                }
+            },
+            {
+                "state": "Emear_South (EMEAR)",
+                "freq": {
+                    "In Pipeline": 730000000,
+                    "Not in Pipeline": 590000000
+                }
+            }
+        ]
+    },
+    {
+        "quarter": "Q1FY15",
+        "areas": [
+            {
+                "state": "US_Enterprise (AMER)",
+                "freq": {
+                    "In Pipeline": 300000000,
+                    "Not in Pipeline": 120000000
+                }
+            },
+            {
+                "state": "Canada (AMER)",
+                "freq": {
+                    "In Pipeline": 690000000,
+                    "Not in Pipeline": 600000000
+                }
+            },
+            {
+                "state": "India_Area (APJ)",
+                "freq": {
+                    "In Pipeline": 490000000,
+                    "Not in Pipeline": 330000000
+                }
+            },
+            {
+                "state": "Emear_Central (EMEAR)",
+                "freq": {
+                    "In Pipeline": 120000000,
+                    "Not in Pipeline": 400000000
+                }
+            },
+            {
+                "state": "Emear_North (EMEAR)",
+                "freq": {
+                    "In Pipeline": 180000000,
+                    "Not in Pipeline": 660000000
+                }
+            },
+            {
+                "state": "Emear_South (EMEAR)",
+                "freq": {
+                    "In Pipeline": 170000000,
+                    "Not in Pipeline": 190000000
+                }
+            }
+        ]
+    },
+    {
+        "quarter": "Q2FY15",
+        "areas": [
+            {
+                "state": "US_Enterprise (AMER)",
+                "freq": {
+                    "In Pipeline": 400000000,
+                    "Not in Pipeline": 180000000
+                }
+            },
+            {
+                "state": "Canada (AMER)",
+                "freq": {
+                    "In Pipeline": 510000000,
+                    "Not in Pipeline": 820000000
+                }
+            },
+            {
+                "state": "India_Area (APJ)",
+                "freq": {
+                    "In Pipeline": 660000000,
+                    "Not in Pipeline": 790000000
+                }
+            },
+            {
+                "state": "Emear_Central (EMEAR)",
+                "freq": {
+                    "In Pipeline": 320000000,
+                    "Not in Pipeline": 150000000
+                }
+            },
+            {
+                "state": "Emear_North (EMEAR)",
+                "freq": {
+                    "In Pipeline": 630000000,
+                    "Not in Pipeline": 580000000
+                }
+            },
+            {
+                "state": "Emear_South (EMEAR)",
+                "freq": {
+                    "In Pipeline": 770000000,
+                    "Not in Pipeline": 140000000
+                }
+            }
+        ]
+    },
+    {
+        "quarter": "Q3FY15",
+        "areas": [
+            {
+                "state": "US_Enterprise (AMER)",
+                "freq": {
+                    "In Pipeline": 340000000,
+                    "Not in Pipeline": 830000000
+                }
+            },
+            {
+                "state": "Canada (AMER)",
+                "freq": {
+                    "In Pipeline": 600000000,
+                    "Not in Pipeline": 130000000
+                }
+            },
+            {
+                "state": "India_Area (APJ)",
+                "freq": {
+                    "In Pipeline": 370000000,
+                    "Not in Pipeline": 140000000
+                }
+            },
+            {
+                "state": "Emear_Central (EMEAR)",
+                "freq": {
+                    "In Pipeline": 160000000,
+                    "Not in Pipeline": 110000000
+                }
+            },
+            {
+                "state": "Emear_North (EMEAR)",
+                "freq": {
+                    "In Pipeline": 490000000,
+                    "Not in Pipeline": 690000000
+                }
+            },
+            {
+                "state": "Emear_South (EMEAR)",
+                "freq": {
+                    "In Pipeline": 830000000,
+                    "Not in Pipeline": 150000000
+                }
+            }
+        ]
+    },
+    {
+        "quarter": "Q4FY15",
+        "areas": [
+            {
+                "state": "US_Enterprise (AMER)",
+                "freq": {
+                    "In Pipeline": 670000000,
+                    "Not in Pipeline": 110000000
+                }
+            },
+            {
+                "state": "Canada (AMER)",
+                "freq": {
+                    "In Pipeline": 620000000,
+                    "Not in Pipeline": 560000000
+                }
+            },
+            {
+                "state": "India_Area (APJ)",
+                "freq": {
+                    "In Pipeline": 460000000,
+                    "Not in Pipeline": 700000000
+                }
+            },
+            {
+                "state": "Emear_Central (EMEAR)",
+                "freq": {
+                    "In Pipeline": 480000000,
+                    "Not in Pipeline": 610000000
+                }
+            },
+            {
+                "state": "Emear_North (EMEAR)",
+                "freq": {
+                    "In Pipeline": 710000000,
+                    "Not in Pipeline": 610000000
+                }
+            },
+            {
+                "state": "Emear_South (EMEAR)",
+                "freq": {
+                    "In Pipeline": 640000000,
+                    "Not in Pipeline": 180000000
+                }
+            }
+        ]
+    },
+    {
+        "quarter": "Q1FY16",
+        "areas": [
+            {
+                "state": "US_Enterprise (AMER)",
+                "freq": {
+                    "In Pipeline": 740000000,
+                    "Not in Pipeline": 780000000
+                }
+            },
+            {
+                "state": "Canada (AMER)",
+                "freq": {
+                    "In Pipeline": 120000000,
+                    "Not in Pipeline": 780000000
+                }
+            },
+            {
+                "state": "India_Area (APJ)",
+                "freq": {
+                    "In Pipeline": 800000000,
+                    "Not in Pipeline": 630000000
+                }
+            },
+            {
+                "state": "Emear_Central (EMEAR)",
+                "freq": {
+                    "In Pipeline": 640000000,
+                    "Not in Pipeline": 330000000
+                }
+            },
+            {
+                "state": "Emear_North (EMEAR)",
+                "freq": {
+                    "In Pipeline": 710000000,
+                    "Not in Pipeline": 480000000
+                }
+            },
+            {
+                "state": "Emear_South (EMEAR)",
+                "freq": {
+                    "In Pipeline": 750000000,
+                    "Not in Pipeline": 300000000
+                }
+            }
+        ]
+    },
+    {
+        "quarter": "Q2FY16",
+        "areas": [
+            {
+                "state": "US_Enterprise (AMER)",
+                "freq": {
+                    "In Pipeline": 100000000,
+                    "Not in Pipeline": 270000000
+                }
+            },
+            {
+                "state": "Canada (AMER)",
+                "freq": {
+                    "In Pipeline": 620000000,
+                    "Not in Pipeline": 470000000
+                }
+            },
+            {
+                "state": "India_Area (APJ)",
+                "freq": {
+                    "In Pipeline": 850000000,
+                    "Not in Pipeline": 490000000
+                }
+            },
+            {
+                "state": "Emear_Central (EMEAR)",
+                "freq": {
+                    "In Pipeline": 670000000,
+                    "Not in Pipeline": 710000000
+                }
+            },
+            {
+                "state": "Emear_North (EMEAR)",
+                "freq": {
+                    "In Pipeline": 440000000,
+                    "Not in Pipeline": 810000000
+                }
+            },
+            {
+                "state": "Emear_South (EMEAR)",
+                "freq": {
+                    "In Pipeline": 240000000,
+                    "Not in Pipeline": 410000000
+                }
+            }
+        ]
+    },
+    {
+        "quarter": "Q3FY16",
+        "areas": [
+            {
+                "state": "US_Enterprise (AMER)",
+                "freq": {
+                    "In Pipeline": 530000000,
+                    "Not in Pipeline": 350000000
+                }
+            },
+            {
+                "state": "Canada (AMER)",
+                "freq": {
+                    "In Pipeline": 850000000,
+                    "Not in Pipeline": 150000000
+                }
+            },
+            {
+                "state": "India_Area (APJ)",
+                "freq": {
+                    "In Pipeline": 240000000,
+                    "Not in Pipeline": 830000000
+                }
+            },
+            {
+                "state": "Emear_Central (EMEAR)",
+                "freq": {
+                    "In Pipeline": 280000000,
+                    "Not in Pipeline": 380000000
+                }
+            },
+            {
+                "state": "Emear_North (EMEAR)",
+                "freq": {
+                    "In Pipeline": 240000000,
+                    "Not in Pipeline": 750000000
+                }
+            },
+            {
+                "state": "Emear_South (EMEAR)",
+                "freq": {
+                    "In Pipeline": 380000000,
+                    "Not in Pipeline": 140000000
+                }
+            }
+        ]
+    },
+    {
+        "quarter": "Q4FY16",
+        "areas": [
+            {
+                "state": "US_Enterprise (AMER)",
+                "freq": {
+                    "In Pipeline": 560000000,
+                    "Not in Pipeline": 840000000
+                }
+            },
+            {
+                "state": "Canada (AMER)",
+                "freq": {
+                    "In Pipeline": 390000000,
+                    "Not in Pipeline": 220000000
+                }
+            },
+            {
+                "state": "India_Area (APJ)",
+                "freq": {
+                    "In Pipeline": 100000000,
+                    "Not in Pipeline": 490000000
+                }
+            },
+            {
+                "state": "Emear_Central (EMEAR)",
+                "freq": {
+                    "In Pipeline": 210000000,
+                    "Not in Pipeline": 340000000
+                }
+            },
+            {
+                "state": "Emear_North (EMEAR)",
+                "freq": {
+                    "In Pipeline": 570000000,
+                    "Not in Pipeline": 200000000
+                }
+            },
+            {
+                "state": "Emear_South (EMEAR)",
+                "freq": {
+                    "In Pipeline": 580000000,
+                    "Not in Pipeline": 130000000
+                }
+            }
+        ]
+    },
+    {
+        "quarter": "Q1FY17",
+        "areas": [
+            {
+                "state": "US_Enterprise (AMER)",
+                "freq": {
+                    "In Pipeline": 610000000,
+                    "Not in Pipeline": 250000000
+                }
+            },
+            {
+                "state": "Canada (AMER)",
+                "freq": {
+                    "In Pipeline": 200000000,
+                    "Not in Pipeline": 780000000
+                }
+            },
+            {
+                "state": "India_Area (APJ)",
+                "freq": {
+                    "In Pipeline": 570000000,
+                    "Not in Pipeline": 160000000
+                }
+            },
+            {
+                "state": "Emear_Central (EMEAR)",
+                "freq": {
+                    "In Pipeline": 500000000,
+                    "Not in Pipeline": 710000000
+                }
+            },
+            {
+                "state": "Emear_North (EMEAR)",
+                "freq": {
+                    "In Pipeline": 380000000,
+                    "Not in Pipeline": 350000000
+                }
+            },
+            {
+                "state": "Emear_South (EMEAR)",
+                "freq": {
+                    "In Pipeline": 540000000,
+                    "Not in Pipeline": 320000000
+                }
+            }
+        ]
+    },
+    {
+        "quarter": "Q2FY17",
+        "areas": [
+            {
+                "state": "US_Enterprise (AMER)",
+                "freq": {
+                    "In Pipeline": 510000000,
+                    "Not in Pipeline": 840000000
+                }
+            },
+            {
+                "state": "Canada (AMER)",
+                "freq": {
+                    "In Pipeline": 180000000,
+                    "Not in Pipeline": 650000000
+                }
+            },
+            {
+                "state": "India_Area (APJ)",
+                "freq": {
+                    "In Pipeline": 650000000,
+                    "Not in Pipeline": 700000000
+                }
+            },
+            {
+                "state": "Emear_Central (EMEAR)",
+                "freq": {
+                    "In Pipeline": 320000000,
+                    "Not in Pipeline": 530000000
+                }
+            },
+            {
+                "state": "Emear_North (EMEAR)",
+                "freq": {
+                    "In Pipeline": 680000000,
+                    "Not in Pipeline": 460000000
+                }
+            },
+            {
+                "state": "Emear_South (EMEAR)",
+                "freq": {
+                    "In Pipeline": 780000000,
+                    "Not in Pipeline": 560000000
+                }
+            }
+        ]
+    },
+    {
+        "quarter": "Q3FY17",
+        "areas": [
+            {
+                "state": "US_Enterprise (AMER)",
+                "freq": {
+                    "In Pipeline": 800000000,
+                    "Not in Pipeline": 100000000
+                }
+            },
+            {
+                "state": "Canada (AMER)",
+                "freq": {
+                    "In Pipeline": 510000000,
+                    "Not in Pipeline": 270000000
+                }
+            },
+            {
+                "state": "India_Area (APJ)",
+                "freq": {
+                    "In Pipeline": 250000000,
+                    "Not in Pipeline": 670000000
+                }
+            },
+            {
+                "state": "Emear_Central (EMEAR)",
+                "freq": {
+                    "In Pipeline": 800000000,
+                    "Not in Pipeline": 630000000
+                }
+            },
+            {
+                "state": "Emear_North (EMEAR)",
+                "freq": {
+                    "In Pipeline": 540000000,
+                    "Not in Pipeline": 760000000
+                }
+            },
+            {
+                "state": "Emear_South (EMEAR)",
+                "freq": {
+                    "In Pipeline": 180000000,
+                    "Not in Pipeline": 340000000
+                }
+            }
+        ]
+    },
+    {
+        "quarter": "Q4FY17",
+        "areas": [
+            {
+                "state": "US_Enterprise (AMER)",
+                "freq": {
+                    "In Pipeline": 300000000,
+                    "Not in Pipeline": 430000000
+                }
+            },
+            {
+                "state": "Canada (AMER)",
+                "freq": {
+                    "In Pipeline": 650000000,
+                    "Not in Pipeline": 700000000
+                }
+            },
+            {
+                "state": "India_Area (APJ)",
+                "freq": {
+                    "In Pipeline": 780000000,
+                    "Not in Pipeline": 700000000
+                }
+            },
+            {
+                "state": "Emear_Central (EMEAR)",
+                "freq": {
+                    "In Pipeline": 300000000,
+                    "Not in Pipeline": 380000000
+                }
+            },
+            {
+                "state": "Emear_North (EMEAR)",
+                "freq": {
+                    "In Pipeline": 750000000,
+                    "Not in Pipeline": 630000000
+                }
+            },
+            {
+                "state": "Emear_South (EMEAR)",
+                "freq": {
+                    "In Pipeline": 340000000,
+                    "Not in Pipeline": 240000000
+                }
+            }
+        ]
+    },
+    {
+        "quarter": "Q1FY18",
+        "areas": [
+            {
+                "state": "US_Enterprise (AMER)",
+                "freq": {
+                    "In Pipeline": 480000000,
+                    "Not in Pipeline": 620000000
+                }
+            },
+            {
+                "state": "Canada (AMER)",
+                "freq": {
+                    "In Pipeline": 720000000,
+                    "Not in Pipeline": 420000000
+                }
+            },
+            {
+                "state": "India_Area (APJ)",
+                "freq": {
+                    "In Pipeline": 390000000,
+                    "Not in Pipeline": 250000000
+                }
+            },
+            {
+                "state": "Emear_Central (EMEAR)",
+                "freq": {
+                    "In Pipeline": 290000000,
+                    "Not in Pipeline": 580000000
+                }
+            },
+            {
+                "state": "Emear_North (EMEAR)",
+                "freq": {
+                    "In Pipeline": 520000000,
+                    "Not in Pipeline": 820000000
+                }
+            },
+            {
+                "state": "Emear_South (EMEAR)",
+                "freq": {
+                    "In Pipeline": 110000000,
+                    "Not in Pipeline": 840000000
+                }
+            }
+        ]
+    },
+    {
+        "quarter": "Q2FY18",
+        "areas": [
+            {
+                "state": "US_Enterprise (AMER)",
+                "freq": {
+                    "In Pipeline": 670000000,
+                    "Not in Pipeline": 170000000
+                }
+            },
+            {
+                "state": "Canada (AMER)",
+                "freq": {
+                    "In Pipeline": 520000000,
+                    "Not in Pipeline": 430000000
+                }
+            },
+            {
+                "state": "India_Area (APJ)",
+                "freq": {
+                    "In Pipeline": 640000000,
+                    "Not in Pipeline": 480000000
+                }
+            },
+            {
+                "state": "Emear_Central (EMEAR)",
+                "freq": {
+                    "In Pipeline": 610000000,
+                    "Not in Pipeline": 170000000
+                }
+            },
+            {
+                "state": "Emear_North (EMEAR)",
+                "freq": {
+                    "In Pipeline": 380000000,
+                    "Not in Pipeline": 110000000
+                }
+            },
+            {
+                "state": "Emear_South (EMEAR)",
+                "freq": {
+                    "In Pipeline": 670000000,
+                    "Not in Pipeline": 380000000
+                }
+            }
+        ]
+    },
+    {
+        "quarter": "Q3FY18",
+        "areas": [
+            {
+                "state": "US_Enterprise (AMER)",
+                "freq": {
+                    "In Pipeline": 200000000,
+                    "Not in Pipeline": 650000000
+                }
+            },
+            {
+                "state": "Canada (AMER)",
+                "freq": {
+                    "In Pipeline": 130000000,
+                    "Not in Pipeline": 330000000
+                }
+            },
+            {
+                "state": "India_Area (APJ)",
+                "freq": {
+                    "In Pipeline": 210000000,
+                    "Not in Pipeline": 210000000
+                }
+            },
+            {
+                "state": "Emear_Central (EMEAR)",
+                "freq": {
+                    "In Pipeline": 760000000,
+                    "Not in Pipeline": 650000000
+                }
+            },
+            {
+                "state": "Emear_North (EMEAR)",
+                "freq": {
+                    "In Pipeline": 470000000,
+                    "Not in Pipeline": 520000000
+                }
+            },
+            {
+                "state": "Emear_South (EMEAR)",
+                "freq": {
+                    "In Pipeline": 800000000,
+                    "Not in Pipeline": 560000000
+                }
+            }
+        ]
+    },
+    {
+        "quarter": "Q4FY18",
+        "areas": [
+            {
+                "state": "US_Enterprise (AMER)",
+                "freq": {
+                    "In Pipeline": 460000000,
+                    "Not in Pipeline": 210000000
+                }
+            },
+            {
+                "state": "Canada (AMER)",
+                "freq": {
+                    "In Pipeline": 450000000,
+                    "Not in Pipeline": 300000000
+                }
+            },
+            {
+                "state": "India_Area (APJ)",
+                "freq": {
+                    "In Pipeline": 790000000,
+                    "Not in Pipeline": 380000000
+                }
+            },
+            {
+                "state": "Emear_Central (EMEAR)",
+                "freq": {
+                    "In Pipeline": 550000000,
+                    "Not in Pipeline": 540000000
+                }
+            },
+            {
+                "state": "Emear_North (EMEAR)",
+                "freq": {
+                    "In Pipeline": 310000000,
+                    "Not in Pipeline": 210000000
+                }
+            },
+            {
+                "state": "Emear_South (EMEAR)",
+                "freq": {
+                    "In Pipeline": 500000000,
+                    "Not in Pipeline": 310000000
+                }
+            }
+        ]
+    }
+]

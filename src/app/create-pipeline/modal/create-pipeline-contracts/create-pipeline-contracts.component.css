@@ -1,0 +1,9 @@
+.modal-header h1 { font-size: 20px; position: relative; width: 100%; padding-right: 30px; }
+.modal-header h1 a.modal-close { position: absolute; right: -8px; top: -6px; }
+.modal-header .ico-close_bg { font-size: 32px; }
+.health-popup .table-responsive { max-height: 302px; border-bottom: 1px solid #ccc; }
+.popup-table table tr th span.product-list-txt { font-weight: 600; color: #666; }
+.popup-table table tr .sort .icon-down-arrow { position: relative; top: -2px; margin-left: 10px; }
+.popup-table table tr .sort .icon-down-arrow:before { color: #58585b; font-size: 5px; display: inline-block; }
+.popup-table table tr .sort.active .icon-down-arrow:before { transform: rotate(180deg); }
+.expanded .striped-table tbody tr td, .expanded .striped-table thead th { vertical-align: middle; }

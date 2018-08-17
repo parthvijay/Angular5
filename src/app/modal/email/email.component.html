@@ -1,0 +1,41 @@
+<!--Start Common Modal Window-->
+<!--ng-template #content let-c="close" let-d="dismiss"-->
+<div class="modal-header">
+  <h5 class="modal-title" id="exampleModalLabel">Share via Email</h5>
+  <button type="button" class="icon-close-btn fixedCloseRight" aria-label="Close" (click)="activeModal.dismiss('Cross click')"></button>
+</div>
+<div class="modal-body">
+  <form>
+    <div class="row">
+      <div class="col-lg-6 sub-header" *ngFor="let c of emaildata">
+        <h4>{{c.title}}:</h4>
+        <h2>{{c.value}}</h2>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="form-group email-form">
+          <app-multiple-select [modelArr]="selectedEmails" [suggestionsArr]="suggestionsArr" (modelChange)="updateEmails($event)"></app-multiple-select>
+          <label class="clear-all" (click)="clearEmails()">Clear All</label>
+        </div>
+      </div>
+    </div>
+    <div class="row description">
+      <div class="col-lg-12">
+        <div class="form-group txt-area-group">
+          <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" name="message" required="" [(ngModel)]="messageDis"
+            appElementFocus></textarea>
+          <label for="exampleFormControlTextarea1" class="form-control-placeholder">Description</label>
+        </div>
+      </div>
+    </div>
+  </form>
+
+</div>
+<div class="modal-footer">
+  <button type="button" class="btn btn-secondary" (click)="activeModal.dismiss('Cancel click')">Cancel</button>
+  <button type="button" class="btn btn-primary" [ngClass]="{'disabled': !isFormValid()}" (click)="isFormValid() && sendEmail()">Send</button>
+</div>
+<!--/ng-template-->
+<!--End Common Modal Window-->

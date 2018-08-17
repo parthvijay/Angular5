@@ -1,0 +1,481 @@
+{
+  "summaryView": [{
+      "customerId": 32456787,
+      "customerName": "Amazon-GU",
+      "qualificationNumber": "3",
+      "ibOpportunity": "18871506.56",
+      "ibOpportunityPercentage": "",
+      "qualificationStage": "Not Started",
+      "dateStarted": "",
+      "startedBy": "",
+      "dateModified": "",
+      "modifiedBy": "",
+      "action": "Start Qualification",
+      "flagged": 1,
+      "sites": 57
+    },
+    {
+      "customerId": 32456787,
+      "customerName": "Apple CorpIT Retail-US",
+      "qualificationNumber": "6",
+      "ibOpportunity": "18871506.56",
+      "ibOpportunityPercentage": "",
+      "qualificationStage": "Not Started",
+      "dateStarted": "",
+      "startedBy": "",
+      "dateModified": "",
+      "modifiedBy": "",
+      "action": "Start Qualification",
+      "flagged": 1,
+      "sites": 57
+    },
+    {
+      "customerId": 32456787,
+      "customerName": "AT&T",
+      "qualificationNumber": "9",
+      "ibOpportunity": "18871506.56",
+      "ibOpportunityPercentage": "",
+      "qualificationStage": "Not Started",
+      "dateStarted": "",
+      "startedBy": "",
+      "dateModified": "",
+      "modifiedBy": "",
+      "action": "Start Qualification",
+      "flagged": 1,
+      "sites": 57
+    },
+    {
+      "customerId": 872456787,
+      "customerName": "British Telecom",
+      "qualificationNumber": "8",
+      "ibOpportunity": "16521148.53",
+      "ibOpportunityPercentage": {
+        "disqualified": "335306.75",
+        "qualified": "213295.84",
+        "pending": "622903.90"
+      },
+      "qualificationStage": "In Progress",
+      "dateStarted": "11-Sep-2016",
+      "startedBy": "Paul Sorge",
+      "dateModified": "12-Oct-2016",
+      "modifiedBy": "Kevin Beesly",
+      "action": "Start Qualification",
+      "flagged": 1,
+      "sites": 90
+    },
+    {
+      "customerName": "China Mobile Communications Corporation",
+      "qualificationNumber": "3",
+      "ibOpportunity": "14052152.91",
+      "ibOpportunityPercentage": {
+        "disqualified": "1356306.75",
+        "qualified": "76295.84",
+        "pending": "522903.90"
+      },
+      "qualificationStage": "In Progress",
+      "dateStarted": "11-Sep-2016",
+      "startedBy": "Kevin Beesly",
+      "dateModified": "14-Sep-2016",
+      "modifiedBy": "Paul Sorge",
+      "action": "Share",
+      "sites": 38
+    },
+    {
+      "customerName": "Charter Area",
+      "qualificationNumber": "1",
+      "ibOpportunity": "13206398.69",
+      "ibOpportunityPercentage": "",
+      "qualificationStage": "Not Started",
+      "dateStarted": "",
+      "startedBy": "",
+      "dateModified": "",
+      "modifiedBy": "",
+      "action": "Start Qualification",
+      "sites": 85
+    },
+    {
+      "customerName": "Cisco Internal",
+      "qualificationNumber": "8",
+      "ibOpportunity": "12002863.10",
+      "ibOpportunityPercentage": "",
+      "qualificationStage": "Approval Pending",
+      "dateStarted": "11-Sep-2016",
+      "startedBy": "Kevin Beesly",
+      "dateModified": "14-Sep-2016",
+      "modifiedBy": "Paul Sorge",
+      "action": "Share",
+      "sites": 63
+    },
+    {
+      "customerName": "Citigroup",
+      "qualificationNumber": "9",
+      "ibOpportunity": "271506.50",
+      "ibOpportunityPercentage": "",
+      "qualificationStage": "Not Started",
+      "dateStarted": "",
+      "startedBy": "",
+      "dateModified": "",
+      "modifiedBy": "",
+      "action": "Start Qualification",
+      "sites": 2
+    },
+    {
+      "customerName": "COX Communications INC",
+      "qualificationNumber": "4",
+      "ibOpportunity": "221148.53",
+      "ibOpportunityPercentage": {
+        "disqualified": "2356306.75",
+        "qualified": "66295.84",
+        "pending": "722903.90"
+      },
+      "qualificationStage": "In Progress",
+      "dateStarted": "9-Jul-2016",
+      "startedBy": "Paul Sorge",
+      "dateModified": "29-Aug-2016",
+      "modifiedBy": "George Adams",
+      "action": "Share",
+      "sites": 5
+    },
+    {
+      "customerName": "Department AIR Force ",
+      "qualificationNumber": "8",
+      "ibOpportunity": "18871506.56 ",
+      "ibOpportunityPercentage": {
+        "disqualified": "3774301.312",
+        "qualified": "15097205.248",
+        "pending": "0"
+      },
+      "qualificationStage": "Complete",
+      "dateStarted": "9-Mar-2016 ",
+      "startedBy": "Paul Sorge",
+      "dateModified": "11-Sep-2016",
+      "modifiedBy": "Paul Sorge",
+      "action": "Share",
+      "sites": 20
+    },
+    {
+      "customerName": "Fastweb SPA ",
+      "qualificationNumber": "5",
+      "ibOpportunity": "16521148.53",
+      "ibOpportunityPercentage": "",
+      "qualificationStage": "Not Started",
+      "dateStarted": "",
+      "startedBy": "",
+      "dateModified": "",
+      "modifiedBy": "",
+      "action": "Start Qualification",
+      "sites": 67
+    },
+    {
+      "customerName": "Ford",
+      "qualificationNumber": "3",
+      "ibOpportunity": "4052152.91",
+      "ibOpportunityPercentage": "",
+      "qualificationStage": "Not Started",
+      "dateStarted": "",
+      "startedBy": "",
+      "dateModified": "",
+      "modifiedBy": "",
+      "action": "Start Qualification",
+      "sites": 1
+    },
+    {
+      "customerName": "FR_COMM-GEO-RULE OWNER73",
+      "qualificationNumber": "3",
+      "ibOpportunity": "206398.69",
+      "ibOpportunityPercentage": {
+        "disqualified": "135306.75",
+        "qualified": "223295.84",
+        "pending": "422903.90"
+      },
+      "qualificationStage": "In Progress",
+      "dateStarted": "4-Sep-2016 ",
+      "startedBy": "Paul Sorge",
+      "dateModified": "14-Sep-2016 ",
+      "modifiedBy": "Paul Sorge",
+      "action": "Share",
+      "sites": 34
+    },
+    {
+      "customerName": "Geico Corporat ",
+      "qualificationNumber": "8",
+      "ibOpportunity": "12002863.10 ",
+      "ibOpportunityPercentage": {
+        "disqualified": "435306.75",
+        "qualified": "223295.84",
+        "pending": "422903.90"
+      },
+      "qualificationStage": "In Progress",
+      "dateStarted": "11-Sep-2016 ",
+      "startedBy": "John Halpert ",
+      "dateModified": "12-Oct-2016 ",
+      "modifiedBy": "Paul Sorge",
+      "action": "Share",
+      "sites": 57
+    },
+    {
+      "customerName": "Health Quest ",
+      "qualificationNumber": "3",
+      "ibOpportunity": "871506.50 ",
+      "ibOpportunityPercentage": {
+        "disqualified": "435306.75",
+        "qualified": "313295.84",
+        "pending": "622903.90"
+      },
+      "qualificationStage": "In Progress",
+      "dateStarted": "9-Aug-2016 ",
+      "startedBy": "Kevin Beesly ",
+      "dateModified": "29-Aug-2016  ",
+      "modifiedBy": "John Halpert ",
+      "action": "Share",
+      "sites": 95
+    },
+    {
+      "customerName": "IKEA",
+      "qualificationNumber": "4",
+      "ibOpportunity": "221148.53",
+      "ibOpportunityPercentage": {
+        "disqualified": "235306.75",
+        "qualified": "113295.84",
+        "pending": "522903.90"
+      },
+      "qualificationStage": "In Progress",
+      "dateStarted": "9-Aug-2016 ",
+      "startedBy": "Paul Sorge",
+      "dateModified": "29-Aug-2016  ",
+      "modifiedBy": "Paul Sorge",
+      "action": "Share",
+      "sites": 92
+    },
+    {
+      "customerName": "JPMC US",
+      "qualificationNumber": "4",
+      "ibOpportunity": "18871506.56",
+      "ibOpportunityPercentage": {
+        "disqualified": "635306.75",
+        "qualified": "513295.84",
+        "pending": "322903.90"
+      },
+      "qualificationStage": "In Progress",
+      "dateStarted": "29-Aug-2016 ",
+      "startedBy": "Paul Sorge",
+      "dateModified": "9-Aug-2016  ",
+      "modifiedBy": "Kevin Beesly",
+      "action": "Share",
+      "sites": 22
+    },
+    {
+      "customerName": "Met Life",
+      "qualificationNumber": "9",
+      "ibOpportunity": "6521148.53",
+      "ibOpportunityPercentage": {
+        "disqualified": "3774301.312",
+        "qualified": "15097205.248",
+        "pending": "0"
+      },
+      "qualificationStage": "Complete",
+      "dateStarted": "9-Sep-2016",
+      "startedBy": "Paul Sorge",
+      "dateModified": "11-Sep-2016  ",
+      "modifiedBy": "Paul Sorge",
+      "action": "Share",
+      "sites": 68
+    },
+    {
+      "customerName": "Microsoft CorpIT-US",
+      "qualificationNumber": "1",
+      "ibOpportunity": "14052152.91",
+      "ibOpportunityPercentage": {
+        "disqualified": "266306.75",
+        "qualified": "187695.84",
+        "pending": "542503.90"
+      },
+      "qualificationStage": "",
+      "dateStarted": "",
+      "startedBy": "",
+      "dateModified": "",
+      "modifiedBy": "",
+      "action": "Start Qualification",
+      "sites": 75
+    },
+    {
+      "customerName": "NLD_COMM_GNN1738",
+      "qualificationNumber": "3",
+      "ibOpportunity": "8871506.56",
+      "ibOpportunityPercentage": "",
+      "qualificationStage": "",
+      "dateStarted": "",
+      "startedBy": "",
+      "dateModified": "",
+      "modifiedBy": "",
+      "action": "Start Qualification",
+      "sites": 75
+    },
+    {
+      "customerName": "NLD_COMM_GNN67",
+      "qualificationNumber": "6",
+      "ibOpportunity": "16521148.53",
+      "ibOpportunityPercentage": "",
+      "qualificationStage": "",
+      "dateStarted": "",
+      "startedBy": "",
+      "dateModified": "",
+      "modifiedBy": "",
+      "action": "Start Qualification",
+      "sites": 53
+    },
+    {
+      "customerName": "NTT_CONS_DOCOMO1",
+      "qualificationNumber": "3",
+      "ibOpportunity": "4052152.91",
+      "ibOpportunityPercentage": {
+        "disqualified": "785306.75",
+        "qualified": "343295.84",
+        "pending": "762903.90"
+      },
+      "qualificationStage": "In Progress",
+      "dateStarted": "11-Sep-2016",
+      "startedBy": "George Adams",
+      "dateModified": "14-Sep-2016",
+      "modifiedBy": "Paul Sorge",
+      "action": "Share",
+      "sites": 5
+    },
+    {
+      "customerName": "SB North Texas Velocity PL520",
+      "qualificationNumber": "3",
+      "ibOpportunity": "13206398.69",
+      "ibOpportunityPercentage": {
+        "disqualified": "535306.75",
+        "qualified": "53295.84",
+        "pending": "555903.90"
+      },
+      "qualificationStage": "In Progress",
+      "dateStarted": "12-Aug-2016",
+      "startedBy": "George Adams",
+      "dateModified": "11-Sep-2016",
+      "modifiedBy": "John Halpert",
+      "action": "Share",
+      "sites": 16
+    },
+    {
+      "customerName": "System Integrator",
+      "qualificationNumber": "6",
+      "ibOpportunity": "202863.10",
+      "ibOpportunityPercentage": {
+        "disqualified": "3774301.312",
+        "qualified": "15097205.248",
+        "pending": "0"
+      },
+      "qualificationStage": "Complete",
+      "dateStarted": "11-Sep-2016",
+      "startedBy": "Paul Sorge",
+      "dateModified": "11-Sep-2016",
+      "modifiedBy": "Paul Sorge",
+      "action": "Share",
+      "sites": 14
+    },
+    {
+      "customerName": "Systems CDS GMBH_nonTA",
+      "qualificationNumber": "3",
+      "ibOpportunity": "871506.50",
+      "ibOpportunityPercentage": {
+        "disqualified": "285406.75",
+        "qualified": "168295.84",
+        "pending": "521803.90"
+      },
+      "qualificationStage": "In Progress",
+      "dateStarted": "9-Aug-2016",
+      "startedBy": "George Adams",
+      "dateModified": "29-Aug-2016",
+      "modifiedBy": "Paul Sorge",
+      "action": "Share",
+      "sites": 37
+    },
+    {
+      "customerName": "T-Mobile-USA",
+      "qualificationNumber": "4",
+      "ibOpportunity": "221148.53",
+      "ibOpportunityPercentage": {
+        "disqualified": "65306.75",
+        "qualified": "113295.84",
+        "pending": "422903.90"
+      },
+      "qualificationStage": "In Progress",
+      "dateStarted": "9-Aug-2016",
+      "startedBy": "Kevin Beesly",
+      "dateModified": "29-Aug-2016",
+      "modifiedBy": "Paul Sorge",
+      "action": "Share",
+      "sites": 57
+    },
+    {
+      "customerName": "Telecom Italia",
+      "qualificationNumber": "8",
+      "ibOpportunity": "18871506.56",
+      "ibOpportunityPercentage": {
+        "disqualified": "3774301.312",
+        "qualified": "15097205.248",
+        "pending": "0"
+      },
+      "qualificationStage": "Complete",
+      "dateStarted": "9-Mar-2016",
+      "startedBy": "Paul Sorge",
+      "dateModified": "29-Aug-2016",
+      "modifiedBy": "Kevin Beesly",
+      "action": "Share",
+      "sites": 45
+    },
+    {
+      "customerName": "Telstra Corporation Limited",
+      "qualificationNumber": "1",
+      "ibOpportunity": "521148.53",
+      "ibOpportunityPercentage": {
+        "disqualified": "235902.75",
+        "qualified": "113456.84",
+        "pending": "522258.90"
+      },
+      "qualificationStage": "",
+      "dateStarted": "",
+      "startedBy": "",
+      "dateModified": "",
+      "modifiedBy": "",
+      "action": "Start Qualification",
+      "sites": 73
+    },
+    {
+      "customerName": "Verizon",
+      "qualificationNumber": "8",
+      "ibOpportunity": "14052152.91",
+      "ibOpportunityPercentage": {
+        "disqualified": "232406.75",
+        "qualified": "114495.84",
+        "pending": "528603.90"
+      },
+      "qualificationStage": "",
+      "dateStarted": "",
+      "startedBy": "",
+      "dateModified": "",
+      "modifiedBy": "",
+      "action": "Start Qualification",
+      "sites": 32
+    },
+    {
+      "customerName": "Verizon Wireline Core",
+      "qualificationNumber": "3",
+      "ibOpportunity": "13206398.69",
+      "ibOpportunityPercentage": {
+        "disqualified": "3774301.312",
+        "qualified": "15097205.248",
+        "pending": "0"
+      },
+      "qualificationStage": "Complete",
+      "dateStarted": "4-Sep-2016",
+      "startedBy": "Kevin Beesly",
+      "dateModified": "14-Sep-2016",
+      "modifiedBy": "Paul Sorge",
+      "action": "Share",
+      "sites": 31
+    }
+  ]
+}

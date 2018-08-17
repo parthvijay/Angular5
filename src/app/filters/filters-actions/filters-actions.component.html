@@ -1,0 +1,15 @@
+<ul class="filter-opt float-left">
+  <li>
+    <a href="javascript:" class="show-filter pl-0" (click)="filtersService.toggleFiltersState('')">
+      <span class="icon-filters"></span>
+      <span class="opt-head" *ngIf="!filtersService.getFiltersState()">Show Filters</span>
+      <span class="opt-head" *ngIf="filtersService.getFiltersState()">Hide Filters</span>
+    </a>
+  </li>
+  <li>
+    <a href="javascript:" class="show-filter" (click)="openViewAppliedFiltersModal()">
+      <span class="icon-view-applied"></span>
+      <span class="opt-head">View Applied ({{filtersService.getFiltersCount(false)}})</span>
+    </a>
+  </li>
+</ul>

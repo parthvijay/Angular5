@@ -1,0 +1,44 @@
+<app-sub-header [pageName]="pageName"></app-sub-header>
+
+<input type="text" value="Hello World" id="copyLink" style="display:none;">
+
+<div id="actions-container" class="emptyWrap">
+  <div class="container-fluid">
+    <div class="row sub-heading">
+      <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 intermediate">
+        <h2>Qualifications</h2>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="main-table">
+  <div *ngIf="showGrid">
+      <div class="container-fluid">
+        <ag-grid-angular #agGrid id="ag-grid" style="width: 100%;" appTableHeight class="ag-fresh table-height qualificationTable intermediateSummaryTable"
+          [gridOptions]="gridOptions" [columnDefs]="columnDefs" [rowData]="rowData" [showToolPanel]="showToolPanel" enableColResize
+          enableSorting enableFilter groupHeaders suppressRowClickSelection toolPanelSuppressGroups toolPanelSuppressValues debug="false"
+          rowHeight="26" rowSelection="multiple" (modelUpdated)="onModelUpdated()" (cellClicked)="onCellClicked($event)" (cellDoubleClicked)="onCellDoubleClicked($event)"
+          (cellContextMenu)="onCellContextMenu($event)" (cellValueChanged)="onCellValueChanged($event)" (cellFocused)="onCellFocused($event)"
+          (rowSelected)="onRowSelected($event)" (selectionChanged)="onSelectionChanged()" (beforeFilterChanged)="onBeforeFilterChanged()"
+          (afterFilterChanged)="onAfterFilterChanged()" (filterModified)="onFilterModified()" (beforeSortChanged)="onBeforeSortChanged()"
+          (afterSortChanged)="onAfterSortChanged()" (virtualRowRemoved)="onVirtualRowRemoved($event)" (rowClicked)="onRowClicked($event)"
+          (gridReady)="onReady($event)" (columnEverythingChanged)="onColumnEvent($event)" (columnRowGroupChanged)="onColumnEvent($event)"
+          (columnValueChanged)="onColumnEvent($event)" (columnMoved)="onColumnEvent($event)" (columnVisible)="onColumnEvent($event)"
+          (columnGroupOpened)="onColumnEvent($event)" (columnResized)="onColumnEvent($event)" (columnPinnedCountChanged)="onColumnEvent($event)"
+          (cellMouseOver)="utilitiesService.onCellMouseOver($event)" (cellMouseOut)="utilitiesService.onCellMouseOut($event)" [overlayNoRowsTemplate]="agGridService.overlayNoRowsTemplate" [defaultColDef]="agGridService.defaultColDef">
+        </ag-grid-angular>
+    </div>
+    <div class="paginationSize">
+      <label>View</label>
+      <select [(ngModel)]="dropdownsize" (change)="onPageSizeChanged(dropdownsize)">
+        <option [ngValue]="10">10</option>
+        <option [ngValue]="25" [selected]>25</option>
+        <option [ngValue]="50">50</option>
+        <option [ngValue]="100">100</option>
+        <option [ngValue]="500">500</option>
+        <option [ngValue]="1000">1000</option>
+      </select>
+    </div>
+  </div>
+</div>

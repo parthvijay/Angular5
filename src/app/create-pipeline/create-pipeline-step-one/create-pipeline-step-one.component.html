@@ -1,0 +1,235 @@
+<div id="page-content-wrapper">
+    <div class="freezed-container">
+        <div class="grey-background">
+            <div class="clearfix" style="position:relative;">
+                <div class="container-fluid filter-switch">
+                    <!-- Opportunities/Performance switch -->
+                    <div class="row marginT10 marginB10">
+                        <div class="col-lg-12">
+                            <a (click)="returnUrl()" class="refresh-back-btn marginT5">
+                                <span class="ico-left-arrow-sm hvr-icon-pop">
+                                    <span class="path1"></span><span class="path2"></span><span class="path3"></span>
+                                </span>
+                                <span class="back-btn-txt" (click)="createPipelineService.clearAllStepValues()">{{backUrlText}}</span>
+                            </a>
+                        </div>
+                    </div>
+                    <!-- <div class="row">
+                        <div class="col-xs-12 paddingR0 view-account">
+                          <filter-detail get-data="getData()" sidebar-active-toggle="sidebarActiveToggle()" template="views/applied-filters.html"></filter-detail>
+                        </div>
+                    </div>
+                </div> -->
+                    <!-- Opportunities/Performance switch -->
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--freezed-container-->
+    <div class="container-fluid tabContent">
+        <div class="steps-container">
+            <div class="steps-heading">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <h3>Convert to Pipeline - Step 1 of 3</h3>
+                    </div>
+                </div>
+            </div>
+            <form id="stepOneForm" name="stepOneForm">
+                <div class="steps-detail">
+                    <div class="required-field">
+                        <span class="mandatory">* </span> Required Field</div>
+
+                    <!--div class="alert-danger warning">
+                        <span class="ico-danger">
+                            <span class="path1"></span><span class="path2"></span>
+                        </span>
+                        <span>You do not have enough rights to create pipeline for this customer. In order to create pipeline for
+                            this customer, you need to have Forecasting Position.</span>
+                    </div-->
+
+                    <div class="block-left">
+                        <div class="block-left-name">
+                            <p class="marginB10">Name Opportunity?</p>
+                            <div class="block-left-det">
+                                <div class="block-option">
+                                    <input id="filters_0_1" value="New Opportunity" class="" name="nameOpp" [(ngModel)]="nameOpp" type="radio" />
+                                    <label for="filters_0_1">
+                                        <span></span>
+                                    </label>
+                                    <span class="input-txt">New Opportunity</span>
+                                </div>
+                                <div class="block-option">
+                                    <input disabled="disabled" id="filters_1_1" value="Add to Existing Opportunity" class="" type="radio" />
+                                    <label for="filters_1_1">
+                                        <span></span>
+                                    </label>
+                                    <span class="input-txt">Add to Existing Opportunity
+                                        <i>(Coming Soon)</i>
+                                    </span>
+                                    <div class="input-drop disable">
+                                        <input disabled="disabled" placeholder="" type="text">
+                                        <span class="ico-dropdown"></span>
+                                        <span class="ico-search"></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="block-right row">
+                        <div class="col-lg-6">
+                            <div class="form-group">
+                                <label for="OpportunityName">Opportunity Name
+                                    <span class="mandatory">*</span>
+                                </label>
+                                <div class="input-drop">
+                                    <input [(ngModel)]="opportunityName" name="opp_name" value="" maxlength="45" required="" class="" type="text"
+                                    />
+                                </div>
+                            </div>
+                            <div class="block-column">
+                                <div class="form-group">
+                                    <label for="Description">Description</label>
+                                    <textarea [(ngModel)]="description" name="description" rows="3" maxlength="300" class=""></textarea>
+                                    <span class="oppo-acnt-txt">
+                                        <b>Note:</b> Max. 300 characters.</span>
+                                </div>
+                            </div>
+                            <!--block-column-->
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="block-column calendar-col">
+                                <div class="form-group">
+                                    <label for="ExpectedBook">Expected Book Date
+                                        <span class="mandatory">*</span>
+                                    </label>
+                                    <div class="input-drop">
+                                        <p class="input-group calender-input">
+                                            <!-- <input placeholder="Select a Date" class="" readonly="" required="required" type="text"><div template-url="uib/template/datepickerPopup/popup.html" class="ng-empty ng-valid"></div> -->
+                                            <input placeholder="Select a Date" class="" name="dp" [(ngModel)]="createPipelineService.selectedDate" (click)="d.toggle()"
+                                                ngbDatepicker #d="ngbDatepicker" readonly />
+                                            <span class="input-group-btn">
+                                                <button type="button" class="btn btn-default calender-btn" (click)="d.toggle()">
+                                                    <i class="ico-calendar"></i>
+                                                </button>
+                                            </span>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--block-column-->
+
+                            <div class="block-column account">
+                                <div class="form-group">
+                                    <label for="Account">Account
+                                        <span class="mandatory">*</span>
+                                    </label>
+                                    <div class="input-drop search">
+                                        <ng-template #rt let-r="result" let-t="term">
+                                            <a>
+                                                <span>{{r.accountName}}</span>
+                                                <br/>
+                                                <small class="small-data">{{r.territory}}</small>
+                                            </a>
+                                        </ng-template>
+                                        <input placeholder="Select" (focus)="focus$.next($event.target.value)"
+                                        id="typeahead-template" type="text" class="form-control search" [(ngModel)]="createPipelineService.account"
+                                           name="account" [ngbTypeahead]="search" [resultTemplate]="rt" [inputFormatter]="formatter"
+                                           (ngModelChange)="onAccountChange($event)" (selectItem)="onAccountSelect()" />
+                                        <span class="ico-search"></span>
+                                    </div>
+                                </div>
+                                <span class="oppo-acnt-txt" *ngIf="createPipelineService.validAccountSelected">Account Owner: {{accountOwnerName}}</span>
+                            </div>
+                            <!--block-column-->
+
+                            <div class="block-column" *ngIf="createPipelineService.validAccountSelected">
+                                <div class="form-group">
+                                    <label for="OpportunityOwner">Opportunity Owner
+                                        <span class="mandatory">*</span>
+                                    </label>
+                                    <div class="input-drop block-input input-dropdown">
+                                        <ol class="nya-bs-select btn-group" title="Select" (click)="showOppOwnerList()">
+                                            <button class="btn btn-default dropdown-toggle" type="button" tabindex="-1">
+                                                <span class="pull-left filter-option" *ngIf="createPipelineService.oppOwner.name">
+                                                    <span>{{createPipelineService.oppOwner.name}}
+                                                        <span *ngIf="createPipelineService.oppOwner.isAccountOwner">(Account Owner)</span>
+                                                        <br/>
+                                                        <small class="small-data">{{createPipelineService.oppOwner.territory}}</small>
+                                                    </span>
+                                                </span>
+                                                <span class="pull-left special-title" *ngIf="!createPipelineService.oppOwner.name">Select</span>&nbsp;
+                                            </button>
+                                            <div class="dropdown-menu" [ngClass]="{'open': showOwnerList}">
+                                                <ul class="dropdown-menu inner">
+                                                    <li class="nya-bs-option" *ngFor="let a of oppOwnerList" (click)="selectedOppOwner(a)">
+                                                        <a>
+                                                            <span>{{a.name}}
+                                                                <span *ngIf="a.isAccountOwner">(Account Owner)</span>
+                                                                <br/>
+                                                                <small class="small-data">{{a.territory}}</small>
+                                                            </span>
+                                                        </a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </ol>
+
+                                    </div>
+                                    <!-- <select>
+                                        <option value="{{a.name}}" *ngFor="let a of oppOwnerList" [(ngModel)]="oppOwner" name="opp_owner">{{a.name}}
+                                            <span *ngIf="a.isAccountOwner">(Account Owner)</span>
+                                            <br/>
+                                            <small class="small-data">{{a.territory}}</small>
+                                        </option>
+                                    </select> -->
+                                </div>
+                            </div>
+                            <!--block-column-->
+
+                            <!--block-column-->
+                            <div class="block-column marginT15 opporForeBaseStage">
+                                <div class="form-group">
+                                    <label for="OpportunityStage">Opportunity Stage
+                                        <span class="mandatory">*</span>
+                                    </label>
+                                    <div class="input-drop select-input input-dropdown">
+                                        <ss-multiselect-dropdown [disabled]="!enableOppStage" [options]="opportunityOptions" [(ngModel)]="createPipelineService.opportunity" [settings]="mySettings" name="opportunity"
+                                            [texts]="opportunityTexts" (ngModelChange)="opportunityChange()"></ss-multiselect-dropdown>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="block-column marginT15 opporForeBaseStage" *ngIf="isSelectedStage">
+                                <div class="form-group">
+                                    <label for="OpportunityStage">Forecast Status
+                                        <span class="mandatory">*</span>
+                                    </label>
+                                    <div class="input-drop select-input input-dropdown">
+                                        <ss-multiselect-dropdown [options]="forecastStatusOptions" [(ngModel)]="createPipelineService.forecastStatusList" [settings]="mySettings" name="forecastStatus"
+                                            [texts]="forecastStatusTexts" (ngModelChange)="forecastChange($event)"></ss-multiselect-dropdown>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--block-column-->
+                            <!-- ngIf: steps.formFirstStep.selectedStage == '2-Qualification' -->
+                            <!--block-column-->
+                        </div>
+                        <!--col-sm-6-->
+                    </div>
+                </div>
+            </form>
+        </div>
+        <!--steps-container-->
+
+        <div class="clearfix marginT10 marginB30 text-right view-detail-btn">
+            <!-- <span class="disclaimer">
+                <span class="mandatory">*</span>
+                <strong>Disclaimer:</strong> Values might not be updated immediately</span> -->
+            <a class="button stroke-btn blue marginB10 marginR10 cp-btn" (click)="createPipelineService.clearAllStepValues(); returnUrl()">Cancel</a>
+            <a class="button filled-btn blue marginB10 disabled nxt-btn" *ngIf="!createPipelineService.isStepOneValid()">Next</a>
+            <a class="button filled-btn blue marginB10 nxt-btn" routerLink="{{stepTwoUrl}}" (click)="setDescription()" *ngIf="createPipelineService.isStepOneValid()">Next</a>
+        </div>
+
+    </div>
+</div>

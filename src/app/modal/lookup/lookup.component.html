@@ -1,0 +1,164 @@
+<div class="modal-header lookup-header">
+  <h4 class="modal-title">Lookup By
+    <button type="button" class="btn lookup-tip" placement="right" ngbPopover="Look up against Serial Number/PAK Number*, Instance ID*, Product ID, Install Site ID and Contract Number from your Customer or Partner. You can upload an excel or CSV file with one or all of these columns."
+      popoverTitle="" triggers="mouseenter:mouseleave">i</button>
+  </h4>
+
+  <button type="button" class="icon-close-btn" aria-label="Close" (click)="activeModal.dismiss('Cross click')"></button>
+</div>
+<div class="modal-body lookup-body">
+
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+
+        <div ng2FileDrop [ngClass]="{'nv-file-over': hasBaseDropZoneOver || uploader?.queue?.length, 'file-format-error': fileFormatError}" (fileOver)="fileOverBase($event)"
+          (onFileDrop)="dropped($event)" [uploader]="uploader" class="well my-drop-zone text-center">
+          <div class="excelSheetIcon" *ngIf="uploader?.queue?.length"></div>
+          <div *ngIf="!uploader?.queue?.length && !fileFormatError">
+            <span class="dragDropboxTitle">Drag & Drop</span>
+            <span class="dragDropboxText">your files here, or
+              <a href="javascript:" (click)="file.click()">browse</a>
+            </span>
+          </div>
+          <div *ngIf="!uploader?.queue?.length && fileFormatError">
+              <span class="icon-file">
+                  <span class="path1"></span><span class="path2"></span><span class="path3"></span><span class="path4"></span><span class="path5"></span><span class="path6"></span><span class="path7"></span><span class="path8"></span>
+                  </span>
+            <span class="file-name">{{fileName}}
+            <button placement="top" ngbPopover="Remove" popoverTitle="" type="button" class="dragDropRemove btn btn-danger btn-xs"
+              (click)="fileFormatError = false;" triggers="mouseenter:mouseleave">
+              <span class="icon-close-btn"></span>
+            </button></span>
+            <span class="incorrect-format">This format is not supported. Please upload XLS format only or <a href="javascript:" (click)="file.click()">browse</a></span>
+          </div>
+          <input type="file" id="file" #file ng2FileSelect [uploader]="uploader" (change)="onFileChange($event)" hidden />
+          <div *ngFor="let item of uploader.queue">
+            <div>
+              <strong>{{ item?.file?.name }}</strong>
+              <div class="buttonsWrap">
+                <button placement="top" ngbPopover="Upload" type="button" class="btn fileUploadWrap btn-success btn-xs" (click)="item.upload()"
+                 [ngClass]="{'disbleUpldBtn':item.isReady || item.isUploading || item.isSuccess}" triggers="mouseenter:mouseleave">
+                  <span class="fileUploadIcon"></span>
+                </button>
+                <button placement="top" ngbPopover="Remove" popoverTitle="" type="button" class="dragDropRemove btn btn-danger btn-xs" (click)="removeItem(item)"
+                  triggers="mouseenter:mouseleave">
+                  <span class="icon-close-btn"></span>
+                </button>
+              </div>
+            </div>
+            <div class="progress" style="margin-bottom: 0;" *ngIf="item.isUploading || item.isSuccess">
+              <div class="progress-bar" role="progressbar" [ngStyle]="{ 'width': item.progress + '%' }"></div>
+            </div>
+            <div class="text-center">
+              <span *ngIf="item.isSuccess">
+                <i class="glyphicon glyphicon-ok"></i>
+              </span>
+              <span *ngIf="item.isCancel">
+                <i class="glyphicon glyphicon-ban-circle"></i>
+              </span>
+              <span *ngIf="item.isError">
+                <i class="glyphicon glyphicon-remove"></i>
+              </span>
+            </div>
+            <div class="dragDropText" *ngIf="uploader?.queue?.length && !item.isUploading && !item.isSuccess">Please select column below which you want to map.</div>
+          </div>
+
+        </div>
+
+        <div class="notesSection">
+          <span class="tdTitle">Note: </span>
+          <span class="tdList">1. Only XLS can be uploaded with 10K rows.
+            <br> 2. Serial Number/PAK Number or Instance ID column is mandatory.
+            <br/>3. In Addition, you can lookup Product ID, Install Site ID or Contract Number.</span>
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+  <div *ngIf="uploader?.queue?.length">
+
+    <!-- <table class="sjs-table">
+      <tr *ngFor="let row of data">
+        <td *ngFor="let val of row">
+          {{val}}
+        </td>
+      </tr>
+    </table> -->
+
+    <div class="header-content lookupListHeading font-weight-bold text-black">
+      <div class="float-left">
+        Column Name
+      </div>
+      <div class="match float-right">
+        Match (%)
+      </div>
+    </div>
+
+
+    <div class="lookupMandatoryField">
+      <ul>
+        <ng-container *ngFor="let c of allCols; let i = index;">
+          <li *ngIf="c.required">
+            <div class="float-left column-header">
+              <input type="checkbox" name="colRadio" value="{{c.field}}" [(ngModel)]="c.checked" id="colRadio_{{i}}" (change)="runMatch()" [attr.disabled]="colRadio===c.field?'':null">
+              <label for="colRadio_{{i}}">{{c.name}}</label>
+            </div>
+            <div class="set-primary">
+              <a href="javascript:" (click)="setPrimary(c);" [attr.disabled]="colRadio===c.field?'':null">Set Primary</a>
+            </div>
+            <div class="float-right">
+              {{c.match}}%
+            </div>
+          </li>
+        </ng-container>
+      </ul>
+    </div>
+
+    <!-- <div class="selectListBtns">
+      <ul class="float-left">
+        <li>
+          <a href="javascript:" (click)="selectAll(true)">Select All</a>
+        </li>
+        <li>
+          <a href="javascript:" (click)="selectAll(false)">Deselect All</a>
+        </li>
+      </ul>
+    </div> -->
+
+    <div class="body-content text-black">
+      <ul class="pl-0">
+        <ng-container *ngFor="let c of allCols; let i = index;">
+          <li class="list-unstyled border-bottom-1 pb-10 pt-8" *ngIf="!c.required">
+            <div class="float-left column-header">
+              <input type="checkbox" name="colCheckbox" value="{{c.field}}" [(ngModel)]="c.checked" id="colCheckbox_{{i}}" (change)="runMatch()">
+              <label for="colCheckbox_{{i}}">{{c.name}}</label>
+            </div>
+            <div class="float-right">
+              {{c.match}}%
+            </div>
+          </li>
+        </ng-container>
+      </ul>
+    </div>
+
+  </div>
+</div>
+
+<div class="modal-footer lookup-footer">
+  <h6 class="download-template">
+      <ng-template #tipContent ><strong>We have a predefined template to help you!</strong></ng-template>
+        <a href="assets/sample.xlsx" class="" [ngbTooltip]="tipContent" #t="ngbTooltip" triggers="manual">
+          download template
+        </a>
+  </h6>
+  <div class="btnns">
+    <button type="button" class="btn cancel-btn" (click)="activeModal.dismiss('Cancel click')">Cancel</button>
+    <button type="button" class="btn upload download-btn" (click)="uploadFile()" [ngClass]="{'disabled': !isFormValid()}">Next</button>
+  </div>
+  <div class="clearfix"></div>
+  <!--button type="button" class="btn btn-outline-dark" (click)="activeModal.close('Close click')">Cancel</button-->
+</div>

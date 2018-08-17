@@ -1,0 +1,58 @@
+{
+    "qualDetails": [
+        {
+            "qualificationId": 63610312,
+            "qualificationName": "Wireless",
+            "customerId": 67456787,
+            "canEdit": true
+        },
+        {
+            "qualificationId": 33909060,
+            "qualificationName": "Switching",
+            "customerId": 67456787,
+            "canEdit": false
+        },
+        {
+            "qualificationId": 93906023,
+            "qualificationName": "Enterprise Networking",
+            "customerId": 67456787,
+            "canEdit": true
+        },
+        {
+            "qualificationId": 636103121,
+            "qualificationName": "Mobility",
+            "customerId": 674567871,
+            "canEdit": true
+        },
+        {
+            "qualificationId": 339090602,
+            "qualificationName": "Citigroup",
+            "customerId": 674567872,
+            "canEdit": false
+        },
+        {
+            "qualificationId": 3390906023,
+            "qualificationName": "Collaboration",
+            "customerId": 6745678723,
+            "canEdit": false
+        },
+        {
+            "qualificationId": 3390906024,
+            "qualificationName": "Security",
+            "customerId": 6745678724,
+            "canEdit": false
+        },
+        {
+            "qualificationId": 3390906025,
+            "qualificationName": "Computing Systems",
+            "customerId": 6745678725,
+            "canEdit": true
+        },
+        {
+            "qualificationId": 3390906026,
+            "qualificationName": "TP Endpoints",
+            "customerId": 6745678726,
+            "canEdit": false
+        }
+    ]
+}

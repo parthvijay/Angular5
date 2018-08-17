@@ -1,0 +1,9 @@
+.ag-fresh.siteLocationsTable .ag-pinned-left-header .ag-header-row:first-child .ag-header-group-cell:first-child .ag-header-cell-resize { top:11px; }
+.siteLocationsTable { margin-top:126px; }
+.ag-fresh.siteLocationsTable .ag-cell[col-id="qualficationId"] { cursor:default !important; color:#58585b !important; }
+.ag-fresh.siteLocationsTable .ag-cell[col-id="notifyAm"] a.notifyAm { color:#ccc; cursor:default; }
+.ag-fresh .ag-cell[col-id="notifyAm"] a.notifyAm.active { color:#00bceb; cursor:pointer; }
+.manageLocationWrap { float:left; width:100%; padding-top:15px; padding-bottom:15px; }
+.manageLocationBtn { font-weight:500; background-color:#fff !important; }
+.manageLocationShowList { font-size: 14px; font-weight: 500 !important; }
+

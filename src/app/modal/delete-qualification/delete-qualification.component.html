@@ -1,0 +1,17 @@
+<!--Start Common Modal Window-->
+<div class="modal-header">
+  <h5 class="modal-title" id="exampleModalLabel">Delete Qualification</h5>
+  <button type="button" class="icon-close-btn" aria-label="Close" (click)="activeModal.dismiss('Cross click')">
+
+  </button>
+</div>
+<div class="modal-body">
+  <div class="deleteWrap">
+    <h3>Do you want to delete {{deleteQual}} group and move its assets to {{config.labels.all}} group?</h3>
+  </div>
+</div>
+<div class="modal-footer">
+  <button type="button" class="btn btn-secondary" (click)="activeModal.dismiss('Cancel click')">Cancel</button>
+  <button type="button" class="btn btn-primary" data-dismiss="modal" (click)="deleteQualification()">Delete</button>
+</div>
+<!--End Common Modal Window-->

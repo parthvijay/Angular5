@@ -1,0 +1,26 @@
+<div class="modal-header lookup-header">
+  <h4 class="modal-title"></h4>
+  <button type="button" class="icon-close-btn" aria-label="Close" (click)="activeModal.dismiss('Cross click')"></button>
+</div>
+<div class="modal-body lookup-body">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12 undoQual">
+        <div class="iconBeforeDropWrap text-center">
+          <span class="icon-undo-change"></span>
+        </div>
+        <div class="text-center lookup-beforeDrop">
+          <p>Do you want to drop the filters before you do a lookup?</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal-footer lookup-footer lookup-footerCustom">
+  <div class="btnns">
+    <button type="button" class="btn cancel-btn" (click)="cancelRemoveFilters()">No</button>
+    <button type="button" class="btn upload download-btn" (click)="removeFilters()">Yes</button>
+  </div>
+  <div class="clearfix"></div>
+</div>

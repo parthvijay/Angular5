@@ -1,0 +1,16 @@
+<!--Start Common Modal Window-->
+<div id="confirm-leave">
+  <button type="button" class="icon-close-btn" aria-label="Close" (click)="activeModal.dismiss('Cancel click')"></button>
+  <div class="modal-body">
+    <span class="errorIconWrap">
+      <span class="icon-error-icon"></span>
+    </span>
+    <p>All the Qualifications and Disqualifications will not be written back in Cisco Ready Database.</p>
+    <p>Are you sure you want to continue?</p>
+  </div>
+  <div class="modal-footer">
+    <button type="button" class="btn btn-secondary 1212" (click)="activeModal.dismiss('Cancel click')">Cancel</button>
+    <button type="button" class="btn btn-primary" (click)="disapprove('disapprove')">Continue</button>
+  </div>
+</div>
+<!--End Common Modal Window-->

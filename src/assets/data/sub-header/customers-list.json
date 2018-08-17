@@ -1,0 +1,52 @@
+[
+    {
+        "customerId": 32456787,
+        "customerName": "Met Life",
+        "qualificationId": ""
+    },
+    {
+        "customerId": 32456788,
+        "customerName": "Charter Area",
+        "qualificationId": 1
+    },
+    {
+        "customerId": 32456789,
+        "customerName": "Citigroup",
+        "qualificationId": 1
+    },
+    {
+        "customerId": 32456790,
+        "customerName": "Ford",
+        "qualificationId": 1
+    },
+    {
+        "customerId": 32456791,
+        "customerName": "Geico Corporat",
+        "qualificationId": 1
+    },
+    {
+        "customerId": 32456792,
+        "customerName": "China Mobile Communications Corporation",
+        "qualificationId": 1
+    },
+    {
+        "customerId": 32456793,
+        "customerName": "IKEA",
+        "qualificationId": 1
+    },
+    {
+        "customerId": 32456794,
+        "customerName": "JPMC US",
+        "qualificationId": 1
+    },
+    {
+        "customerId": 32456795,
+        "customerName": "Microsoft CorpIT-US",
+        "qualificationId": 1
+    },
+    {
+        "customerId": 32456796,
+        "customerName": "NLD_COMM_GNN1738",
+        "qualificationId": 1
+    }
+]

@@ -1,0 +1,72 @@
+[
+    {
+        "contract_number": "764146",
+        "start_date": "03-Feb-2016",
+        "end_date": "05-Dec-2017",
+        "earliest_end_date": "29-Dec-2017",
+        "type": "SNTP",
+        "line_items": "103",
+        "list_price": "148,660",
+        "net_price": "75,330"
+    },
+    {
+        "contract_number": "545678",
+        "start_date": "03-Mar-2016",
+        "end_date": "07-May-2017",
+        "earliest_end_date": "16-Aug-2017",
+        "type": "SAS",
+        "line_items": "17",
+        "list_price": "31,450",
+        "net_price": "15,667"
+    },
+    {
+        "contract_number": "764146",
+        "start_date": "03-Feb-2016",
+        "end_date": "05-Dec-2017",
+        "earliest_end_date": "29-Dec-2017",
+        "type": "SNTP",
+        "line_items": "103",
+        "list_price": "148,660",
+        "net_price": "75,330"
+    },
+    {
+        "contract_number": "545678",
+        "start_date": "03-Mar-2016",
+        "end_date": "07-May-2017",
+        "earliest_end_date": "16-Aug-2017",
+        "type": "SAS",
+        "line_items": "17",
+        "list_price": "31,450",
+        "net_price": "15,667"
+    },
+    {
+        "contract_number": "764146",
+        "start_date": "03-Feb-2016",
+        "end_date": "05-Dec-2017",
+        "earliest_end_date": "29-Dec-2017",
+        "type": "SNTP",
+        "line_items": "103",
+        "list_price": "148,660",
+        "net_price": "75,330"
+    },
+    {
+        "contract_number": "545678",
+        "start_date": "03-Mar-2016",
+        "end_date": "07-May-2017",
+        "earliest_end_date": "16-Aug-2017",
+        "type": "SAS",
+        "line_items": "17",
+        "list_price": "31,450",
+        "net_price": "15,667"
+    },
+    {
+        "contract_number": "764146",
+        "start_date": "03-Feb-2016",
+        "end_date": "05-Dec-2017",
+        "earliest_end_date": "29-Dec-2017",
+        "type": "SNTP",
+        "line_items": "103",
+        "list_price": "148,660",
+        "net_price": "75,330"
+    }
+]

@@ -1,0 +1,340 @@
+{
+  "assetsView": [
+    {
+      "contractNumber": 32456787,
+      "contractType": "PSUT",
+      "contractEarliestEndDate": "4/23/2015",
+      "servicesBillToPartnerName": "TELUS COMMUNICATIONS COMPANY",
+      "ibOpportunityPercentage": {
+        "disqualified": 335306.75,
+        "qualified": 213295.84,
+        "pending": 622903.90
+      },
+      "productListPrice": 1725.00,
+      "defaultServiceListPrice": 90989898,
+      "existingCoverageListPrice": 12789743
+    },
+    {
+      "contractNumber": 12456787,
+      "contractType": "PSUP",
+      "contractEarliestEndDate": "8/23/2016",
+      "servicesBillToPartnerName": "TELUS COMMUNICATIONS COMPANY",
+      "ibOpportunityPercentage": {
+        "disqualified": 3774301.312,
+        "qualified": 15097205.248,
+        "pending": 0
+      },
+      "productListPrice": 200.00,
+      "defaultServiceListPrice": 98123452,
+      "existingCoverageListPrice": 28904532
+    },
+    {
+      "contractNumber": 77456787,
+      "contractType": "SNT",
+      "contractEarliestEndDate": "2/15/2014",
+      "servicesBillToPartnerName": "TELUS COMMUNICATIONS COMPANY",
+      "ibOpportunityPercentage": {
+        "disqualified": 335306.75,
+        "qualified": 213295.84,
+        "pending": 622903.90
+      },
+      "productListPrice": 3395.00,
+      "defaultServiceListPrice": 98987656,
+      "existingCoverageListPrice": 31456786
+    },
+    {
+      "contractNumber": 66456787,
+      "contractType": "SNT",
+      "contractEarliestEndDate": "4/23/2015",
+      "servicesBillToPartnerName": "TELUS COMMUNICATIONS COMPANY",
+      "ibOpportunityPercentage": {
+        "disqualified": 335306.75,
+        "qualified": 213295.84,
+        "pending": 622903.90
+      },
+      "productListPrice": 1725.00,
+      "defaultServiceListPrice": 90989898,
+      "existingCoverageListPrice": 12789743
+    },
+    {
+      "contractNumber": 44446787,
+      "contractType": "SNT",
+      "contractEarliestEndDate": "8/23/2016",
+      "servicesBillToPartnerName": "TELUS COMMUNICATIONS COMPANY",
+      "ibOpportunityPercentage": {
+        "disqualified": 3774301.312,
+        "qualified": 15097205.248,
+        "pending": 0
+      },
+      "productListPrice": 200.00,
+      "defaultServiceListPrice": 98123452,
+      "existingCoverageListPrice": 28904532
+    },
+    {
+      "contractNumber": 12676787,
+      "contractType": "SNT",
+      "contractEarliestEndDate": "2/15/2014",
+      "servicesBillToPartnerName": "TELUS COMMUNICATIONS COMPANY",
+      "ibOpportunityPercentage": {
+        "disqualified": 335306.75,
+        "qualified": 213295.84,
+        "pending": 622903.90
+      },
+      "productListPrice": 3395.00,
+      "defaultServiceListPrice": 98987656,
+      "existingCoverageListPrice": 31456786
+    },
+    {
+      "contractNumber": 90056787,
+      "contractType": "C4P",
+      "contractEarliestEndDate": "4/23/2015",
+      "servicesBillToPartnerName": "TELUS COMMUNICATIONS COMPANY",
+      "ibOpportunityPercentage": {
+        "disqualified": 335306.75,
+        "qualified": 213295.84,
+        "pending": 622903.90
+      },
+      "productListPrice": 1725.00,
+      "defaultServiceListPrice": 90989898,
+      "existingCoverageListPrice": 12789743
+    },
+    {
+      "contractNumber": 100006787,
+      "contractType": "C4P",
+      "contractEarliestEndDate": "8/23/2016",
+      "servicesBillToPartnerName": "TELUS COMMUNICATIONS COMPANY",
+      "ibOpportunityPercentage": {
+        "disqualified": 3774301.312,
+        "qualified": 15097205.248,
+        "pending": 0
+      },
+      "productListPrice": 200.00,
+      "defaultServiceListPrice": 98123452,
+      "existingCoverageListPrice": 28904532
+    },
+    {
+      "contractNumber": 23256787,
+      "contractType": "C4P",
+      "contractEarliestEndDate": "2/15/2014",
+      "servicesBillToPartnerName": "TELUS COMMUNICATIONS COMPANY",
+      "ibOpportunityPercentage": {
+        "disqualified": 335306.75,
+        "qualified": 213295.84,
+        "pending": 622903.90
+      },
+      "productListPrice": 3395.00,
+      "defaultServiceListPrice": 98987656,
+      "existingCoverageListPrice": 31456786
+    },
+    {
+      "contractNumber": 89856787,
+      "contractType": "C4P",
+      "contractEarliestEndDate": "4/23/2015",
+      "servicesBillToPartnerName": "TELUS COMMUNICATIONS COMPANY",
+      "ibOpportunityPercentage": {
+        "disqualified": 335306.75,
+        "qualified": 213295.84,
+        "pending": 622903.90
+      },
+      "productListPrice": 1725.00,
+      "defaultServiceListPrice": 90989898,
+      "existingCoverageListPrice": 12789743
+    },
+    {
+      "contractNumber": 43456787,
+      "contractType": "C4P",
+      "contractEarliestEndDate": "8/23/2016",
+      "servicesBillToPartnerName": "TELUS COMMUNICATIONS COMPANY",
+      "ibOpportunityPercentage": {
+        "disqualified": 3774301.312,
+        "qualified": 15097205.248,
+        "pending": 0
+      },
+      "productListPrice": 200.00,
+      "defaultServiceListPrice": 98123452,
+      "existingCoverageListPrice": 28904532
+    },
+    {
+      "contractNumber": 77876787,
+      "contractType": "SNT",
+      "contractEarliestEndDate": "2/15/2014",
+      "servicesBillToPartnerName": "TELUS COMMUNICATIONS COMPANY",
+      "ibOpportunityPercentage": {
+        "disqualified": 335306.75,
+        "qualified": 213295.84,
+        "pending": 622903.90
+      },
+      "productListPrice": 3395.00,
+      "defaultServiceListPrice": 98987656,
+      "existingCoverageListPrice": 31456786
+    },
+    {
+      "contractNumber": 82456787,
+      "contractType": "PSUT",
+      "contractEarliestEndDate": "4/23/2015",
+      "servicesBillToPartnerName": "TELUS COMMUNICATIONS COMPANY",
+      "ibOpportunityPercentage": {
+        "disqualified": 335306.75,
+        "qualified": 213295.84,
+        "pending": 622903.90
+      },
+      "productListPrice": 1725.00,
+      "defaultServiceListPrice": 90989898,
+      "existingCoverageListPrice": 12789743
+    },
+    {
+      "contractNumber": 62456787,
+      "contractType": "PSUP",
+      "contractEarliestEndDate": "8/23/2016",
+      "servicesBillToPartnerName": "TELUS COMMUNICATIONS COMPANY",
+      "ibOpportunityPercentage": {
+        "disqualified": 3774301.312,
+        "qualified": 15097205.248,
+        "pending": 0
+      },
+      "productListPrice": 200.00,
+      "defaultServiceListPrice": 98123452,
+      "existingCoverageListPrice": 28904532
+    },
+    {
+      "contractNumber": 11456787,
+      "contractType": "SNT",
+      "contractEarliestEndDate": "2/15/2014",
+      "servicesBillToPartnerName": "TELUS COMMUNICATIONS COMPANY",
+      "ibOpportunityPercentage": {
+        "disqualified": 335306.75,
+        "qualified": 213295.84,
+        "pending": 622903.90
+      },
+      "productListPrice": 3395.00,
+      "defaultServiceListPrice": 98987656,
+      "existingCoverageListPrice": 31456786
+    },
+    {
+      "contractNumber": 45456787,
+      "contractType": "PSUT",
+      "contractEarliestEndDate": "4/23/2015",
+      "servicesBillToPartnerName": "TELUS COMMUNICATIONS COMPANY",
+      "ibOpportunityPercentage": {
+        "disqualified": 335306.75,
+        "qualified": 213295.84,
+        "pending": 622903.90
+      },
+      "productListPrice": 1725.00,
+      "defaultServiceListPrice": 90989898,
+      "existingCoverageListPrice": 12789743
+    },
+    {
+      "contractNumber": 97156787,
+      "contractType": "C4P",
+      "contractEarliestEndDate": "8/23/2016",
+      "servicesBillToPartnerName": "TELUS COMMUNICATIONS COMPANY",
+      "ibOpportunityPercentage": {
+        "disqualified": 3774301.312,
+        "qualified": 15097205.248,
+        "pending": 0
+      },
+      "productListPrice": 200.00,
+      "defaultServiceListPrice": 98123452,
+      "existingCoverageListPrice": 28904532
+    },
+    {
+      "contractNumber": 32356787,
+      "contractType": "C4P",
+      "contractEarliestEndDate": "2/15/2014",
+      "servicesBillToPartnerName": "TELUS COMMUNICATIONS COMPANY",
+      "ibOpportunityPercentage": {
+        "disqualified": 335306.75,
+        "qualified": 213295.84,
+        "pending": 622903.90
+      },
+      "productListPrice": 3395.00,
+      "defaultServiceListPrice": 98987656,
+      "existingCoverageListPrice": 31456786
+    },
+    {
+      "contractNumber": 12126787,
+      "contractType": "PSUT",
+      "contractEarliestEndDate": "4/23/2015",
+      "servicesBillToPartnerName": "TELUS COMMUNICATIONS COMPANY",
+      "ibOpportunityPercentage": {
+        "disqualified": 335306.75,
+        "qualified": 213295.84,
+        "pending": 622903.90
+      },
+      "productListPrice": 1725.00,
+      "defaultServiceListPrice": 90989898,
+      "existingCoverageListPrice": 12789743
+    },
+    {
+      "contractNumber": 42456787,
+      "contractType": "PSUP",
+      "contractEarliestEndDate": "8/23/2016",
+      "servicesBillToPartnerName": "TELUS COMMUNICATIONS COMPANY",
+      "ibOpportunityPercentage": {
+        "disqualified": 3774301.312,
+        "qualified": 15097205.248,
+        "pending": 0
+      },
+      "productListPrice": 200.00,
+      "defaultServiceListPrice": 98123452,
+      "existingCoverageListPrice": 28904532
+    },
+    {
+      "contractNumber": 79056787,
+      "contractType": "SNT",
+      "contractEarliestEndDate": "2/15/2014",
+      "servicesBillToPartnerName": "TELUS COMMUNICATIONS COMPANY",
+      "ibOpportunityPercentage": {
+        "disqualified": 335306.75,
+        "qualified": 213295.84,
+        "pending": 622903.90
+      },
+      "productListPrice": 3395.00,
+      "defaultServiceListPrice": 98987656,
+      "existingCoverageListPrice": 31456786
+    },
+    {
+      "contractNumber": 33336787,
+      "contractType": "C4P",
+      "contractEarliestEndDate": "4/23/2015",
+      "servicesBillToPartnerName": "TELUS COMMUNICATIONS COMPANY",
+      "ibOpportunityPercentage": {
+        "disqualified": 335306.75,
+        "qualified": 213295.84,
+        "pending": 622903.90
+      },
+      "productListPrice": 1725.00,
+      "defaultServiceListPrice": 90989898,
+      "existingCoverageListPrice": 12789743
+    },
+    {
+      "contractNumber": 12456232,
+      "contractType": "C4P",
+      "contractEarliestEndDate": "8/23/2016",
+      "servicesBillToPartnerName": "TELUS COMMUNICATIONS COMPANY",
+      "ibOpportunityPercentage": {
+        "disqualified": 3774301.312,
+        "qualified": 15097205.248,
+        "pending": 0
+      },
+      "productListPrice": 200.00,
+      "defaultServiceListPrice": 98123452,
+      "existingCoverageListPrice": 28904532
+    },
+    {
+      "contractNumber": 77456712,
+      "contractType": "SNT",
+      "contractEarliestEndDate": "2/15/2014",
+      "servicesBillToPartnerName": "TELUS COMMUNICATIONS COMPANY",
+      "ibOpportunityPercentage": {
+        "disqualified": 335306.75,
+        "qualified": 213295.84,
+        "pending": 622903.90
+      },
+      "productListPrice": 3395.00,
+      "defaultServiceListPrice": 98987656,
+      "existingCoverageListPrice": 31456786
+    }
+  ]
+}

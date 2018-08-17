@@ -1,0 +1,81 @@
+.pt-8 {padding-top: 8px;}
+.pb-10 {padding-bottom: 8px;}
+.pb-8 {padding-bottom: 8px;}
+.pl-20 {padding-left: 20px;}
+.pl-6 {padding-left: 6px;}
+.progress {height: 6px;margin-top: 15px;}
+.lookup-body .border-bottom-1 {border-bottom: 1px solid #C6C6C6;}
+.lookup-body.text-black {color: #000;}
+.lookup-body .body-content li:last-child {border-bottom: 0px;}
+.lookup-body .body-content {overflow-y: auto;height: 125px;}
+.lookup-body .info-icon {margin-left: 5px;}
+.lookup-body .percentage {padding-right: 8px;}
+.lookup-body span.match {padding-right: 22px;}
+.lookup-footer .btnns .cancel-btn {margin-right: 6px;border: 1px solid #00B9E9;color: #00B9E9;cursor: pointer;}
+.lookup-footer .download-template {float: left;width: 50%;padding-top: 7px;margin-left: 15px;}
+.lookup-footer .btnns {width: 50%;text-align: right;}
+.lookup-footer .btn.upload.download-btn.disabled {background: #cccccc ;color: #999999 ;border: 1px solid transparent;cursor: not-allowed;}
+.btn.upload {background: #00BAE9;color: #fff;}
+
+.btn.download-btn.disabled:hover {box-shadow: none;cursor: not-allowed;}
+.lookup-footer .download-template a {font-size: 16px;color: #00BAE9;text-transform: capitalize;font-weight: 400;}
+.lookup-footer .download-template a:hover {color: #0056b3;}
+.lookup-footer .btn.focus, .btn:focus {box-shadow: none;}
+
+.btn:hover {box-shadow: 0 3px 15px 0 rgba(0, 0, 0, .25);}
+.lookup-body .header-content {width: 100%;float: left;background-color: #F2F2F2;padding: 7px 15px 5px 28px;text-transform: uppercase;color: #58585b;}
+.lookup-body .header-content div {font-weight: 500;}
+.lookupListHeading {color: #999;font-size: 13px;font-weight: 300 !important;}
+.lookup-body .body-content, .lookup-body .body-content ul {float: left;width: 100%;}
+.lookup-body .body-content ul li {float: left;width: 100%;}
+.lookupMandatoryField {float: left;width: 100%;padding: 5px 0px 0px 0px;margin-bottom: 0px;}
+.lookupMandatoryField ul {float: left;width: 100%;border-bottom: 1px solid #ccc;}
+.lookupMandatoryField ul li {float: left;width: 100%;padding: 8px 0;border-bottom: 1px dashed #ccc;}
+.lookupMandatoryField ul li:last-child {border-bottom: 0;}
+.selectListBtns {float: left;width: 100%;margin: 0px;}
+.selectListBtns ul {margin-top: 7px;}
+.selectListBtns li {display: inline-block;font-size: 12px;border-left: 1px solid #ccc;line-height: 10px;}
+.selectListBtns li:first-child {border-left: 0px;}
+.selectListBtns li a {font-size: 12px;font-weight: 300;margin: 0 6px;position: relative;top: 1px;}
+.selectListBtns li a.disable {color: #ccc;cursor: not-allowed;}
+.selectListBtns li:last-child a {margin: 0 0 0 6px;}
+.lookup-body input[type=checkbox]:not(old) {width: 18px;height: 18px;opacity: 0;position: relative;margin: 0 0 0 -20px ;padding: 0;left: 24px;z-index: 1;top: 6px;cursor: pointer;}
+.lookup-body input[type="checkbox"][disabled],.lookup-body input[type="radio"][disabled] {z-index: -1;}
+.lookup-body input[type=checkbox]:not(old)+label {display: inline-block;min-height: 20px;min-width: 20px;margin-bottom: 0;padding-left: 28px;background: url("../../../assets/images/checkbox.svg") no-repeat;line-height: 20px;color: #58585b;font-size: 16px;font-weight: 100;cursor: default;position: relative;top: -1px;}
+.lookup-body input[type=checkbox]:not(old):checked+label {background: url("../../../assets/images/checkbox-enable.svg") no-repeat;color: #666;font-size: 16px;font-weight: 100;cursor: default;}
+.lookup-body input[type=checkbox][disabled]:not(old)+label {background: url("../../../assets/images/checkbox-disable.svg") no-repeat;cursor: default;}
+.lookup-body input[type=checkbox][disabled]:not(old):checked+label {background: url("../../../assets/images/checkbox-selected-disable.svg") no-repeat;cursor: default;}
+.lookup-body input[type=radio]:not(old) {width: 18px;height: 18px;opacity: 0;position: relative;margin: 0 0 0 0px !important;padding: 0;left: 0px;z-index: 1;top: 0px;cursor: pointer;}
+.lookup-body input[type=radio]:not(old)+label {display: inline-block;min-height: 20px;min-width: 20px;margin-bottom: 0;padding-left: 28px;background: url("../../../assets/images/radio-btn.svg") no-repeat;line-height: 20px;color: #666;font-size: 16px;font-weight: 100;cursor: default;margin-left: -20px;}
+.lookup-body input[type=radio]:not(old):checked+label {background: url("../../../assets/images/radio-selected.svg") no-repeat;color: #666;font-size: 16px;font-weight: 100 ;cursor: default;}
+.lookup-body input[type=radio][disabled]:not(old)+label {background: url("../../../assets/images/radio-disable.svg") no-repeat;cursor: default;}
+.lookup-body input[type=radio][disabled]:not(old):checked+label {background: url("../../../assets/images/radio-selected-disable.svg") no-repeat;cursor: default;}
+.download-template.float-left {float: left;width: 190px;}
+.btn.lookup-tip {width: 18px;height: 18px;padding: 0;border-radius: 20px;font-size: 11px;line-height: normal;font-weight: 700;background-color: #fff;border: 2px solid #58585b;color: #58585b;margin-left: 3px;position: relative;top: 0;}
+.my-drop-zone {border: dashed 2px #ccc;padding: 20px;border-radius: 3px;}
+.nv-file-over {border: dashed 2px #6cc04a;background-color: #6cc04a1a;}
+.excelSheetIcon {height: 41px;width: 34px;display: inline-block;}
+.my-drop-zone strong {font-size: 16px;font-weight: 100;color: #58585b;letter-spacing: 0.03em;word-break: break-all;float:left;width: 100%;}
+.dragDropboxTitle {display: block}
+.dragDropText, .dragDropboxText {font-size: 13px;color: #58585b;letter-spacing: 0.03em;display: block;}
+.dragDropboxText a {display: inline-block;}
+.notesSection {float: left;width: 100%;padding: 10px 0;display: table;color: #999;font-size: 11px;}
+.notesSection .tdTitle {display: table-cell;vertical-align: top;}
+.notesSection .tdList {display: table-cell;vertical-align: top;}
+.buttonsWrap {display: inline-block;}
+.dragDropRemove {position: relative;top: -2px;border-radius: 20px;background-color: #00B9E9;font-size: 7px;height: 17px;width: 17px;padding: 4px;line-height: normal;border: none;}
+.dragDropRemove:hover { box-shadow: 0 1px 4px 0 rgba(0, 0, 0, .25); }
+.dragDropRemove span.icon-close-btn:before {color: #fff;}
+.fileUploadWrap {background-color: transparent;padding: 0;border: 0;position: relative;top: -2px;border-radius: 30px;position: relative;margin: 0px 5px;}
+.fileUploadIcon {height: 17px;width: 17px;float: left;background: url('/assets/images/upload-icon.svg') no-repeat;}
+.float-right {display: none;}
+li .float-right {margin-right: 30px;}
+.my-drop-zone.file-format-error {border-color: #c82439;background-color: #fdf4f5}
+.my-drop-zone.file-format-error .file-name{ font-size: 16px; max-width: 380px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; display: inline-block; position: relative; padding-right: 25px;}
+.my-drop-zone.file-format-error .icon-file { font-size: 40px; display: block; margin: 0px auto 15px; width: 30px;}
+.my-drop-zone.file-format-error .file-name button{ position: absolute; top: 2px; right: 2px;}
+.my-drop-zone.file-format-error .incorrect-format{ font-size: 13px; color: #58585b; display:block;}
+.column-header { width:auto; margin-right: 15px; }
+.set-primary {font-size: 12px;margin-top: 5px;display: block;}
+.set-primary a[disabled] {color:lightgray;}
+.disbleUpldBtn{pointer-events: none;}

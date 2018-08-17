@@ -1,0 +1,179 @@
+<!--Start Common Modal Window-->
+<div class="modal-header">
+  <h5 class="modal-title" id="exampleModalLabel">Applied Filters</h5>
+  <button type="button" class="icon-close-btn" aria-label="Close" (click)="activeModal.dismiss('Cross click')"></button>
+</div>
+
+<div class="modal-body">
+  <div class="view-filter-clear">
+    <a href="" class="disabled"></a>
+  </div>
+
+  <div class="view-applied-container">
+    <div class="view-applied-details">
+      <h5>Definition Description</h5>
+      <p class=""></p>
+    </div>
+
+    <div class="expanded">
+      <div class="table-responsive view-applied-table appliedFilter-table">
+        <table class="table-width">
+          <tbody>
+            <ng-container *ngFor="let c of appliedFilters">
+
+              <tr class="primary-row" *ngIf="c.type==='status'">
+                <td>
+                  <table>
+                    <tbody>
+                      <tr class="sub-level-row" *ngFor="let row of c.categories; let i = index">
+                        <td class="no-border view-filters-heading width20" [ngStyle]="{ 'visibility': i>0 ? 'hidden' : 'visible' }">
+                          <!-- <input type="checkbox">
+																		<label>
+																			<span class="check"></span>
+																		</label> -->
+                          {{c.title}}
+                        </td>
+                        <td class="width22">
+                          <!-- <input disabled="disabled" type="checkbox">
+																		<label>
+																			<span class="check"></span>
+																		</label> -->
+                          {{row.title}}
+                        </td>
+                        <td class="width58 td-width-tag">
+                          <span class="name-tag">{{row.selected}}
+                            <!-- <span class="ico-close"></span> -->
+                          </span>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </td>
+              </tr>
+
+              <tr class="primary-row" *ngIf="c.type==='slider'">
+                <td>
+                  <table>
+                    <tbody>
+                      <tr class="sub-level-row" *ngFor="let row of c.categories; let i = index">
+                        <td class="no-border view-filters-heading width20" [ngStyle]="{ 'visibility': i>0 ? 'hidden' : 'visible' }">
+                          <!-- <input type="checkbox">
+																			<label>
+																				<span class="check"></span>
+																			</label> -->
+                          {{c.title}}
+                        </td>
+                        <td class="width22">
+                          <!-- <input disabled="disabled" type="checkbox">
+																			<label>
+																				<span class="check"></span>
+																			</label> -->
+                          {{row.title}}
+                        </td>
+                        <td class="width58 td-width-tag">
+                          <span class="name-tag">{{row.selected[0]}} to {{row.selected[1]}}
+                            <!-- <span class="ico-close"></span> -->
+                          </span>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </td>
+              </tr>
+
+              <tr class="primary-row" *ngIf="c.type==='dropdown' && c.selected.length > 0">
+                <td>
+                  <table>
+                    <tbody>
+                      <ng-container *ngFor="let row of c.levels_name; let i = index">
+                        <tr class="sub-level-row" *ngIf="c.selected[i] && c.selected[i].length">
+                          <td class="no-border view-filters-heading width20">
+                            <!-- <input type="checkbox">
+												<label>
+													<span class="check"></span>
+												</label> -->
+                            {{c.title}}
+                          </td>
+
+                          <td class="width22">
+                            <!-- <input disabled="disabled" type="checkbox">
+												<label>
+													<span class="check"></span>
+												</label> -->
+                            {{row}}
+                          </td>
+                          <td class="width58 td-width-tag">
+                            <span class="name-tag" *ngFor="let g of c.selected[i]">{{g}}
+                              <!-- <span class="ico-close"></span> -->
+                            </span>
+                          </td>
+                        </tr>
+                      </ng-container>
+                    </tbody>
+                  </table>
+                </td>
+              </tr>
+
+              <tr class="primary-row" *ngIf="c.type==='dataset'">
+                <td>
+                  <table>
+                    <tbody>
+                      <tr class="sub-level-row" *ngFor="let row of c.categories; let i = index">
+                        <td class="no-border view-filters-heading width20" [ngStyle]="{ 'visibility': i>0 ? 'hidden' : 'visible' }">
+                          {{c.title}}
+                        </td>
+                        <td class="width22">
+                          {{row.title}}
+                        </td>
+                        <td class="width58 td-width-tag">
+                          <span class="name-tag">{{row.selected_value[0]}} to {{row.selected_value[1]}}
+                          </span>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </td>
+              </tr>
+
+            </ng-container>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+  <!-- End of definition Decription-->
+
+  <div class="view-applied-tab">
+    <h2></h2>
+  </div>
+
+  <!-- <div class="insight-filter-content">
+        <div class="expanded">
+            <div class="table-responsive view-applied-table">
+                <table class="table-width">
+                    <tbody>
+                    <tr class="primary-row">
+                        <td>
+                            <table>
+                                <tbody>
+                                	<tr class="sub-level-row">
+	                                    <td class="no-border view-filters-heading width20">Insights</td>
+	                                    <td class="width22">Propensity for TS Attach <br><i>(US Commercial Only)</i></td>
+	                                    <td class="width58 td-width-tag">
+	                                    	<span class="name-tag">40% - 100%</span>
+	                                    </td>
+                                	</tr>
+                            </tbody>
+                        </table>
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div> -->
+  <!-- End of Applied Insights -->
+</div>
+
+<!--End Common Modal Window-->

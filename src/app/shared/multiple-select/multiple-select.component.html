@@ -1,0 +1,35 @@
+<div class="ng-ms form-item-container">
+  <div class="input-text form-group">
+    <ul class="list-inline">
+      <li *ngFor="let item of modelArr">
+        <span *ngIf="objectProperty == undefined || objectProperty == ''">{{item}}
+          <i (click)="removeAddedValues(item)" class="icon-close-btn"></i>
+        </span>
+        <span *ngIf="objectProperty != undefined && objectProperty != ''">{{item[objectProperty]}}
+          <i (click)="removeAddedValues(item)" class="icon-close-btn"></i>
+        </span>
+      </li>
+      <li>
+        <input id="emailID" required="" name="email" class="form-control" [(ngModel)]="inputValue" (keydown)="keyParser($event)"
+          (focus)="onFocus()" (blur)="onBlur()" (ngModelChange)="onChange()" class="form-control"
+          required="" appElementFocus autocomplete="off" />
+      </li>
+    </ul>
+    <label class="form-control-placeholder" for="emailID">Search User Name, Email ID, CEC ID</label>
+    <div class="clearfix"></div>
+  </div>
+
+  <div class="autocomplete-list" *ngIf="(isFocused || isHover) && suggestionsArrFiltered.length" (mouseenter)="onMouseEnter()"
+    (mouseleave)="onMouseLeave()">
+    <ul *ngIf="objectProperty != undefined && objectProperty != ''">
+      <ng-container *ngFor="let suggestion of suggestionsArrFiltered; let i = index">
+        <li [ngClass]="{'autocomplete-active' : selectedItemIndex == i}" (click)="onSuggestedItemsClick(suggestion)"
+          (mouseenter)="mouseEnterOnItem(i)">
+          {{suggestion.name}} ({{suggestion.cec}})
+          <span class="emailid-holder">{{suggestion.email}}</span>
+        </li>
+      </ng-container>
+    </ul>
+  </div>
+
+</div>

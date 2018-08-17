@@ -1,0 +1,37 @@
+<div class="modal-header">
+  <h4 class="modal-title">Notify to AM</h4>
+  <button type="button" class="icon-close-btn" aria-label="Close" (click)="activeModal.dismiss('Cross click')"></button>
+</div>
+<div class="modal-body notifyToAm-body-text">
+    <div class="grey-bg notifyToAmTitle">
+        <div class="row">
+          <div class="col-6"><span class="colname">Names</span></div>
+          <div class="col-6 text-left"><span class="notifyToAm">Email</span></div>
+        </div>
+      </div>
+  <ul class="pl-0">
+    <li class="list-unstyled border-bottom-1" *ngFor="let am of amList; let i= index">
+        <div class="row">
+            <div class="col-6">
+              <input type="checkbox" id="am_{{i}}" name="selectAM" [(ngModel)]="am.checked" (change)="selectAM(am, i)" />
+              <label for="am_{{i}}"><span></span></label>
+              <span class="pl-6">{{am.userName}}</span>
+            </div>
+            <div class="col-6 text-left">
+              <span class="percentage">{{am.emailId}}</span>
+            </div>
+        </div>
+    </li>
+  </ul>
+  <div class="disclaimerText">Note:
+    <span *ngIf="selectedAm.length<=selectionLimit">Max selection upto {{selectionLimit}}.</span>
+    <span class="limitExceeded" *ngIf="selectedAm.length>selectionLimit">You have exceeded the max selection limit of {{selectionLimit}}.</span>
+  </div>
+</div>
+<div class="modal-footer">
+  <div class="btn">
+    <button type="button" class="btn cancel-btn" (click)="activeModal.dismiss('Cancel click')">Cancel</button>
+    <button type="button" class="btn btn-primary" (click)="notifyAm()" [disabled]="isNotifyDisabled()">Notify</button>
+  </div>
+  <div class="clearfix"></div>
+</div>

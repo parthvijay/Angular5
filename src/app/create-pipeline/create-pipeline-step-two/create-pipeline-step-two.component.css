@@ -1,0 +1,66 @@
+.form-group { margin-bottom:0; }
+.input-block .highlight-bar { height:100%; left:-1px; top:0px; bottom:0px; }
+.input-block .input-group-addon { position:absolute; }
+.input-block input:hover { border:1px solid #049fd9; }
+.input-block:hover { border:0; }
+.input-drop.select-input select { border-radius: 2px; border:1px solid #999; font-size: 14px; font-weight: 300; color: #58585b; }
+
+/*  Alert CSS  */
+.help-block.alert .ico-danger { position:absolute; font-size:12px; left:0; top:-1px; }
+.block-left p.help-block.alert { color:#c82439; padding:0 0 0 17px; margin:0; line-height:normal; }
+p.help-block { font-size:11px; color:#999999; font-family:'CiscoSans'; position:absolute; margin-top:0; max-width:279px; }
+/*  Alert CSS  */
+
+.technologies.table-search { max-width:470px; }
+input::placeholder, input.form-control::placeholder, textarea.form-control::placeholder { color:#ccc; font-size:13px; }
+.help-block.relative-help.technology-help { min-width:436px; }
+.help-block.relative-help { position:relative; max-width:330px; font-size:11px; color:#999; font-family:'CiscoSans'; margin-top:0; margin-bottom:15px; display:block; }
+
+.service-details, .fixedhead { overflow-y: scroll; }
+.service-details .table tbody tr td.highlight-td, .service-details .table tbody tr td { position: relative; }
+.highlight-bar { width: 3px;background-color: #049fd9; display: inline-block; position: absolute;}
+.service-details table .input-block, .service-details table.striped-table .input-block { height: 24px; border:1px solid #999 !important; margin-top: 0; border-radius: 3px; }
+.table-top-list li.float-right { border:none; margin-top:3px; }
+.table-top-list .ico-delete { font-size:27px; vertical-align:middle; cursor:pointer; }
+.table-top-list .ico-delete .path2:before { color: #00bceb; }
+.table-top-list .ico-delete.disable { cursor:auto; }
+.table-top-list .ico-delete.disable .path1::before { color:transparent; }
+.table-top-list .ico-delete.disable .path2::before { color:#ccc; }
+.table-scrolled thead, .table-scrolled tfoot { width:calc(100% - 17px); }
+.expanded .striped-table tbody tr.grey-row, .expanded .striped-table tfoot tr.grey-row { background:#f6f6f6; }
+table.opp-by tr, .opp-by.table thead tr, .opp-by.table tbody tr { border-bottom:1px solid #ccc; }
+.expanded .striped-table tbody tr.grey-row td, .expanded .striped-table tfoot tr.grey-row td { border-top:2px solid #ccc; }
+.table-scrolled .col-thead-1, .table-scrolled .col-tbody-1, .fixedhead .table .col-thead-1, .fixedhead .table .col-tbody-1 { width:38%; }
+.table-scrolled .col-thead-2, .table-scrolled .col-tbody-2, .table-scrolled .col-tfoot-2, .fixedhead .table .col-thead-2, .fixedhead .table .col-tbody-2 { width:23%; }
+.table-scrolled .col-thead-3, .table-scrolled .col-tbody-3, .table-scrolled .col-tfoot-3, .fixedhead .table .col-thead-3, .fixedhead .table .col-tbody-3 { width:12%; }
+.table-scrolled .col-thead-4, .table-scrolled .col-tbody-4, .fixedhead .table .col-thead-4, .fixedhead .table .col-tbody-4 { width:27%; }
+.service-details .table-scrolled .col-thead-1, .service-details .table-scrolled .col-tbody-1, .fixedhead.service-details .table .col-thead-1, .fixedhead.service-details .table .col-tbody-1 { width:30%; }
+.service-details .table-scrolled .col-thead-2, .service-details .table-scrolled .col-tbody-2, .fixedhead.service-details .table .col-thead-2, .fixedhead.service-details .table .col-tbody-2 { width:17%; }
+.service-details .table-scrolled .col-thead-3, .service-details .table-scrolled .col-tbody-3, .service-details .table-scrolled .col-tfoot-3, .fixedhead.service-details .table .col-thead-3, .fixedhead.service-details .table .col-tbody-3 { width:26%; }
+.service-details .table-scrolled .col-thead-4, .service-details .table-scrolled .col-tbody-4, .fixedhead.service-details .table .col-thead-4, .fixedhead.service-details .table .col-tbody-4 { width:12%; }
+.service-details .table-scrolled .col-thead-5, .service-details .table-scrolled .col-tbody-5, .fixedhead.service-details .table .col-thead-5, .fixedhead.service-details .table .col-tbody-5 { width:15%; }
+
+.table-scrolled .col-tfoot-1, .fixedhead .table .col-tfoot-1 { width:69.5%; }
+.table-scrolled .col-thead-2, .table-scrolled .col-tbody-2, .table-scrolled .col-tfoot-2, .fixedhead .table .col-thead-2, .fixedhead .table .col-tbody-2 { width:23%; }
+.table-scrolled .col-tfoot-3, .fixedhead .table .col-tfoot-3 { width:13%; padding-right: 0; text-align: right; }
+.table-scrolled .col-tfoot-4, .fixedhead .table .col-tfoot-4 { width:31%; }
+.service-details .table-scrolled .col-tfoot-1, .fixedhead.service-details .table .col-tfoot-1 { width:0%; }
+.service-details .table-scrolled .col-tfoot-2, .fixedhead.service-details .table .col-tfoot-2 { max-width:95%; }
+.service-details .table-scrolled .col-tfoot-3, .fixedhead.service-details .table .col-tfoot-3 { width:0%; }
+.service-details .table-scrolled .col-tfoot-4, .fixedhead.service-details .table .col-tfoot-4 { width:17%; }
+.service-details .table-scrolled .col-tfoot-5, .fixedhead.service-details .table .col-tfoot-5 { width:19%; }
+.red-txt { font-family:'CiscoSans'; color:#c82439; font-size:11px; font-weight:400; }
+.opp-by.table.sav-table thead tr th.w140 { width: 140px !important; }
+.opp-by.table.sav-table thead tr th.w210 { width: 210px !important; }
+.opp-by.table.sav-table thead tr th.w230 { width: 230px !important; }
+.opp-by.table.sav-table thead tr th.w285 { width: 285px !important; }
+.opp-by.table.sav-table thead tr th.w310 { width: 310px !important; }
+.expanded .striped-table tbody tr td.w140 { width: 140px !important; }
+.expanded .striped-table tbody tr td.w210 { width: 210px !important; }
+.expanded .striped-table tbody tr td.w230 { width: 230px !important; }
+.expanded .striped-table tbody tr td.w285 { width: 285px !important; }
+.expanded .striped-table tbody tr td.w310 { width: 310px !important; }
+.expanded .striped-table thead { float: left; width: 100%; display: table; }
+.table.opp-by tr, .opp-by.table thead tr { display: table; width: 100%; float: left;  }
+.expanded .striped-table tbody {display: table; width: 100%; float: left; }
+td.text-right.col-tbody-3.w140.trdcol{border-bottom: 2px solid #cccccc;}

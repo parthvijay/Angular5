@@ -1,0 +1,329 @@
+<div id="page-content-wrapper">
+    <div class="freezed-container">
+        <div class="grey-background">
+            <div class="clearfix" style="position:relative;">
+                <div class="container-fluid filter-switch">
+                    <!-- Opportunities/Performance switch -->
+                    <div class="row marginT10 marginB10">
+                        <div class="col-lg-12">
+                            <a (click)="returnUrl()" class="refresh-back-btn marginT5">
+                                <span class="ico-left-arrow-sm hvr-icon-pop">
+                                    <span class="path1"></span><span class="path2"></span><span class="path3"></span>
+                                </span>
+                                <span class="back-btn-txt" (click)="createPipelineService.clearAllStepValues()">{{backUrlText}}</span>
+                            </a>
+                        </div>
+                    </div>
+                    <!-- <div class="row">
+                        <div class="col-xs-12 paddingR0 view-account">
+                          <filter-detail get-data="getData()" sidebar-active-toggle="sidebarActiveToggle()" template="views/applied-filters.html"></filter-detail>
+                        </div>
+                    </div>
+                </div> -->
+                    <!-- Opportunities/Performance switch -->
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--freezed-container-->
+    <div class="container-fluid tabContent">
+        <div class="steps-container">
+            <div class="steps-heading">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <h3>Convert to Pipeline - Step 2 of 3</h3>
+                    </div>
+                </div>
+            </div>
+            <div class="steps-detail">
+                <div class="block-left single-row">
+                    <div class="usd-value marginR0 marginB10">Value shown in USD</div>
+                    <div class="single-col marginR5 step-input">
+                        <div class="block-column marginT15 opporForeBaseStage">
+                                <div class="form-group">
+                                    <label for="installBase">Install Base Type
+                                        <span class="mandatory">*</span>
+                                    </label>
+                                    <div class="input-drop select-input input-dropdown">    
+                                        <div class="disableDropdown" *ngIf="createPipelineService.disableInstallBase"></div>
+                                        <ss-multiselect-dropdown [options]="baseTypeOptions" [(ngModel)]="createPipelineService.installBase" [settings]="mySettings" name="basetype"
+                                        [texts]="basetypeTexts" (ngModelChange)="autopopulateValues()"></ss-multiselect-dropdown>
+                                    </div>
+                                </div>
+                            </div>
+                        <div class="form-group">
+                            <label for="ExpectedProduct">Expected Product Amount</label>
+                            <div class="input-block input-group exp-input focused highlighted">
+                                <span class="highlight-bar"></span>
+                                <span class="input-group-addon">$</span>
+                                <input name="ExpectedProductValue" class="" type="text" [(ngModel)]="createPipelineService.ExpectedProductValue" (input)="validateExp($event, 'ExpectedProductValue', false)">
+                            </div>
+                            <p class="help-block" *ngIf="createPipelineService.ExpectedProductValue === '0' && !objectKeys(createPipelineService.newOpurtunity.selectedTechnologies).length">If you are not adding products leave '0' inside the field.</p>
+                            <p class="help-block alert" *ngIf="objectKeys(createPipelineService.newOpurtunity.selectedTechnologies).length && createPipelineService.ExpectedProductValue==='0'">
+                                <span class="ico-danger">
+                                    <span class="path1"></span>
+                                    <span class="path2"></span>
+                                </span>Products added to the table below must have a dollar amount</p>
+                        </div>
+                    </div>
+                    <div class="single-col marginR5 step-input">
+                        <div class="form-group">
+                            <label for="ExpectedService">Expected Service Amount</label>
+                            <div class="input-block input-group exp-input focused highlighted">
+                                <span class="highlight-bar"></span>
+                                <span class="input-group-addon">$</span>
+                                <input name="ExpectedServiceValue" class="" type="text" [(ngModel)]="createPipelineService.ExpectedServiceValue" (input)="validateExp($event, 'ExpectedServiceValue', false)">
+                            </div>
+                            <p class="help-block" *ngIf="createPipelineService.ExpectedServiceValue === '0' && !objectKeys(createPipelineService.newOpurtunity.selectedServices).length">If you are not adding services leave '0' inside the field.</p>
+                            <p class="help-block alert" *ngIf="objectKeys(createPipelineService.newOpurtunity.selectedServices).length && createPipelineService.ExpectedServiceValue==='0'">
+                                <span class="ico-danger">
+                                    <span class="path1"></span>
+                                    <span class="path2"></span>
+                                </span>Services added to the table below must have a dollar amount</p>
+                        </div>
+                    </div>
+
+                    <ng-template #rt let-r="result" let-t="term">
+                        {{r.businessProdFamily}}
+                    </ng-template>
+
+                    <h6 class="table-head">Technologies</h6>
+                    <script type="text/ng-template" id="customTemplateTech.html">
+                        <a>
+                        <span ng-bind-html="match.label | uibTypeaheadHighlight:query"></span>
+                        </a>
+                    </script>
+                    <ul class="table-top-list clearfix">
+                        <li>
+                            <div class="table-search technologies">
+                                <span class="highlight-bar"></span>
+                                <input placeholder="Search &amp; Add BE/Product Family" class="form-control" type="text" [(ngModel)]="searchTech" [ngbTypeahead]="searchTechTypeahead"
+                                    [resultTemplate]="rt" [inputFormatter]="formatter" (selectItem)="onTechSelect($event)">
+                                <span class="ico-search"></span>
+                            </div>
+                            <span class="help-block relative-help technology-help">Use this search to add products to the table in order to proceed.</span>
+                        </li>
+                        <li>
+                            <a (click)="openShowAllTechModal()">Show All</a>
+                        </li>
+                        <li>
+                            <a (click)="openShowAllTechIbModal()">Show Technologies for My IB</a>
+                        </li>
+                        <li class="float-right">
+                            <!-- <span class="ico-delete services-delete-icon" [ngClass]="{'disable': !isDeleteEnabled(createPipelineService.newOpurtunity.selectedTechnologies)}" (click)="deleteTechnology()">
+                                <span class="path1 hvr-icon-pop"></span>
+                                <span class="path2"></span>
+                            </span> -->
+                            <span class="ico-delete services-delete-icon" (click)="deleteTechnology()" [ngClass]="{'disable':!isDeleteEnabled(createPipelineService.newOpurtunity.selectedTechnologies)}">
+                                <span class="path1 hvr-icon-pop"></span>
+                                <span class="path2"></span>
+                            </span>
+                        </li>
+                    </ul>
+
+                    <div class="fixedhead expanded techTable">
+                        <table class="table border-table opp-by sav-table striped-table marginB0">
+                            <thead>
+                                <tr>
+                                    <th class="col-thead-1">
+                                        <input id="checkbox" class="" type="checkbox" [(ngModel)]="checkAllBoxes" (change)="checkAll(checkAllBoxes,createPipelineService.newOpurtunity.selectedTechnologies)">
+                                        <label for="checkbox">
+                                            <span class="check"></span>
+                                        </label>Business Entity/Sub Entity</th>
+                                    <th class="col-thead-2 w310">Product Family</th>
+                                    <th class="text-right col-thead-3 w140">Allocation %</th>
+                                    <th class="text-right col-thead-4 w210">Expected Product Amount</th>
+                                </tr>
+                            </thead>
+                            <tbody class="borderB0 norecordTbody">
+                                <!-- <tr class="no-record">
+                                    <td colspan="5" class="text-center borderR0">No technologies are selected. You can add it by search.</td>
+                                </tr> -->
+                                <tr *ngFor="let key of objectKeys(createPipelineService.newOpurtunity.selectedTechnologies);">
+                                    <td class="col-tbody-1">
+                                        <input id="checkbox-{{key}}" type="checkbox" [(ngModel)]="createPipelineService.newOpurtunity.selectedTechnologies[key].boxes"
+                                            (change)="checkParent(createPipelineService.newOpurtunity.selectedTechnologies,'technology')">
+                                        <label for="checkbox-{{key}}">
+                                            <span class="check"></span>
+                                        </label>{{key}}</td>
+                                    <td class="col-tbody-2 w310">
+                                        <div *ngFor="let option of createPipelineService.newOpurtunity.selectedTechnologies[key].options">{{option.key}}
+                                            <br>
+                                        </div>
+                                    </td>
+                                    <td class="text-right col-tbody-3 w140 trdcol" data-ng-class="{'highlight-td' : !createPipelineService.newOpurtunity.selectedTechnologies[key].value >0}">
+                                        <span class="highlight-bar"></span>
+                                        <div class="count-col">
+                                            <input type="number" [(ngModel)]="createPipelineService.newOpurtunity.selectedTechnologies[key].value">
+                                        </div>
+                                    </td>
+                                    <td class="text-right col-tbody-4 w210">
+                                        {{createPipelineService.getAllocationValue(createPipelineService.ExpectedProductValue, createPipelineService.newOpurtunity.selectedTechnologies[key].value)}}
+                                    </td>
+                                </tr>
+
+                                <tr class="no-record" *ngIf="!objectKeys(createPipelineService.newOpurtunity.selectedTechnologies).length">
+                                    <td colspan="4" class="text-center borderR0">No products are selected. You can add it by search.</td>
+                                </tr>
+
+                            </tbody>
+                            <tfoot>
+                                <tr class="grey-row" >
+                                    <td  class="borderR0 col-tfoot-1">
+                                        
+                                    </td>
+                                    <td class="middle-txt borderR0 total col-tfoot-3">
+                                        <span class="red-txt" *ngIf="!isTechValid()">Allocations must add up to 100%</span>
+                                        <span *ngIf="objectKeys(createPipelineService.newOpurtunity.selectedTechnologies).length>0 && isTechValid()">Total 100</span>
+                                    </td>
+                                    <td class="borderR0 col-tfoot-1"></td>
+                                    <td class="borderR0 col-tfoot-1"></td>
+                                </tr>
+                            </tfoot>
+                        </table>
+                    </div>
+
+                    <h6 class="table-head marginT20">Services</h6>
+                    <script type="text/ng-template" id="customTemplateServ.html">
+                        <a>
+                        <span></span>
+                        </a>
+                    </script>
+
+                    <ng-template #rt2 let-r="result" let-t="term">
+                        {{r.name}}
+                    </ng-template>
+
+                    <ul class="table-top-list clearfix">
+                        <li>
+                            <div class="table-search">
+                                <span class="highlight-bar"></span>
+                                <input placeholder="Search &amp; Add Service Program" class="form-control" type="text" [(ngModel)]="searchService" [ngbTypeahead]="searchServTypeahead"
+                                    [resultTemplate]="rt2" [inputFormatter]="formatterServ" (selectItem)="onServiceSelect($event)">
+                                <span class="ico-search"></span>
+                            </div>
+                            <span class="help-block relative-help">Use this search to add services to the table in order to proceed.</span>
+                        </li>
+                        <li>
+                            <a (click)="openShowAllServiceModal()">Show All</a>
+                        </li>
+                        <li class="float-right">
+                            <span class="ico-delete" (click)="deleteService()" [ngClass]="{'disable':!isDeleteEnabled(createPipelineService.newOpurtunity.selectedServices)}">
+                                <span class="path1 hvr-icon-pop"></span>
+                                <span class="path2"></span>
+                            </span>
+                        </li>
+                    </ul>
+
+                    <div class="fixedhead expanded service-details marginB30">
+                        <table class="table border-table opp-by sav-table striped-table marginB0">
+                            <thead>
+                                <tr>
+                                    <th class="col-thead-1 w310">
+                                        <input id="serviceCheckbox" class="" type="checkbox" [(ngModel)]="serviceSelected" (change)="checkAll(serviceSelected,createPipelineService.newOpurtunity.selectedServices)">
+                                        <label for="serviceCheckbox">
+                                            <span class="check"></span>
+                                        </label>Service Program</th>
+                                    <th class="col-thead-2 w230">Service Level</th>
+                                    <th class="col-thead-3 w285">Service Category</th>
+                                    <th class="text-right col-thead-4 w140">Allocation %</th>
+                                    <th class="text-right col-thead-5 w210">Expected Service Amount</th>
+                                </tr>
+                            </thead>
+                            <tbody class="borderB0 norecordTbody">
+                                <tr *ngFor="let key of objectKeys(createPipelineService.newOpurtunity.selectedServices);">
+                                    <td class="col-tbody-1 w310">
+                                        <input type="checkbox" id="serviceCheckbox-{{key}}" [(ngModel)]="createPipelineService.newOpurtunity.selectedServices[key].boxes"
+                                            (change)="checkParent(createPipelineService.newOpurtunity.selectedServices,'service')">
+                                        <label for="serviceCheckbox-{{key}}">
+                                            <span class="check"></span>
+                                        </label>{{key}}</td>
+
+                                    <td class="text-right highlight-td col-tbody-2 w230">
+                                        <!-- <span class="highlight-bar"></span> -->
+                                        <div class="form-group">
+                                            <div class="select-input select-sm input-block input-dropdown marginB0 service-dropdown">
+                                                <select [(ngModel)]="createPipelineService.newOpurtunity.selectedServices[key].serviceLevelSelected">
+                                                    <option value="">Select</option>
+                                                    <option *ngFor="let level of createPipelineService.newOpurtunity.selectedServices[key].serviceLevel" value="{{level.name}}">{{level.name}}</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <!--<div class="form-group">
+                                            <div class="select-input select-sm input-block input-dropdown marginB0 service-dropdown">
+                                                <ol class="nya-bs-select serviceLevelList" ng-model="val.serviceLevelSelected" data-title="Select">
+                                                    <li class="nya-bs-option" nya-bs-option="level in val.serviceLevel" data-value="level.name">
+                                                        <a>{{level.name }}</a>
+                                                    </li>
+                                                </ol>
+                                            </div>
+                                        </div> -->
+                                    </td>
+                                    <td class="text-right highlight-td col-tbody-3 w285">
+                                        <span class="highlight-bar" *ngIf="!createPipelineService.newOpurtunity.selectedServices[key].serviceCategorySelected && false"></span>
+                                        <div class="form-group">
+                                            <div class="select-input select-sm input-block input-dropdown marginB0 service-dropdown">
+                                                <select [(ngModel)]="createPipelineService.newOpurtunity.selectedServices[key].serviceCategorySelected">
+                                                    <option value="">Select</option>
+                                                    <option *ngFor="let category of createPipelineService.newOpurtunity.selectedServices[key].serviceCategory" value="{{category.name}}">{{category.name}}</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <!-- <div class="form-group">
+                                            <div class="select-input select-sm input-block input-dropdown marginB0 service-dropdown">
+                                                <ol class="nya-bs-select" ng-model="val.serviceCategorySelected" data-title="Select">
+                                                    <li class="nya-bs-option" nya-bs-option="category in val.serviceCategory" data-value="category.name">
+                                                        <a>{{category.name}}</a>
+                                                    </li>
+                                                </ol>
+                                            </div>
+                                        </div> -->
+                                    </td>
+                                    <td class="text-right col-tbody-4 w140" data-ng-class="{'highlight-td' : !createPipelineService.newOpurtunity.selectedServices[key].value >0}">
+                                        <!-- <span class="highlight-bar"></span> -->
+                                        <div class="count-col">
+                                            <input type="number" [(ngModel)]="createPipelineService.newOpurtunity.selectedServices[key].value">
+                                        </div>
+                                    </td>
+                                    <td class="text-right highlight-td col-tbody-5 w210">{{createPipelineService.getAllocationValue(createPipelineService.ExpectedServiceValue, createPipelineService.newOpurtunity.selectedServices[key].value)}}
+                                    </td>
+                                </tr>
+
+                                <tr class="no-record" *ngIf="!objectKeys(createPipelineService.newOpurtunity.selectedServices).length">
+                                    <td colspan="5" class="text-center borderR0">No services are selected. You can add it by search.</td>
+                                </tr>
+                            </tbody>
+                            <tfoot>
+                                <tr class="grey-row" *ngIf="objectKeys(createPipelineService.newOpurtunity.selectedServices).length">
+                                        <td colspan="3" class="middle-txt borderR0 col-tfoot-1" *ngIf="isServDropdownValid()"></td>
+                                        <td colspan="3" class="middle-txt borderR0 col-tfoot-2" *ngIf="!isServDropdownValid()">
+                                            Service Level and Service Category should be selected in order to proceed to the next step.</td>
+                                    <td colspan="2" class="middle-txt borderR0 col-tfoot-3" *ngIf="!isServValid()">
+                                        <span class="red-txt">Allocations must add up to 100%</span>
+                                    </td>
+                                    <td colspan="2" class="middle-txt borderR0 col-tfoot-3" *ngIf="isServValid()">
+                                        </td>
+                                </tr>
+                            </tfoot>
+                        </table>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <!--steps-container-->
+
+        <div class="clearfix marginT10 marginB30 text-right view-detail-btn">
+            <!-- <span class="disclaimer">
+                <span class="mandatory">*</span>
+                <strong>Disclaimer:</strong> Values might not be updated immediately</span> -->
+            <a class="button stroke-btn blue marginB10 marginR10 cp-btn" (click)="createPipelineService.clearAllStepValues(); returnUrl()">Cancel</a>
+            <a class="button filled-btn blue marginR10 marginB10 cp-btn" routerLink="{{stepOneUrl}}">Previous</a>
+            <!-- <a class="button filled-btn blue marginB10" disabled="disabled">Next</a> -->
+            <a class="button filled-btn blue marginB10 nxt-btn" routerLink="{{stepThreeUrl}}" [ngClass]="{'disabled':!isStepTwoValid()}">Next</a>
+            <!-- <a class="button filled-btn blue marginB10 disabled" *ngIf="!isStepTwoValid()">Next</a>
+            <a class="button filled-btn blue marginB10" routerLink="/create-pipeline/three" *ngIf="isStepTwoValid()">Next</a> -->
+        </div>
+
+    </div>
+</div>

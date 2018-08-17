@@ -1,0 +1,9 @@
+.borderBottom0 { border-bottom: 0; }
+.modal-footer { display: block; }
+.modal-footer .btn { min-width:80px; }
+.modal-footer .floatNone { float: none; }
+.fixedCloseRight { position: absolute; right: 20px; top: 20px ; z-index: 99;}
+.padLR25 { padding: 25px 25px 20px 25px;}
+.undoQual { text-align: center;}
+.undoQual .icon-undo-change{ width: 76px; height: 76px; background:url(/assets/images/undo-change.svg) no-repeat; display: inline-block; }
+.undoQual p { font-size: 16px; letter-spacing: 0.03em; line-height: 25px; }

@@ -1,0 +1,129 @@
+{
+  "qualDetails": [{
+      "qualficationId": 33909060,
+      "qualificationName": "Switching",
+      "customerId": 32456787,
+      "filtersApplied": 3,
+      "ibOpportunity": 200502.26,
+      "ibOpportunityPercentage": {
+        "disqualified": 335306.75,
+        "qualified": 213295.84,
+        "pending": 622903.90
+      },
+      "qualificationStage": "In Progress",
+      "dateStarted": "11-Sep-2016",
+      "startedBy": "Paul Sorge",
+      "dateModified": "12-Oct-2016",
+      "modifiedBy": "Kevin Beesly",
+      "actionShare": "",
+      "userAction": "Notify to AM",
+      "enableActionURL": "N",
+      "qualificationHashId": 33909060
+    },
+    {
+      "qualficationId": 63610312,
+      "qualificationName": "Wireless",
+      "customerId": 872456787,
+      "filtersApplied": 4,
+      "ibOpportunity": 380502.0,
+      "ibOpportunityPercentage": {
+        "disqualified": "3774301.312",
+        "qualified": "15097205.248",
+        "pending": "0"
+      },
+      "qualificationStage": "Complete",
+      "dateStarted": "9-Jul-2016",
+      "startedBy": "Paul Sorge",
+      "dateModified": "29-Aug-2016",
+      "modifiedBy": "George Adams",
+      "actionShare": "",
+      "userAction": "Notify to AM",
+      "enableActionURL": "Y",
+      "qualificationHashId": 63610312
+    },
+    {
+      "qualficationId": 13610312,
+      "qualificationName": "Mobility",
+      "customerId": 872456787,
+      "filtersApplied": 4,
+      "ibOpportunity": 580502.0,
+      "ibOpportunityPercentage": {
+        "disqualified": "3774301.312",
+        "qualified": "15097205.248",
+        "pending": "0"
+      },
+      "qualificationStage": "Approval Pending",
+      "dateStarted": "16-Jul-2016",
+      "startedBy": "George Adams",
+      "dateModified": "29-Aug-2016",
+      "modifiedBy": "Paul Sorge",
+      "actionShare": "",
+      "userAction": "Approve",
+      "enableActionURL": "Y",
+      "qualificationHashId": 63610312
+    },
+    {
+      "qualficationId": 93906023,
+      "qualificationName": "Enterprise Networking",
+      "customerId": 172411187,
+      "filtersApplied": 5,
+      "ibOpportunity": 290502.24,
+      "ibOpportunityPercentage": {
+        "disqualified": 135306.75,
+        "qualified": 223295.84,
+        "pending": 422903.90
+      },
+      "qualificationStage": "In Progress",
+      "dateStarted": "11-Sep-2016 ",
+      "startedBy": "John Halpert ",
+      "dateModified": "12-Oct-2016 ",
+      "modifiedBy": "Paul Sorge",
+      "actionShare": "",
+      "userAction": "Notify to AM",
+      "enableActionURL": "N",
+      "qualificationHashId": 93906023
+    },
+    {
+      "qualficationId": 53611312,
+      "qualificationName": "Citigroup",
+      "customerId": 872456787,
+      "filtersApplied": 7,
+      "ibOpportunity": 480502.0,
+      "ibOpportunityPercentage": {
+        "disqualified": "3774301.312",
+        "qualified": "15097205.248",
+        "pending": "0"
+      },
+      "qualificationStage": "Complete",
+      "dateStarted": "29-Nov-2016",
+      "startedBy": "Paul Sorge",
+      "dateModified": "29-Aug-2016",
+      "modifiedBy": "George Adams",
+      "actionShare": "",
+      "userAction": "Deal ID",
+      "enableActionURL": "Y",
+      "qualificationHashId": 63610312
+    },
+    {
+      "qualficationId": 43611312,
+      "qualificationName": "Security",
+      "customerId": 872456787,
+      "filtersApplied": 7,
+      "ibOpportunity": 580502.0,
+      "ibOpportunityPercentage": {
+        "disqualified": "3774301.312",
+        "qualified": "15097205.248",
+        "pending": "0"
+      },
+      "qualificationStage": "Complete",
+      "dateStarted": "17-Dec-2016",
+      "startedBy": "George Adams",
+      "dateModified": "29-Sep-2016",
+      "modifiedBy": "Paul Sorge",
+      "actionShare": "",
+      "userAction": "Create Pipeline",
+      "enableActionURL": "Y",
+      "qualificationHashId": 63610312
+    }
+  ]
+}

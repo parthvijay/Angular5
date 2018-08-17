@@ -1,0 +1,14 @@
+/*  Global View Header CSS  */
+.btn { -webkit-appearance:none; }
+.globalButtonsWrap .btn.active { background-color:#0dbaec !important; border:1px solid #0dbaec; color:#fff; }
+.globalButtonsWrap .btn { padding:2px 15px; border:1px solid #0dbaec; color:rgba(255,255,255,0.6); font-size:12px; }
+.globalButtonsWrap .btn.locationView { border-radius:6px 0px 0px 6px;  }
+.globalButtonsWrap .btn.assetView { border-radius:0 6px 6px 0 !important; position:relative; left:-5px; }
+.globalButtonsWrap .btn.manageLocation { border-radius:6px; border-color:#fff; color:#fff; font-size:13px; font-weight:400 !important; padding-top:1px; padding-bottom:1px; position: relative; top: -6px; background-color: transparent; }
+.globalButtonsWrap .btn.manageLocation:hover, .globalButtonsWrap .btn.manageLocation.active, .globalButtonsWrap .btn.manageLocation.active:hover{ background-color:#00405c; }
+.globalButtonsWrap .btn.manageLocation.disabled, .globalButtonsWrap .btn.manageLocation.disabled:hover{ background-color:transparent; border-color:rgba(255,255,255,0.3); color:rgba(255,255,255,0.3); cursor:not-allowed; }
+.globalButtonsWrap .btn.manageLocation:disabled { background-color:transparent; border-color:rgba(255,255,255,0.3); color:rgba(255,255,255,0.3); cursor:not-allowed; }
+.globalButtonsWrap .pendingRequestWrap { float: none; display:block; width: 100%; text-align: center; padding: 2px 0 4px 0; position: relative; top: -3px; }
+.globalButtonsWrap .requestAccess { float: right; display: inline-block; color: #00bceb ; text-decoration: none; cursor: pointer; }
+.globalButtonsWrap .requestAccess:hover{ color: #00cfff;}
+.globalButtonsWrap .requestStatus { float: none; display: inline-block; color: rgba(255,255,255,0.6) !important;}

@@ -1,0 +1,17 @@
+<!--Start Common Modal Window-->
+<div class="modal-header">
+  <h5 class="modal-title" id="exampleModalLabel"></h5>
+  <button type="button" class="icon-close-btn" aria-label="Close" (click)="activeModal.dismiss('Cross click')"></button>
+</div>
+<div class="modal-body">
+  <p class="success-text">Cisco Ready Integration Coming Soon!</p>
+  <div class="deleteWrap">
+    <p>The "Competitive Dashboard" is currently located in a different url. Full integration with the Cisco Ready dashboard is
+        coming soon.</p>
+  </div>
+</div>
+<div class="modal-footer text-center">
+  <button type="button" class="btn btn-secondary" (click)="activeModal.dismiss('Cancel click')">Cancel</button>
+  <button type="button" class="btn btn-primary" data-dismiss="modal" (click)="redirectPage()">Go There!</button>
+</div>
+<!--End Common Modal Window-->

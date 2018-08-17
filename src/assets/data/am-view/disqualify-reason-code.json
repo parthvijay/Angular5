@@ -1,0 +1,47 @@
+[{
+    "id": "Product Removed from Customer's Network",
+    "name": "Product Removed from Customer's Network",
+    "subReasonCode": [{
+        "id": "Refreshed",
+        "name": "Refreshed"
+      },
+      {
+        "id": "Device is lost to Competitor",
+        "name": "Device is lost to Competitor"
+      },
+      {
+        "id": "Product RMA'ed",
+        "name": "Product RMA'ed"
+      },
+      {
+        "id": "Downsizing",
+        "name": "Downsizing"
+      }
+    ]
+  },
+  {
+    "id": "Data Needs Updating",
+    "name": "Data Needs Updating",
+    "subReasonCode": [{
+        "id": "Migrated to SWSS",
+        "name": "Migrated to SWSS"
+      },
+      {
+        "id": "Already Renewed under a different Service",
+        "name": "Already Renewed under a different Service"
+      },
+      {
+        "id": "Duplicate: Different Instance",
+        "name": "Duplicate: Different Instance"
+      },
+      {
+        "id": "Duplicate: Customer upgraded to another version",
+        "name": "Duplicate: Customer upgraded to another version"
+      },
+      {
+        "id": "Duplicate: Data Error",
+        "name": "Duplicate: Data Error"
+      }
+    ]
+  }
+]

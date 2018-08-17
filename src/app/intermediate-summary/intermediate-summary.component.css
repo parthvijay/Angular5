@@ -1,0 +1,6 @@
+.ag-fresh.intermediateSummaryTable .ag-pinned-left-header .ag-header-row:first-child .ag-header-group-cell:first-child .ag-header-cell-resize { top: 0px; }
+.ag-fresh.intermediateSummaryTable .ag-ltr .ag-header-group-cell.ag-header-group-cell-with-group[col-id="3_0"] .ag-header-group-cell-label .ag-header-group-text { top:4px !important; }
+.ag-fresh .ag-ltr .ag-header-group-cell[col-id="10_0"] .ag-header-cell-resize { top:0; height: 45px; }
+.iconSparkText { position: relative; top: 0px; margin-left: 5px; }
+.ag-fresh .ag-cell[col-id="notifyAm"] a.notifyAm.disabled, .ag-pinned-right-cols-container .ag-row .ag-cell[col-id="notifyAm"]:hover a.disabled { color: #ccc!important; cursor: default;}
+.emptyWrap { float:left; width:100%; padding-top:0; padding-bottom:0; }

@@ -1,0 +1,15 @@
+<!--Start Common Modal Window-->
+<div id="confirm-leave">
+  <button type="button" class="icon-close-btn" aria-label="Close" (click)="closeModal(false)"></button>
+  <div class="modal-body">
+    <span class="errorIconWrap">
+      <span class="icon-error-icon"></span>
+    </span>
+    <p>{{message}}</p>
+  </div>
+  <div class="modal-footer">
+    <button type="button" class="btn btn-primary" (click)="closeModal(false)">Cancel</button>
+    <button type="button" class="btn btn-secondary" (click)="closeModal(true)">Navigate</button>
+  </div>
+</div>
+<!--End Common Modal Window-->

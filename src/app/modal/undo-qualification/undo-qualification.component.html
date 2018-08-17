@@ -1,0 +1,16 @@
+<!--Start Common Modal Window-->
+<div class="modal-header borderBottom0">
+  <button type="button" class="icon-close-btn fixedCloseRight" aria-label="Close" (click)="activeModal.dismiss('Cross click')"></button>
+</div>
+<div class="modal-body">
+  <div class="undoQual">
+    <span class="icon-undo-change"></span>
+    <p class="text-center padLR25">Do you want to undo the changes?</p>
+    <p class="text-center padLR25">Please note you can Undo only the Lines that you did the last Write Backs.</p>
+  </div>
+</div>
+<div class="modal-footer text-center">
+  <button type="button" class="btn btn-primary floatNone" data-dismiss="modal" (click)="activeModal.dismiss('Cross click')">Cancel</button>
+  <button type="button" class="btn btn-secondary floatNone" data-dismiss="modal" (click)="closeUndo()">Ok</button>
+</div>
+<!--End Common Modal Window-->
